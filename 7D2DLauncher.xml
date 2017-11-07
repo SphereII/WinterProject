@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Servers>
+	<ServerGroup Name="Sphereii-mental" Logo="" Description="Highly Experimental SDX Builds">
+		<Server Name="WinterProject" Logo="">
+			<Description>Winter Project
+			</Description>
+			<DownloadMode>Clone</DownloadMode>
+			<Excludes>
+				<Exclude>7DaysToDieServer_Data</Exclude>
+			</Excludes>
+			<Version>alpha16.4</Version>
+			<RSS></RSS>
+			<ReleaseNotes></ReleaseNotes>
+			<Downloads>
+				<Download>https://github.com/SphereII/WinterProject/archive/master.zip</Download>
+			</Downloads>
+		</Server>
+		
+	</ServerGroup>
+</Servers>
