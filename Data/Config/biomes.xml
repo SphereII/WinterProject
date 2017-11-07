@@ -157,7 +157,7 @@ If you do not declare them, the decorations of the main biome are used.
 
 		<subbiome prob="0.1"> <!-- Snow Sub Biome grass and Blueberries -->
 			<layers>
-				<layer depth="8" blockname="snow" />
+				<layer depth="12" blockname="snow" />
 				<layer depth="4" blockname="snow" > <resource blockname="gravelPlusIron" cluster="1" prob="0.071" rwgGenerationType="all" /> </layer>
 				<layer depth="3" blockname="dirt" > <resource blockname="clay" cluster="1" prob="0.2" rwgGenerationType="all" /> <resource blockname="gravelPlusIron" cluster="1" prob="0.811" rwgGenerationType="all" /> </layer>
 				<layer depth="*" blockname="stone" >
@@ -195,7 +195,7 @@ If you do not declare them, the decorations of the main biome are used.
 		</subbiome>
 		<subbiome prob="0.1"> <!-- Snow Sub Biome rocks and snowberries -->
 			<layers>
-			<layer depth="8" blockname="snow" />
+			<layer depth="12" blockname="snow" />
 				<layer depth="4" blockname="snow" > <resource blockname="gravelPlusIron" cluster="1" prob="0.071" rwgGenerationType="all" /> </layer>
 				<layer depth="3" blockname="dirt" > <resource blockname="clay" cluster="1" prob="0.2" rwgGenerationType="all" /> <resource blockname="gravelPlusIron" cluster="1" prob="0.811" rwgGenerationType="all" /> </layer>
 				<layer depth="*" blockname="stone" >
@@ -233,7 +233,7 @@ If you do not declare them, the decorations of the main biome are used.
 		<subbiome prob="0.1551"> <!-- Ore Sub Biome: leadOre -->
 		
 			<layers>
-			<layer depth="8" blockname="snow" />
+			<layer depth="12" blockname="snow" />
 				<layer depth="4" blockname="snow" > <resource blockname="gravelPlusLead" cluster="1" prob="0.071" rwgGenerationType="all" /> </layer>
 				<layer depth="3" blockname="dirt" > <resource blockname="clay" cluster="1" prob="0.15" rwgGenerationType="all" />  <resource blockname="gravel" cluster="1" prob="0.811" rwgGenerationType="all" /> </layer>
 				<layer depth="1" blockname="stone" > <resource blockname="gravelPlusLead" cluster="1" prob="0.8130" rwgGenerationType="all" /> </layer>
@@ -242,7 +242,7 @@ If you do not declare them, the decorations of the main biome are used.
 		</subbiome>
 		<subbiome prob="0.1551"> <!-- Ore Sub Biome: coalOre -->
 			<layers>
-			<layer depth="8" blockname="snow" />
+			<layer depth="12" blockname="snow" />
 				<layer depth="4" blockname="snow" /> <resource blockname="gravelPlusCoal" cluster="1" prob="0.071" rwgGenerationType="all" />
 				<layer depth="3" blockname="dirt" > <resource blockname="clay" cluster="1" prob="0.15" rwgGenerationType="all" />  <resource blockname="gravelPlusCoal" cluster="1" prob="0.811" rwgGenerationType="all" /> </layer>
 				<layer depth="1" blockname="stone" > <resource blockname="gravelPlusCoal" cluster="1" prob="0.8130" rwgGenerationType="all" /> </layer>
@@ -251,7 +251,7 @@ If you do not declare them, the decorations of the main biome are used.
 		</subbiome>
 		<subbiome prob="0.1551"> <!-- Ore Sub Biome: potassiumNitrate -->
 			<layers>
-			<layer depth="8" blockname="snow" />
+			<layer depth="12" blockname="snow" />
 				<layer depth="4" blockname="snow" /> <resource blockname="gravelPlusPotassium" cluster="1" prob="0.071" rwgGenerationType="all" />
 				<layer depth="3" blockname="dirt" > <resource blockname="clay" cluster="1" prob="0.15" rwgGenerationType="all" />  <resource blockname="gravelPlusPotassium" cluster="1" prob="0.811" rwgGenerationType="all" /> </layer>
 				<layer depth="1" blockname="stone" > <resource blockname="gravelPlusPotassium" cluster="1" prob="0.8130" rwgGenerationType="all" /> </layer>
@@ -261,7 +261,7 @@ If you do not declare them, the decorations of the main biome are used.
 
 		<!-- Block layers: Snow, Local ore: potassiumNitrate -->
 		<layers>
-		<layer depth="8" blockname="snow" />
+		<layer depth="12" blockname="snow" />
 			<layer filluptorg="60" blockname="water" />
 			<layer depth="4" blockname="snow" > <resource blockname="gravelPlusIron" cluster="1" prob="0.071" rwgGenerationType="all" /> </layer>
 			<layer depth="3" blockname="dirt" > <resource blockname="clay" cluster="1" prob="0.2" rwgGenerationType="all" /> <resource blockname="gravelPlusIron" cluster="1" prob="0.811" rwgGenerationType="all" /> </layer>

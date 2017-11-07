@@ -6,7 +6,7 @@
     <property name="RotationToFaceNorth" value="2" />
     <property name="AllowedTownships" value="city" />
     <property name="Condition" value="New" />
-    <property name="YOffset" value="-8" />
+    <property name="YOffset" value="-12" />
     <property name="TraderArea" value="False" />
     <property name="ExcludeDistantPOIMesh" value="False" />
     <property name="SleeperVolumeSize" value="19, 4, 8#8, 4, 9#7, 4, 9#35, 6, 24#44, 12, 44" />

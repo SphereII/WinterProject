@@ -3,7 +3,7 @@
     <property name="CopyAirBlocks" value="True" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="Industrial" />
-    <property name="YOffset" value="-8" />
+    <property name="YOffset" value="-12" />
     <property name="AllowedTownships" value="rural,wilderness" />
     <property name="AllowedBiomes" value="snow" />
     <property name="Condition" value="Old" />

@@ -2,6 +2,6 @@
 <prefab>
     <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
-	<property name="YOffset" value="-8" />
+	<property name="YOffset" value="-12" />
 	<property name="Zoning" value="BiomeOnly" />
 </prefab>

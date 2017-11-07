@@ -5,7 +5,7 @@
     <property name="Zoning" value="Commercial" />
     <property name="RotationToFaceNorth" value="2" />
     <property name="AllowedTownships" value="city,rural,town" />
-    <property name="YOffset" value="-8" />
+    <property name="YOffset" value="-12" />
     <property name="TraderArea" value="False" />
     <property name="ExcludeDistantPOIMesh" value="False" />
     <property name="SleeperVolumeSize" value="21, 9, 28#13, 9, 28" />

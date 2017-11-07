@@ -4,7 +4,7 @@
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="Industrial,ResidentialOld" />
     <property name="RotationToFaceNorth" value="1" />
-    <property name="YOffset" value="-8" />
+    <property name="YOffset" value="-12" />
     <property name="AllowedTownships" value="town,rural,wilderness" />
     <property name="Condition" value="Old" />
     <property name="ExcludeDistantPOIMesh" value="False" />

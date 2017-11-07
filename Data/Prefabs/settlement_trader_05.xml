@@ -4,7 +4,7 @@
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="any" />
     <property name="RotationToFaceNorth" value="2" />
-    <property name="YOffset" value="-8" />
+    <property name="YOffset" value="-12" />
     <property name="AllowedTownships" value="city,town,rural,wilderness" />
     <property name="AllowedBiomes" value="snow" />
     <property name="TraderArea" value="True" />

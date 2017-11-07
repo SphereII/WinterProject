@@ -3,7 +3,7 @@
     <property name="CopyAirBlocks" value="True" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="industrial" />
-    <property name="YOffset" value="-8" />
+    <property name="YOffset" value="-12" />
     <property name="RotationToFaceNorth" value="1" />
     <property name="AllowedTownships" value="city,town,rural" />
     <property name="TraderArea" value="False" />
