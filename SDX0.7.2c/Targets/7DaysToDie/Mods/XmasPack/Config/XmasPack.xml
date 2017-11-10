@@ -1,0 +1,62 @@
+<configs>
+	<config name="blocks">	
+		<append xpath="/blocks">	
+			<block id="" name="xmasGift">
+				<property name="Class" value="Loot" />
+				<property name="LootList" value="8" />
+				<property name="CustomIcon" value="xmasGift" />
+				<property name="Material" value="paper" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Gifts?GiftPrefab" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="DescriptionKey" value="xmasGift" />
+				<drop event="Destroy" count="0" />
+				<drop event="Destroy" name="paper" count="1" prob="1" />
+				<drop event="Fall" name="paper" count="0" prob="1" stick_chance="1" />
+				<drop event="Fall" name="paper" count="1" prob=".75" stick_chance="1" />
+			</block>
+			<block id="" name="xmasGifts">
+				<property name="Class" value="Loot" />
+				<property name="LootList" value="8" />
+				<property name="CustomIcon" value="xmasGifts" />
+				<property name="Material" value="paper" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Gifts?GiftsPrefab" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="DescriptionKey" value="xmasGifts" />
+				<property name="OnlySimpleRotations" value="true" />
+				<drop event="Destroy" count="0" />
+				<drop event="Destroy" name="paper" count="5" prob="1" />
+				<drop event="Fall" name="paper" count="0" prob="1" stick_chance="1" />
+				<drop event="Fall" name="paper" count="5" prob=".75" stick_chance="1" />
+			</block>
+			<block id="" name="xmasTree">
+				<property name="CustomIcon" value="xmasTree" />
+				<property name="Material" value="treeWoodSmall" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#XmasTree?XmasTreePrefab" />
+				<property name="CanPickup" value="true" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="DescriptionKey" value="xmasTree" />
+				<drop event="Destroy" count="0" />
+				<drop event="Harvest" name="wood" count="10" tool_category="harvestingTools" />
+				<property name="MultiBlockDim" value="1,3,1" />
+				<property name="CanPlayersSpawnOn" value="false" />
+				<property name="ParticleOnDeath" value="treeGib_small_dust" />
+			</block>
+		</append>
+	</config>
+	
+	<config name="recipes">
+		<append xpath="/recipes" >
+			<recipe name="xmasGift" count="1" craft_area="workbench">
+				<ingredient name="paper" count="2" />
+				<ingredient name="glue" count="1" />
+			</recipe>			
+			<recipe name="xmasGifts" count="1" craft_area="workbench">
+				<ingredient name="paper" count="10" />
+				<ingredient name="glue" count="2" />
+			</recipe>			
+		</append>
+	</config>
+</configs>
