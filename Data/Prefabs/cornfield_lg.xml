@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
-    <property name="CopyAirBlocks" value="True" />
+    <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="AllowedTownships" value="wilderness,rural" />
     <property name="YOffset" value="-12" />
     <property name="Zoning" value="ResidentialOld,Industrial" />
     <property name="TraderArea" value="False" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
 </prefab>

@@ -4,6 +4,6 @@
     <property name="AllowTopSoilDecorations" value="True" />
     <property name="YOffset" value="-10" />
     <property name="Zoning" value="DevOnly" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="TraderArea" value="False" />
 </prefab>

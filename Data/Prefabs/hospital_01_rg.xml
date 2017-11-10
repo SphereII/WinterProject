@@ -7,7 +7,7 @@
     <property name="RotationToFaceNorth" value="2" />
     <property name="YOffset" value="-12" />
     <property name="AllowedTownships" value="city,town,rural" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeSize" value="131, 5, 111#110, 5, 43#110, 19, 43#9, 5, 11#13, 5, 8" />
     <property name="SleeperVolumeStart" value="0, 0, 0#21, 5, 46#21, 10, 46#51, 0, 67#21, 16, 59" />
     <property name="SleeperVolumeGroup" value="S_Default_XL,S_Default_L,S_Default_L,S_LootRoom_S,S_LootRoom_S" />

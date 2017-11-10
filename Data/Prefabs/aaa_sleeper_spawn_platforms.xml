@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
+    <property name="YOffset" value="-12" />
+
     <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="NavOnly" />

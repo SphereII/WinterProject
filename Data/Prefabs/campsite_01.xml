@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
-    <property name="CopyAirBlocks" value="True" />
+<property name="YOffset" value="-12" />
+    <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="NoZone" />
     <property name="AllowedTownships" value="wilderness" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="TraderArea" value="False" />
     <property name="SleeperVolumeSize" value="56, 10, 56" />
     <property name="SleeperVolumeStart" value="-22, -3, -21" />

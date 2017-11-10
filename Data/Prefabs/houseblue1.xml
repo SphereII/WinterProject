@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
-    <property name="CopyAirBlocks" value="True" />
+<property name="YOffset" value="-12" />
+    <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="Zoning" value="ResidentialOld" />
     <property name="RotationToFaceNorth" value="2" />
@@ -9,7 +10,7 @@
     <property name="SleeperVolumeSize" value="15, 4, 20#15, 13, 20" />
     <property name="SleeperVolumeStart" value="0, 0, 2#0, 4, 2" />
     <property name="SleeperSpawns" value="(0, 6, 0, 21, 0, 0, 1)" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeGroup" value="S_Default_S,S_Default_S" />
     <property name="SleeperVolumeGameStageAdjust" value="," />
     <property name="SleeperIsLootVolume" value="False,False" />

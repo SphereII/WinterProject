@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
-    <property name="CopyAirBlocks" value="True" />
+    <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="YOffset" value="-12" />
     <property name="Zoning" value="Commercial,downtown" />
@@ -8,7 +8,7 @@
     <property name="AllowedTownships" value="city,town" />
     <property name="Condition" value="New" />
     <property name="TraderArea" value="False" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeSize" value="48, 9, 55" />
     <property name="SleeperVolumeStart" value="-4, 0, -8" />
     <property name="SleeperVolumeGroup" value="S_Default_S" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
-    <property name="CopyAirBlocks" value="True" />
+    <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="True" />
     <property name="Zoning" value="commercial,downtown" />
     <property name="YOffset" value="-12" />
@@ -10,7 +10,7 @@
     <property name="StaticSpawner.Size" value="32,2,32" />
     <property name="StaticSpawner.Trigger" value="160" />
     <property name="TraderArea" value="False" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeSize" value="25, 8, 20" />
     <property name="SleeperVolumeStart" value="1, 1, 9" />
     <property name="SleeperVolumeGroup" value="S_Default_Med" />

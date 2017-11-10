@@ -1,0 +1,43 @@
+<configs>
+	<config name="blocks">	
+		<!-- Reset the block IDs for the base doors to be wild cards, so they'll be renumbered. -->
+		<set xpath="/blocks/block[@id='631']/@id">*</set>
+		<set xpath="/blocks/block[@id='642']/@id">*</set>
+		<set xpath="/blocks/block[@id='643']/@id">*</set>
+		
+		<!-- Place the trees down to the old 'ground' -->
+		<set xpath="/blocks/block[starts-with(@name, 'treeWinter')]/property[@name='ModelOffset']/@value">0,-12.3,0</set>
+		<set xpath="/blocks/block[starts-with(@name, 'cntTreeStump')]/property[@name='ModelOffset']/@value">0,-12.2,0</set>
+		
+	</config>
+	<!-- Closing the blocks and reopening, so that SDX will see the new wild cards -->
+	<config name="blocks">	
+		<append xpath="/blocks">	
+
+			<block id="" name="snowFill">
+				<property name="Extends" value="snow" />
+				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools"/>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1"/>
+				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0"/>
+			</block>
+
+			<block id="631" name="AirsecureDoorWooden">
+				<property name="Material" value="air" />
+				<property name="Shape" value="Invisible" />
+				<property name="Texture" value="250" />
+			</block>
+			<block id="642" name="AirsecureReinforcedDoorWooden">
+				<property name="Material" value="air" />
+				<property name="Shape" value="Invisible" />
+				<property name="Texture" value="250" />
+			</block>
+			<block id="643" name="AirmetalReinforcedDoorWooden">
+				<property name="Material" value="air" />
+				<property name="Shape" value="Invisible" />
+				<property name="Texture" value="250" />
+			</block>
+
+		</append>
+	</config> 
+</configs>

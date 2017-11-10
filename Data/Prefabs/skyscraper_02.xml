@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prefab>
-    <property name="CopyAirBlocks" value="True" />
+    <property name="CopyAirBlocks" value="False" />
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="YOffset" value="-12" />
     <property name="RotationToFaceNorth" value="2" />
@@ -13,5 +13,5 @@
     <property name="SleeperVolumeGroup" value="S_Default_Med,S_Default_Med,S_BusinessMan_L,S_ZomUtilityWorker_L,S_GhostTown_S,S_BusinessMan_Med,S_GhostTown_S,S_Default_S,S_GhostTown_S,S_BikerBar_Med,S_ZomUtilityWorker_S" />
     <property name="SleeperVolumeGameStageAdjust" value=",,,,,,,,,," />
     <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,True,True,True,False,False" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
 </prefab>

@@ -4,6 +4,6 @@
     <property name="AllowTopSoilDecorations" value="False" />
     <property name="YOffset" value="-12" />
     <property name="Zoning" value="BiomeOnly" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="TraderArea" value="False" />
 </prefab>

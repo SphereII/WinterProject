@@ -8,7 +8,7 @@
     <property name="Condition" value="New" />
     <property name="YOffset" value="-12" />
     <property name="TraderArea" value="False" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeSize" value="45, 6, 33#45, 4, 33#45, 4, 33#45, 4, 33#45, 4, 33#45, 11, 33#12, 11, 16" />
     <property name="SleeperVolumeStart" value="0, 1, 7#0, 7, 7#0, 11, 7#0, 15, 7#0, 19, 7#0, 23, 7#0, 24, 25" />
     <property name="SleeperVolumeGroup" value="S_Default_Med,S_Default_Med,S_Default_Med,S_Default_Med,S_Default_Med,S_Default_Med,S_LootRoom_S" />

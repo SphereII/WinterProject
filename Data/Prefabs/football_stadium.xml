@@ -7,7 +7,7 @@
     <property name="Zoning" value="ResidentialNew" />
     <property name="RotationToFaceNorth" value="2" />
     <property name="YOffset" value="-12" />
-    <property name="ExcludeDistantPOIMesh" value="False" />
+    <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeSize" value="173, 20, 90#94, 11, 37#94, 20, 37#20, 19, 15" />
     <property name="SleeperVolumeStart" value="0, 1, 47#49, 1, 10#49, 12, 10#86, 15, 16" />
     <property name="SleeperVolumeGroup" value="S_FootballStadium_Med,S_FootballStadium_L,S_FootballStadium_Med,S_FootballStadium_Med" />
