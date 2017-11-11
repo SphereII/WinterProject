@@ -7,7 +7,7 @@
 				<property name="CustomIcon" value="xmasGift" />
 				<property name="Material" value="paper" />
 				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#Gifts?GiftPrefab" />
+				<property name="Model" value="#Gifts?GiftPrefab" />   <!-- Present by holtkamp is licensed under CC Attribution  -->
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="DescriptionKey" value="xmasGift" />
 				<drop event="Destroy" count="0" />
@@ -21,7 +21,7 @@
 				<property name="CustomIcon" value="xmasGifts" />
 				<property name="Material" value="paper" />
 				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#Gifts?GiftsPrefab" />
+				<property name="Model" value="#Gifts?GiftsPrefab" />  <!-- Stack of Christmas Gifts by Damco is licensed under CC Attribution  -->
 				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 				<property name="DescriptionKey" value="xmasGifts" />
 				<property name="OnlySimpleRotations" value="true" />
@@ -44,9 +44,104 @@
 				<property name="CanPlayersSpawnOn" value="false" />
 				<property name="ParticleOnDeath" value="treeGib_small_dust" />
 			</block>
+			<block id="" name="icicle"> 
+				<property name="Material" value="snow" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#WinterBlocks?IciclePrefab"/> 
+				<property name="CanPickup" value="false" />
+				<property name="CustomIcon" value="icicle" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+				<drop event="Harvest" name="snowBall" count="3" tool_category="harvestingTools"/>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="snow" count="1" prob="0.1" stick_chance="1"/>
+				<drop event="Fall" name="snowBall" count="3" prob="0.187" stick_chance="0"/>
+			</block>
+			<block id="" name="icicles"> 
+				<property name="Material" value="snow" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#WinterBlocks?IciclesPrefab"/> 
+				<property name="CanPickup" value="false" />
+				<property name="CustomIcon" value="icicle" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools"/>
+				<drop event="Destroy" count="0"/>
+				<drop event="Fall" name="snow" count="1" prob="0.1" stick_chance="1"/>
+				<drop event="Fall" name="snowBall" count="10" prob="0.187" stick_chance="0"/>
+			</block>
+			
+			<block id="" name="iceBlock"> 
+				<property name="Material" value="snow" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#WinterBlocks?IceBlockPrefab"/> <!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
+				<property name="CanPickup" value="false" />
+				<property name="CustomIcon" value="iceblock" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+				<property name="ImposterExchange" value="imposterBlock" param1="62" />
+				<property name="DropScale" value="2" />
+				<property class="RepairItems">
+					<property name="snowBall" value="10" />
+				</property>
+				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools" />
+				<drop event="Destroy" count="0" />
+				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1" />
+				<drop event="Fall" name="snowBall" count="10" prob="0.187" stick_chance="0" />
+				<property name="EconomicValue" value="5" />
+				<property name="EconomicBundleSize" value="1" />
+				<property name="SellableToTrader" value="false" />
+			</block>
+			<block id="" name="snowBlock"> 
+				<property name="Material" value="snow" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#WinterBlocks?SnowBlockPrefab"/> <!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
+				<property name="CanPickup" value="false" />
+				<property name="CustomIcon" value="snowblock" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+				<property name="ImposterExchange" value="imposterBlock" param1="62" />
+				<property name="DropScale" value="2" />
+				<property class="RepairItems">
+					<property name="snowBall" value="10" />
+				</property>
+				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools" />
+				<drop event="Destroy" count="0" />
+				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1" />
+				<drop event="Fall" name="snowBall" count="10" prob="0.187" stick_chance="0" />
+				<property name="EconomicValue" value="5" />
+				<property name="EconomicBundleSize" value="1" />
+				<property name="SellableToTrader" value="false" />
+			</block>
+
+<!--			<block id="" name="santaToyBlock">
+				<property name="Material" value="Mplastics" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#SantaToy?SantaToyPrefab" />		
+				<property name="Place" value="TowardsPlacer" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="Weight" value="30" />
+				<property name="CanPickup" value="true" param1="santaToyItem" />
+				<property name="DescriptionKey" value="" />
+				<drop event="Destroy" name="scrapPlastics" count="1,3" prob="1" />
+			</block> -->
 		</append>
 	</config>
-	
+	<config name="items">
+		<append xpath="/items">
+	<!--		<item id="" name="santaToyItem">
+				<property name="DescriptionKey" value="toysDesc" />
+				<property name="Meshfile" value="#santaToy?SantaToyPrefab" />
+				<property name="DropMeshfile" value="#santaToy?SantaToyPrefab" />
+				<property name="Material" value="Mplastics" />
+				<property name="HoldType" value="31" />
+				<property name="Stacknumber" value="1" />		
+				<property class="Action1">
+					<property name="Class" value="PlaceAsBlock" />
+					<property name="Delay" value="0.5" />
+					<property name="Blockname" value="santaToyBlock" />
+				</property>
+				<property name="Group" value="Basics,Decor/Miscellaneous" />
+				<property name="EconomicValue" value="25" />
+			</item> -->
+		</append>	  
+	</config>
 	<config name="recipes">
 		<append xpath="/recipes" >
 			<recipe name="xmasGift" count="1" craft_area="workbench">
