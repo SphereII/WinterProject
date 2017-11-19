@@ -13057,7 +13057,7 @@ kind of free
 		<property name="CustomIcon" value="scrapIronFrameHalf" />
 		<property name="CanPickup" value="false" />
 	</block>
-	<block id="1416" name="woodenTable">
+	<block id="1416" name="ChristmasTree">
 		<!--
 		<property name="Material" value="wood_regular" />
 		<property name="Shape" value="New" />
@@ -16571,7 +16571,7 @@ kind of free
 		<drop event="Fall" name="paper" count="0" prob="1" stick_chance="1" />
 		<drop event="Fall" name="paper" count="1" prob=".75" stick_chance="1" />
 	</block>
-	<block id="87" name="oldChair">
+	<block id="87" name="ChristmasGift">
 		<property name="Class" value="Loot" />
 		<property name="LootList" value="2" />
 		<property name="CustomIcon" value="xmasGifts" />

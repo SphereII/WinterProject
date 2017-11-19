@@ -1391,10 +1391,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<recipe name="oilBarrel" count="1" craft_exp_gain="0">
 		<ingredient name="gasCan" count="600" />
 	</recipe>
-	<recipe name="oldChair" count="1">
-		<ingredient name="nail" count="10" />
-		<ingredient name="wood" count="6" />
-	</recipe>
+
 	<recipe name="paper" count="10" craft_area="chemistryStation">
 		<ingredient name="wood" count="10" />
 		<ingredient name="glue" count="1" />
@@ -1828,10 +1825,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<recipe name="woodSupport" count="1">
 		<ingredient name="wood" count="4" />
 	</recipe>
-	<recipe name="woodTable" count="1">
-		<ingredient name="nail" count="10" />
-		<ingredient name="wood" count="10" />
-	</recipe>
+
 	<recipe name="woodenBow" count="1">
 		<ingredient name="wood" count="8" />
 		<ingredient name="yuccaFibers" count="3" />
