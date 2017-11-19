@@ -3110,7 +3110,7 @@ group desc for stuff like metal siding
 		<property name="EconomicValue" value="360" />
 		<!-- disassemble value 355 -->
 	</block>
-	<block id="312" name="ChristmasGifts">
+	<block id="312" name="xmasGifts">
 		<!--
 		<property name="Material" value="wood_weak" />
 		<property name="Shape" value="Ext3dModel" />
@@ -16571,7 +16571,7 @@ kind of free
 		<drop event="Fall" name="paper" count="0" prob="1" stick_chance="1" />
 		<drop event="Fall" name="paper" count="1" prob=".75" stick_chance="1" />
 	</block>
-	<block id="87" name="ChristmasGift">
+	<block id="87" name="xmasGifts">
 		<property name="Class" value="Loot" />
 		<property name="LootList" value="2" />
 		<property name="CustomIcon" value="xmasGifts" />
