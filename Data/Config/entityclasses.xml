@@ -77,7 +77,7 @@
 		<property name="ModelType" value="Standard" />
 		<property name="HasRagdoll" value="true" />
 		<property name="Prefab" value="NPC" />
-		<property name="Class" value="EntityZombie" />
+		<property name="Class" value="EntityZombieSDX, Mods" />
 		<property name="Parent" value="Enemies" />
 		<property name="PhysicsBody" value="zombieStandard" />
 		<property name="Faction" value="undead" />
@@ -91,26 +91,6 @@
 		<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityNPC" />
 		<property name="AITask-6" value="ApproachSpot" />
 		<property name="AITask-7" value="Wander" />
-		<!--Classes for AITarget:
-		<property name="Class" value="EntityDriveableCar"/>
-		<property name="Class" value="EntityAnimalRabbit"/> and chicken
-		<property name="Class" value="EntityAnimalStag"/>
-		<property name="Class" value="EntityBackpack"/>
-		<property name="Class" value="EntityBandit"/>
-		<property name="Class" value="EntityEnemyAnimal"/>
-		<property name="Class" value="EntityLootContainer"/>
-		<property name="Class" value="EntityMinibike"/>
-		<property name="Class" value="EntityNPC"/>
-		<property name="Class" value="EntityPlayer"/>
-		<property name="Class" value="EntitySupplyCrate"/>
-		<property name="Class" value="EntitySupplyPlane"/>
-		<property name="Class" value="EntitySurvivor"/>
-		<property name="Class" value="EntityVulture"/>
-		<property name="Class" value="EntityZombie"/>
-		<property name="Class" value="EntityZombieCop"/>
-		<property name="Class" value="EntityZombieCrawl"/>
-		<property name="Class" value="EntityZombieDog"/>
-	-->
 		<property name="AITarget-1" value="SetAsTargetIfHurt" param1="EntityNPC" />
 		<property name="AITarget-2" value="SetAsTargetIfHurt" param1="EntityPlayer" />
 		<property name="AITarget-3" value="BlockingTargetTask" />
@@ -382,7 +362,7 @@
 		<property name="SleeperSmellWakeThreshold" value="20,50" />
 		<property name="SmellAlertThreshold" value="20" />
 		<!-- for awake zombies -->
-		<property name="LootListOnDeath" value="85" />
+		<property name="LootListOnDeath" value="38" />
 		<property name="TintMaterial2" value="64,63,62" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -393,7 +373,7 @@
 		<property name="ExperienceGain" value="2091" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="85" />
+		<property name="LootListOnDeath" value="38" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -469,7 +449,7 @@
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="15" />
 		<property name="TintMaterial1" value="56,50,40" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -530,7 +510,7 @@
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="15" />
 		<property name="TintMaterial2" value="32,24,20" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -561,7 +541,7 @@
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="15" />
 		<property name="TintMaterial2" value="41,25,25" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -835,7 +815,7 @@
 	<!-- Missing: zombieFatHawaiianFeralRadiated -->
 	<entity_class name="zombieFatCop" extends="zombieTemplateMale">
 		<property name="Mesh" value="Zombies/zombieStandardCopRagdoll" />
-		<property name="Class" value="EntityZombieCop" />
+		<property name="Class" value="EntityZombieCopSDX, Mods" />
 		<property name="HandItem" value="handZombieCop" />
 		<property name="WalkType" value="1" />
 		<property name="RightHandJointName" value="Jaw" />
@@ -854,8 +834,9 @@
 		<property name="AITask-2" value="BreakBlock" />
 		<property name="AITask-3" value="RangedAttackTarget" param1="1" param2="5" />
 		<property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer" />
-		<property name="AITask-5" value="ApproachSpot" />
-		<property name="AITask-6" value="Wander" />
+		<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityAnimalStag" />
+		<property name="AITask-6" value="ApproachSpot" />
+		<property name="AITask-7" value="Wander" />
 		<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam" />
 		<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert" />
 		<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack" />
@@ -1206,6 +1187,7 @@
 		<property name="Mesh" value="Animals/Stag/STAG" />
 		<property name="ModelType" value="Standard" />
 		<property name="Prefab" value="NPC" />
+		<property name="Class" value="EntityAnimalStag" />
 		<property name="Parent" value="Animals" />
 		<property name="AvatarController" value="GameObjectAnimalAnimation" />
 		<property name="Weight" value="70" />
@@ -1621,6 +1603,8 @@
 		<property name="AITarget-4" value="SetNearestCorpseAsTarget" param1="EntityPlayer" />
 		<property name="AITarget-5" value="SetNearestEntityAsTarget" param1="EntityNPC" />
 		<property name="AITarget-6" value="SetNearestEntityAsTarget" param1="EntityPlayer" />
+		<!--property name="AITarget-4" value="SetNearestEntityAsTarget" param1="EntityAnimalBear" /-->
+		<!--property name="AITarget-5" value="SetNearestEntityAsTarget" param1="EntityAnimalStag" /-->
 		<property name="MaxHealth" value="60" />
 		<property name="HandItem" value="handZombie" />
 		<property name="Weight" value="70" />
@@ -2024,6 +2008,20 @@
 	<entity_class name="npcTraderHugh" extends="npcTraderTemplate">
 		<property name="Archetype" value="TraderHugh" />
 		<property name="NPCID" value="traderric" />
+	</entity_class>
+	<entity_class name="SDXTemplate" extends="zombieTemplateMale">
+		<!-- For fun, let's use the zombie transmogrifier class -->
+		<!--property name="Class" value="EntityZombieSDX, Mods" /-->
+		<!-- We are using the Animal Animation, since the BipedAnimation is a bit wonky with the hit animation -->
+		<property name="AvatarController" value="AnimationSDX, Mods" />
+		<!-- With RootMotion true, the zombie just kind of chills out in one place. Set to false to watch it move. -->
+		<property name="RootMotion" value="false" />
+		<!-- Baseline Speed is way too slow, so we need to bump it up a notch or 5 -->
+		<property name="WanderSpeed" value="0.8" />
+		<property name="ApproachSpeed" value="0.8" />
+		<property name="NightWanderSpeed" value="0.8" />
+		<property name="NightApproachSpeed" value="1.1" />
+		<property name="HasRagdoll" value="false" />
 	</entity_class>
 </entity_classes>
 <!-- Radiated, harder to decap

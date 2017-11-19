@@ -4,22 +4,57 @@
 		<set xpath="/blocks/block[@id='631']/@id">*</set>
 		<set xpath="/blocks/block[@id='642']/@id">*</set>
 		<set xpath="/blocks/block[@id='643']/@id">*</set>
-		
-		<!-- Place the trees down to the old 'ground' -->
-		<set xpath="/blocks/block[starts-with(@name, 'treeWinter')]/property[@name='ModelOffset']/@value">0,-12.3,0</set>
-		<set xpath="/blocks/block[starts-with(@name, 'cntTreeStump')]/property[@name='ModelOffset']/@value">0,-12.2,0</set>
-		
 	</config>
 	<!-- Closing the blocks and reopening, so that SDX will see the new wild cards -->
 	<config name="blocks">	
 		<append xpath="/blocks">	
 
 			<block id="" name="snowFill">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="blueberrySeed"/>
+	<property name="Material" value="plants"/>
+	<property name="LightOpacity" value="0"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="BillboardPlant"/>
+	<property name="Mesh" value="grass"/>
+	<property name="Texture" value="378"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Class" value="PlantGrowing"/>
+	<property name="PlantGrowing.Next" value="cropsHarvestableMaster"/>
+	<property name="PlantGrowing.GrowthRate" value="63.0"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.FertileLevel" value="1"/>
+	<property name="PlantGrowing.IsRandom" value="false"/>
+	<!--
+	<property name="PlantGrowing.LightLevelGrow" value="8"/> default, light required for growing up
+	<property name="PlantGrowing.LightLevelStay" value="0"/> default, light required for not dieing off
+	<property name="PlantGrowing.GrowOnTop" value="treeSnowyGrassDiagonal"/>
+	<property name="PlantGrowing.GrowIfAnythinOnTop" value="false"/>
+	<property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+	-->
+	<property name="HarvestOverdamage" value="false"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Group" value="Food/Cooking"/>
+	<property name="DescriptionKey" value="plantsBlockGroupDesc"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	
+				<!--
 				<property name="Extends" value="snow" />
-				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools"/>
-				<drop event="Destroy" count="0"/>
-				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1"/>
-				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0"/>
+				<property name="LightOpacity" value="0" />
+				<property name="Class" value="SnowFill, Mods" />
+
+				<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools" />
+				<drop event="Destroy" count="0" />
+				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1" />
+				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
+				-->
 			</block>
 
 			<block id="631" name="AirsecureDoorWooden">
@@ -41,3 +76,10 @@
 		</append>
 	</config> 
 </configs>
+
+
+<!-- Place the trees down to the old 'ground' 
+		<set xpath="/blocks/block[starts-with(@name, 'treeWinter')]/property[@name='ModelOffset']/@value">0,-12.3,0</set>
+		<set xpath="/blocks/block[starts-with(@name, 'cntTreeStump')]/property[@name='ModelOffset']/@value">0,-12.2,0</set>
+		
+		-->

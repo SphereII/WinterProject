@@ -2262,7 +2262,7 @@ If you do not declare them, the decorations of the main biome are used.
 		<!--poi name="Road Concrete" poimapcolor="#3a3020" prefab="road_concrete" surfaceoffset="0" /><poi name="Road Asphalt" poimapcolor="#272f48" prefab="road_asphalt" surfaceoffset="0" /><poi name="Road Gravel" poimapcolor="#806f52" prefab="road_gravel" surfaceoffset="0" /><poi name="crossing" poimapcolor="#f6ff0f" prefab="street_crossing" /><poi name="Water" poimapcolor="#0063ff" prefab="water_7_wide" surfaceoffset="0" /-->
 		<!--<poi name="Water" poimapcolor="#0063ff" blockname="water" ypos="56" old water set method/-->
 		<!--<poi name="Water" poimapcolor="#0063ff" prefab="water" ypos="56"/>-->
-		<poi name="City Asphalt" poimapcolor="#3d3f47" blockname="asphalt">
+		<poi name="City Asphalt" poimapcolor="#3d3f47" blockname="snow" >
 			<decal texture="0" face="0" prob="0.001" />
 			<!-- 0 == 500 -->
 			<decal texture="1" face="0" prob="0.001" />
@@ -2291,7 +2291,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<blockontop blockname="rock02" prob="0.0007" />
 			<blockontop blockname="rock04" prob="0.0007" />
 		</poi>
-		<poi name="Country Road Asphalt" poimapcolor="#272f48" blockname="asphalt">
+		<poi name="Country Road Asphalt" poimapcolor="#272f48" blockname="snow" >
 			<decal texture="0" face="0" prob="0.005" />
 			<decal texture="1" face="0" prob="0.005" />
 			<decal texture="2" face="0" prob="0.005" />
@@ -2319,7 +2319,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<blockontop blockname="rock04" prob="0.0007" />
 			<!--blockontop blockname="potassiumNitrate" prob="0.02" offset="-1"/-->
 		</poi>
-		<poi name="Road Gravel" poimapcolor="#806f52" blockname="gravel">
+		<poi name="Road Gravel" poimapcolor="#806f52" blockname="snow" >
 			<decal texture="0" face="0" prob="0.005" />
 			<decal texture="1" face="0" prob="0.005" />
 			<decal texture="2" face="0" prob="0.005" />
@@ -2341,10 +2341,10 @@ If you do not declare them, the decorations of the main biome are used.
 			<blockontop blockname="randomCarsHelper" prob="0.0005" rotatemax="3" />
 			<!--blockontop blockname="potassiumNitrate" prob="0.02" offset="-1"/-->
 		</poi>
-		<poi name="Water" poimapcolor="#0063ff" blockname="water" blockbelow="sand" yposfill="58" />
-		<poi name="WaterDesert" poimapcolor="#002868" blockname="water" blockbelow="sand" yposfill="44" />
-		<poi name="WaterHills" poimapcolor="#5d9bfd" blockname="water" blockbelow="sand" yposfill="73" />
-		<poi name="WaterMountains" poimapcolor="#a3c7fe" blockname="water" blockbelow="sand" yposfill="78" />
+		<poi name="Water" poimapcolor="#0063ff" blockname="iceBlock" blockbelow="sand" yposfill="58" />
+		<poi name="WaterDesert" poimapcolor="#002868" blockname="iceBlock" blockbelow="sand" yposfill="44" />
+		<poi name="WaterHills" poimapcolor="#5d9bfd" blockname="iceBlock" blockbelow="sand" yposfill="73" />
+		<poi name="WaterMountains" poimapcolor="#a3c7fe" blockname="iceBlock" blockbelow="sand" yposfill="78" />
 		<poi name="Sand" poimapcolor="#c6b9a2" blockname="sand" />
 		<poi name="Empty" poimapcolor="#f6ff00" />
 	</pois>

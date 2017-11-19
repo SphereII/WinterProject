@@ -14,7 +14,7 @@ public class WinterMod : IPatcherMod
     public bool Patch(ModuleDefinition module)
     {
         Log("=== Winter Mod Patcher ===");
-        AllowSnowFilledAreas(module);
+        //AllowSnowFilledAreas(module);
 
         return true;
     }
@@ -26,28 +26,29 @@ public class WinterMod : IPatcherMod
         Log("Searching for Prefab Class");
         var myClass = module.Types.First(d => d.Name == "Prefab");
         Log("Searching for PrefabChunk Sub Class");
-        var myNestedClass = myClass.NestedTypes.First(d => d.Name == "PrefabChunk");
+       // var myNestedClass = myClass.NestedTypes.First(d => d.Name == "Prefab");
         Log("Searching for GetBlock Method");
-        var myMethod = myNestedClass.Methods.First(d => d.Name == "GetBlock");
+        var myMethod = myClass.Methods.First(d => d.Name == "Get");
 
         Log("Searching for Block Class");
         var myBlock = module.Types.First(d => d.Name == "Block");
 
         Log("Searching for GetBlock Method of the Block Class");
         var myGetBlock = myBlock.Methods.First(d => d.Name == "GetBlockValue");
-        
+
         var instructions = myMethod.Body.Instructions;
         var pro = myMethod.Body.GetILProcessor();
         foreach (var i in instructions.Reverse())
         {
             // We want to replace the Air block and point to our snowFill block, which will have a custom class
             // and allow us to fill up spaces with a block, instead of air.
+            String strOperand = i.Operand.ToString();
             if (i.OpCode == OpCodes.Ldsfld )
             {
                 i.OpCode = OpCodes.Ldstr;
                 i.Operand = "snowFill";
                 pro.InsertAfter(i, Instruction.Create(OpCodes.Call, myGetBlock));
-                break;
+               
             }
 
         }

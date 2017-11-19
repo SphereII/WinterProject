@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>2ac4b31f-ec09-428e-a659-35ac79167ef0</ProjectGuid>
+    <ProjectGuid>{2AC4B31F-EC09-428E-A659-35AC79167EF0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VisualStudioProject</RootNamespace>
@@ -30,24 +30,86 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mods">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Mods.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Tds">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Mono.Data.Tds.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="SDX.Compiler">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\SDX.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="SDX.Core">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\SDX.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SDX.Payload">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\SDX.Payload.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\7DaysToDie_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Mods\AnimationSDX\Scripts\AnimationSDX.cs" />
+    <Compile Include="Mods\CraftingLag\PatchScripts\CraftingLagFixes.cs" />
+    <Compile Include="Mods\WinterMod\PatchScripts\WinterMod.cs" />
+    <Compile Include="Mods\WinterMod\Scripts\SnowFillBlock.cs" />
+    <Compile Include="Mods\ZombieTransmogrifier\PatchScripts\EntityAlive.cs" />
+    <Compile Include="Mods\ZombieTransmogrifier\PatchScripts\PatcherHalDll.cs" />
+    <Compile Include="Mods\ZombieTransmogrifier\Scripts\EntityZombieCopSDX.cs" />
+    <Compile Include="Mods\ZombieTransmogrifier\Scripts\EntityZombieCrawlSDX.cs" />
+    <Compile Include="Mods\ZombieTransmogrifier\Scripts\EntityZombieSDX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mods\AnimationSDX\Configs\AnimationSDX.xml" />
+    <Content Include="Mods\AnimationSDX\mod.xml" />
+    <Content Include="Mods\CraftingLag\mod.xml" />
+    <Content Include="Mods\CraftingLag\ReadMe.txt" />
+    <Content Include="Mods\Nightmares\Configs\Nightmares.xml" />
+    <Content Include="Mods\Nightmares\mod.xml" />
+    <Content Include="Mods\Nightmares\Text\English.txt" />
+    <Content Include="Mods\WinterMod\mod.xml" />
+    <Content Include="Mods\ZombieTransmogrifier\Configs\EntityClasses.xml" />
+    <Content Include="Mods\ZombieTransmogrifier\mod.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mods\Nightmares\Resources\AfroShamanSounds.unity3d" />
+    <None Include="Mods\Nightmares\Resources\Dinosaurs.unity3d" />
+    <None Include="Mods\Nightmares\Resources\Mechanic.unity3d" />
+    <None Include="Mods\Nightmares\Resources\Mutant.unity3d" />
+    <None Include="Mods\Nightmares\Resources\Nightmares.unity3d" />
+    <None Include="Mods\Nightmares\Resources\Samuzai.unity3d" />
+    <None Include="Mods\ZombieTransmogrifier\ReadMe.md" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

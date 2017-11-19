@@ -8,6 +8,7 @@ do
 	sed -i 's@<property name="YOffset" value="-4" />@<property name="YOffset" value="-12" />@g' ${each}
 	sed -i 's@<property name="YOffset" value="-5" />@<property name="YOffset" value="-12" />@g' ${each}
 	sed -i 's@<property name="YOffset" value="-6" />@<property name="YOffset" value="-12" />@g' ${each}
+	sed -i 's@<property name="CopyAirBlocks" value="true" />@<property name="CopyAirBlocks" value="false" />@g' ${each}
 	sed -i 's@<property name="CopyAirBlocks" value="True" />@<property name="CopyAirBlocks" value="False" />@g' ${each}
 	sed -i 's@<property name="ExcludeDistantPOIMesh" value="False" />@<property name="ExcludeDistantPOIMesh" value="True" />@g' ${each}
 
