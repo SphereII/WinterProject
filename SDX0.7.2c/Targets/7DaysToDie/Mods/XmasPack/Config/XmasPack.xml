@@ -109,37 +109,36 @@
 				<property name="EconomicBundleSize" value="1" />
 				<property name="SellableToTrader" value="false" />
 			</block>
-
-<!--			<block id="" name="santaToyBlock">
-				<property name="Material" value="Mplastics" />
-				<property name="Shape" value="ModelEntity" />
-				<property name="Model" value="#SantaToy?SantaToyPrefab" />		
+			<block id="" name="rabbitBlock">
+				<property name="Material" value="cloth" />
+				<property name="Shape" value="ModelEntity" /> <!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
+				<property name="Model" value="#Rabbit?RabbitBlockPrefab" />		
 				<property name="Place" value="TowardsPlacer" />
 				<property name="IsTerrainDecoration" value="true" />
 				<property name="Weight" value="30" />
-				<property name="CanPickup" value="true" param1="santaToyItem" />
+				<property name="CanPickup" value="true" param1="rabbitItem" />
 				<property name="DescriptionKey" value="" />
-				<drop event="Destroy" name="scrapPlastics" count="1,3" prob="1" />
-			</block> -->
-		</append>
+				<drop event="Destroy" name="cloth" count="1,3" prob="1" />
+			</block>
+			</append>
 	</config>
 	<config name="items">
 		<append xpath="/items">
-	<!--		<item id="" name="santaToyItem">
+				<item id="" name="rabbitItem">
 				<property name="DescriptionKey" value="toysDesc" />
-				<property name="Meshfile" value="#santaToy?SantaToyPrefab" />
-				<property name="DropMeshfile" value="#santaToy?SantaToyPrefab" />
-				<property name="Material" value="Mplastics" />
+				<property name="Meshfile" value="#Rabbit?RabbitItemPrefab" /> <!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
+				<property name="DropMeshfile" value="#Rabbit?RabbitItemPrefab" />
+				<property name="Material" value="cloth" />
 				<property name="HoldType" value="31" />
 				<property name="Stacknumber" value="1" />		
 				<property class="Action1">
 					<property name="Class" value="PlaceAsBlock" />
-					<property name="Delay" value="0.5" />
-					<property name="Blockname" value="santaToyBlock" />
+					<property name="Delay" value="0.1" />
+					<property name="Blockname" value="rabbitBlock" />
 				</property>
 				<property name="Group" value="Basics,Decor/Miscellaneous" />
 				<property name="EconomicValue" value="25" />
-			</item> -->
+			</item>
 		</append>	  
 	</config>
 	<config name="recipes">
