@@ -113,14 +113,40 @@
 				<property name="Material" value="cloth" />
 				<property name="Shape" value="ModelEntity" /> <!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
 				<property name="Model" value="#Rabbit?RabbitBlockPrefab" />		
+				<property name="IsDecoration" value="true" />
+				<property name="ImposterExclude" value="true" />
 				<property name="Place" value="TowardsPlacer" />
-				<property name="IsTerrainDecoration" value="true" />
 				<property name="Weight" value="30" />
 				<property name="CanPickup" value="true" param1="rabbitItem" />
 				<property name="DescriptionKey" value="" />
 				<drop event="Destroy" name="cloth" count="1,3" prob="1" />
 			</block>
-			</append>
+			<block id="" name="wreath">
+				<property name="CustomIcon" value="xmasTree" />
+				<property name="Material" value="treeWoodSmall" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Wreath?WreathPrefab" />
+				<property name="IsDecoration" value="true" />
+				<property name="ImposterExclude" value="true" />
+				<property name="CanPickup" value="true" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="DescriptionKey" value="wreath" />
+				<drop event="Destroy" count="0" />
+				<drop event="Harvest" name="wood" count="1" tool_category="harvestingTools" />
+				<property name="ParticleOnDeath" value="treeGib_small_dust" />
+			</block>
+			<block id="" name="stockings">
+				<property name="Material" value="cloth" />
+				<property name="Shape" value="ModelEntity" /> 
+				<property name="Model" value="#Stockings?Stockings" />		
+				<property name="IsDecoration" value="true" />
+				<property name="ImposterExclude" value="true" />
+				<property name="Weight" value="30" />
+				<property name="CanPickup" value="true" />
+				<property name="DescriptionKey" value="" />
+				<drop event="Destroy" name="cloth" count="1,3" prob="1" />
+			</block>
+		</append>
 	</config>
 	<config name="items">
 		<append xpath="/items">
