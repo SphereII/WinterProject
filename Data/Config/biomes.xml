@@ -156,7 +156,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<subbiome prob="0.1">
 				<!-- Snow Sub Biome grass and Blueberries -->
 				<layers>
-					<layer depth="12" blockname="snow" />
+					<layer depth="12" blockname="snowFill" />
 					<layer depth="4" blockname="snow">
 						<resource blockname="gravelPlusIron" cluster="1" prob="0.071" rwgGenerationType="all" />
 					</layer>
@@ -204,7 +204,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<subbiome prob="0.1">
 				<!-- Snow Sub Biome rocks and snowberries -->
 				<layers>
-					<layer depth="12" blockname="snow" />
+					<layer depth="12" blockname="snowFill" />
 					<layer depth="4" blockname="snow">
 						<resource blockname="gravelPlusIron" cluster="1" prob="0.071" rwgGenerationType="all" />
 					</layer>
@@ -250,7 +250,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<subbiome prob="0.1551">
 				<!-- Ore Sub Biome: leadOre -->
 				<layers>
-					<layer depth="12" blockname="snow" />
+					<layer depth="12" blockname="snowFill" />
 					<layer depth="4" blockname="snow">
 						<resource blockname="gravelPlusLead" cluster="1" prob="0.071" rwgGenerationType="all" />
 					</layer>
@@ -274,7 +274,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<subbiome prob="0.1551">
 				<!-- Ore Sub Biome: coalOre -->
 				<layers>
-					<layer depth="12" blockname="snow" />
+					<layer depth="12" blockname="snowFill" />
 					<layer depth="4" blockname="snow" />
 					<resource blockname="gravelPlusCoal" cluster="1" prob="0.071" rwgGenerationType="all" />
 					<layer depth="3" blockname="dirt">
@@ -297,7 +297,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<subbiome prob="0.1551">
 				<!-- Ore Sub Biome: potassiumNitrate -->
 				<layers>
-					<layer depth="12" blockname="snow" />
+					<layer depth="12" blockname="snowFill" />
 					<layer depth="4" blockname="snow" />
 					<resource blockname="gravelPlusPotassium" cluster="1" prob="0.071" rwgGenerationType="all" />
 					<layer depth="3" blockname="dirt">
@@ -319,7 +319,7 @@ If you do not declare them, the decorations of the main biome are used.
 			</subbiome>
 			<!-- Block layers: Snow, Local ore: potassiumNitrate -->
 			<layers>
-				<layer depth="12" blockname="snow" />
+				<layer depth="12" blockname="snowFill" />
 				<layer filluptorg="60" blockname="water" />
 				<layer depth="4" blockname="snow">
 					<resource blockname="gravelPlusIron" cluster="1" prob="0.071" rwgGenerationType="all" />

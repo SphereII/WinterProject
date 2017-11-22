@@ -16519,6 +16519,7 @@ kind of free
 				<property name="Texture" value="285"/> -->
 	</block>
 	<block id="85" name="snowFill">
+		<property name="Class" value="SnowFill, Mods" />
 		<property name="Material" value="snow" />
 		<property name="Shape" value="Terrain" />
 		<property name="Mesh" value="terrain" />
@@ -16531,16 +16532,15 @@ kind of free
 		<property class="RepairItems">
 			<property name="snowBall" value="10" />
 		</property>
-		<drop event="Harvest" name="snowBall" count="10" tool_category="harvestingTools" />
+		<drop event="Harvest" name="snowFill" count="10" tool_category="harvestingTools" />
 		<drop event="Destroy" count="0" />
-		<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1" />
+		<drop event="Fall" name="snowFill" count="1" prob="0.25" stick_chance="1" />
 		<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
 		<property name="EconomicValue" value="5" />
 		<property name="EconomicBundleSize" value="1" />
 		<property name="SellableToTrader" value="false" />
-		<property name="Class" value="SnowFill, Mods" />
 		<property name="LightOpacity" value="0" />
-		<property name="LightLevelStay" value="10" />
+		<property name="LightLevelStay" value="13" />
 	</block>
 
 
