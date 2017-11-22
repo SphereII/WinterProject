@@ -19,6 +19,8 @@ public class BlockSnowFill : BlockPlant
     // default LightLevelStay value
     public new int lightLevelStay= 10;
 
+    public static System.Random random = new System.Random();
+
     public override void Init()
     {
         base.Init();
@@ -32,9 +34,20 @@ public class BlockSnowFill : BlockPlant
     // Token: 0x0600178A RID: 6026 RVA: 0x000AA3E0 File Offset: 0x000A85E0
     public override bool CanPlantStay(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue)
     {
-
         // Do a simple check to see if the current block light value is correct or not
-        return ((_world.GetBlockLightValue(_clrIdx, _blockPos) >= this.lightLevelStay));
+            bool blCanStay = ((_world.GetBlockLightValue(_clrIdx, _blockPos) >= this.lightLevelStay));
+            if ( blCanStay )
+            {
+                Debug.Log("This plant can stay: Converting to Snow.");
+                BlockValue newBlock = Block.GetBlockValue("snow");
+                _world.SetBlockRPC(_clrIdx, _blockPos, newBlock);
+            }
+            else
+            {
+                Debug.Log("This plant cannot stay!");
+            }
+       
+        return true;
 
     }
 
