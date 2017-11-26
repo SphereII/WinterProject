@@ -19,6 +19,11 @@ public class WinterMod : IPatcherMod
         return true;
     }
 
+    private void FixWorldBlockTicker( ModuleDefinition module )
+    {
+
+    }
+
  
     // Set the filter on the search to be 2 or 3 characters
     private void AllowSnowFilledAreas( ModuleDefinition module )

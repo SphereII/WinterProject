@@ -1,54 +1,65 @@
 ﻿using System;
-using UnityEngine;
 
+// Token: 0x02000003 RID: 3
 public class BlockSnowFill : BlockPlant
 {
-    // Stores when to do the next light check and what the current light level is
-    private float nextCheck = 1;
-    byte lightLevel;
-
-    // Globa value for the light threshold in which zombies run in the dark
-    public static byte LightThreshold = 10;
-
-    // Frequency of check to determine the light level.
-    public static float CheckDelay = 1f;
-
-    bool blCanStay = false;
-
-    bool blFirstCheck = true; 
-    // default LightLevelStay value
-    public new int lightLevelStay= 10;
-
-    public static System.Random random = new System.Random();
-
+    // Token: 0x06000040 RID: 64
     public override void Init()
     {
         base.Init();
-
-        // we want to adjust the light level stay through XML, so we don't have to fuss around with code every time.
         if (this.Properties.Values.ContainsKey("LightLevelStay"))
-            int.TryParse( this.Properties.Values["LightLevelStay"], out this.lightLevelStay);
-
+        {
+            int.TryParse(this.Properties.Values["LightLevelStay"], out this.lightLevelStay);
+        }
     }
 
-    // Token: 0x0600178A RID: 6026 RVA: 0x000AA3E0 File Offset: 0x000A85E0
+    // Token: 0x06000041 RID: 65
     public override bool CanPlantStay(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue)
     {
-        // Do a simple check to see if the current block light value is correct or not
-            bool blCanStay = ((_world.GetBlockLightValue(_clrIdx, _blockPos) >= this.lightLevelStay));
-            if ( blCanStay )
-            {
-                Debug.Log("This plant can stay: Converting to Snow.");
-                BlockValue newBlock = Block.GetBlockValue("snow");
-                _world.SetBlockRPC(_clrIdx, _blockPos, newBlock);
-            }
-            else
-            {
-                Debug.Log("This plant cannot stay!");
-            }
-       
-        return true;
-
+        return _world.GetBlockLightValue(_clrIdx, _blockPos) >= this.lightLevelStay;
     }
 
+    // Token: 0x06000044 RID: 68
+    public override bool CheckPlantAlive(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue)
+    {
+        this.Counter++;
+        if (GameManager.Instance.IsEditMode())
+        {
+            return true;
+        }
+        if (!this.CanPlantStay(_world, _clrIdx, _blockPos, _blockValue))
+        {
+            _world.SetBlockRPC(_clrIdx, _blockPos, BlockValue.Air);
+            return false;
+        }
+
+        return true;
+    }
+
+    // Token: 0x04000017 RID: 23
+    private float nextCheck = 1f;
+
+    // Token: 0x04000018 RID: 24
+    private byte lightLevel;
+
+    // Token: 0x04000019 RID: 25
+    public static byte LightThreshold = 10;
+
+    // Token: 0x0400001A RID: 26
+    public static float CheckDelay = 1f;
+
+    // Token: 0x0400001B RID: 27
+    private bool blCanStay;
+
+    // Token: 0x0400001C RID: 28
+    private bool blFirstCheck = true;
+
+    // Token: 0x0400001D RID: 29
+    public new int lightLevelStay = 10;
+
+    // Token: 0x0400001E RID: 30
+    public int MaxChecks = 10;
+
+    // Token: 0x0400001F RID: 31
+    public int Counter;
 }
