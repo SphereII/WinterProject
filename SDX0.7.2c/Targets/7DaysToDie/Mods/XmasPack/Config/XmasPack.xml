@@ -1,7 +1,21 @@
 <configs>
+
+	<!-- Reset the block IDs for the blocks. We'll replace them with our new choices -->
+	<config name="blocks">	
+			
+		<!-- Wood table to be replaced with Christmas tree -->
+		<set xpath="/blocks/block[@id='1416']/@id">*</set>
+		
+		<!-- OldChair - to be replaced with christmas gifts -->
+		<set xpath="/blocks/block[@id='312']/@id">*</set>
+		
+		<!-- Trash Can with Xmas Gift -->
+		<set xpath="/blocks/block[@id='335']/@id">*</set>
+	</config>
+		<!-- Closing the blocks and reopening, so that SDX will see the new wild cards -->
 	<config name="blocks">	
 		<append xpath="/blocks">	
-			<block id="" name="xmasGift">
+			<block id="335" name="xmasGift">
 				<property name="Class" value="Loot" />
 				<property name="LootList" value="8" />
 				<property name="CustomIcon" value="xmasGift" />
@@ -15,7 +29,9 @@
 				<drop event="Fall" name="paper" count="0" prob="1" stick_chance="1" />
 				<drop event="Fall" name="paper" count="1" prob=".75" stick_chance="1" />
 			</block>
-			<block id="" name="xmasGifts">
+			
+			<!-- This will replace the oldChair -->
+			<block id="312" name="xmasGifts">
 				<property name="Class" value="Loot" />
 				<property name="LootList" value="8" />
 				<property name="CustomIcon" value="xmasGifts" />
@@ -30,7 +46,8 @@
 				<drop event="Fall" name="paper" count="0" prob="1" stick_chance="1" />
 				<drop event="Fall" name="paper" count="5" prob=".75" stick_chance="1" />
 			</block>
-			<block id="" name="xmasTree">
+			<!-- This will replace the woodTable -->
+			<block id="1416" name="xmasTree">
 				<property name="CustomIcon" value="xmasTree" />
 				<property name="Material" value="treeWoodSmall" />
 				<property name="Shape" value="ModelEntity" />

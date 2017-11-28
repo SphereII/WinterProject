@@ -23,12 +23,13 @@
 
 -->
 <quests>
-	<!-- Basic Survival 1 - Craft a Wooden Club /> -->
-	<quest id="quest_BasicSurvival1" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival5" subtitle_key="quest_BasicSurvival5_subtitle" description_key="quest_BasicSurvival5_description" icon="ui_game_symbol_club" category_key="quest" difficulty="veryeasy" offer_key="quest_BasicSurvival_offer">
+	<!-- Basic Survival 1 - Craft a Bedroll /> -->
+	<quest id="quest_BasicSurvival1" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival1" subtitle_key="quest_BasicSurvival1_subtitle" description_key="quest_BasicSurvival1_description" icon="ui_game_symbol_map_bed" category_key="quest" difficulty="veryeasy" offer_key="quest_BasicSurvival_offer">
 		<action type="ShowTip" value="tutorialTipQuest02" />
 		<action type="TrackQuest" />
-		<objective type="FetchKeep" id="wood" value="6" />
-		<objective type="Craft" id="clubWood" value="1" />
+		<objective type="FetchKeep" id="yuccaFibers" value="20" />
+		<objective type="Craft" id="bedroll" value="1" />
+		<objective type="BlockPlace" id="bedroll" value="1" />
 		<reward type="Quest" id="quest_BasicSurvival2" />
 	</quest>
 	<!-- Basic Survival 2 - Craft a Stone Axe /> -->
@@ -39,58 +40,54 @@
 		<objective type="Craft" id="stoneAxe" value="1" />
 		<reward type="Quest" id="quest_BasicSurvival3" />
 	</quest>
-	<!-- Basic Survival 3 - Craft Bow & Arrows /> -->
-	<quest id="quest_BasicSurvival3" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival6" subtitle_key="quest_BasicSurvival6_subtitle" description_key="quest_BasicSurvival6_description" icon="ui_game_symbol_archery" category_key="quest" difficulty="veryeasy">
-		<objective type="FetchKeep" id="wood" value="10" />
-		<objective type="FetchKeep" id="yuccaFibers" value="3" />
-		<objective type="FetchKeep" id="feather" value="2" />
-		<objective type="FetchKeep" id="rockSmall" value="2" />
-		<objective type="Craft" id="woodenBow" value="1" />
-		<objective type="Craft" id="arrow" value="2" />
-		<reward type="Quest" id="quest_BasicSurvival4" />
-	</quest>
-	<!-- Basic Survival 4 - Start a Base /> -->
-	<quest id="quest_BasicSurvival4" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival7" subtitle_key="quest_BasicSurvival7_subtitle" description_key="quest_BasicSurvival7_description" icon="ui_game_symbol_map_house" category_key="quest" difficulty="veryeasy">
-		<objective type="FetchKeep" id="wood" value="18" />
-		<objective type="Craft" id="woodFrameBlock" value="3" />
-		<objective type="BlockPlace" id="woodFrameBlock" value="3" />
-		<objective type="BlockUpgrade" id="woodFrameBlock" value="3" />
-		<reward type="Quest" id="quest_BasicSurvival5" />
-	</quest>
-	<!-- Basic Survival 5 - Craft a Bedroll /> -->
-	<quest id="quest_BasicSurvival5" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival1" subtitle_key="quest_BasicSurvival1_subtitle" description_key="quest_BasicSurvival1_description" icon="ui_game_symbol_map_bed" category_key="quest" difficulty="veryeasy">
-		<objective type="FetchKeep" id="cottonPlant" value="10" />
-		<objective type="FetchKeep" id="cloth" value="5" />
-		<objective type="Craft" id="bedroll" value="1" />
-		<objective type="BlockPlace" id="bedroll" value="1" />
-		<reward type="Quest" id="quest_BasicSurvival6" />
-	</quest>
-	<!-- Basic Survival 6 - Build a Campfire /> -->
-	<quest id="quest_BasicSurvival6" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival8" subtitle_key="quest_BasicSurvival8_subtitle" description_key="quest_BasicSurvival8_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="veryeasy">
-		<objective type="FetchKeep" id="rockSmall" value="8" />
-		<!-- can't do 'fetch candle OR torch', so go with the more common one. -->
-		<objective type="FetchKeep" id="torch" value="1" />
-		<objective type="Craft" id="campfire" value="1" />
-		<objective type="BlockPlace" id="campfire" value="1" />
-		<reward type="Quest" id="quest_BasicSurvival7" />
-	</quest>
-	<!-- Basic Survival 7 - Craft Plant Fiber Clothing /> -->
-	<quest id="quest_BasicSurvival7" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival3" subtitle_key="quest_BasicSurvival3_subtitle" description_key="quest_BasicSurvival3_description" icon="ui_game_symbol_tailoring" category_key="quest" difficulty="veryeasy">
+	<!-- Basic Survival 3 - Craft Plant Fiber Clothing /> -->
+	<quest id="quest_BasicSurvival3" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival3" subtitle_key="quest_BasicSurvival3_subtitle" description_key="quest_BasicSurvival3_description" icon="ui_game_symbol_tailoring" category_key="quest" difficulty="veryeasy">
 		<objective type="FetchKeep" id="yuccaFibers" value="35" />
 		<objective type="Craft" id="plantFiberPants" value="1" />
 		<objective type="Craft" id="plantFiberShirt" value="1" />
 		<objective type="Craft" id="plantFiberHood" value="1" />
 		<objective type="Craft" id="plantFiberShoes" value="1" />
 		<objective type="Craft" id="plantFiberGloves" value="1" />
-		<reward type="Quest" id="quest_BasicSurvival8" />
+		<reward type="Quest" id="quest_BasicSurvival4" />
 	</quest>
-	<!-- Basic Survival 8 - Wear Plant Fiber Clothing /> -->
-	<quest id="quest_BasicSurvival8" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival4" subtitle_key="quest_BasicSurvival4_subtitle" description_key="quest_BasicSurvival4_description" icon="ui_game_symbol_shirt" category_key="quest" difficulty="veryeasy">
+	<!-- Basic Survival 4 - Wear Plant Fiber Clothing /> -->
+	<quest id="quest_BasicSurvival4" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival4" subtitle_key="quest_BasicSurvival4_subtitle" description_key="quest_BasicSurvival4_description" icon="ui_game_symbol_shirt" category_key="quest" difficulty="veryeasy">
 		<objective type="Wear" id="plantFiberPants" />
 		<objective type="Wear" id="plantFiberShirt" />
 		<objective type="Wear" id="plantFiberHood" />
 		<objective type="Wear" id="plantFiberShoes" />
 		<objective type="Wear" id="plantFiberGloves" />
+		<reward type="Quest" id="quest_BasicSurvival5" />
+	</quest>
+	<!-- Basic Survival 5 - Craft a Wooden Club /> -->
+	<quest id="quest_BasicSurvival5" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival5" subtitle_key="quest_BasicSurvival5_subtitle" description_key="quest_BasicSurvival5_description" icon="ui_game_symbol_club" category_key="quest" difficulty="veryeasy">
+		<objective type="FetchKeep" id="wood" value="6" />
+		<objective type="Craft" id="clubWood" value="1" />
+		<reward type="Quest" id="quest_BasicSurvival6" />
+	</quest>
+	<!-- Basic Survival 6 - Craft Bow & Arrows /> -->
+	<quest id="quest_BasicSurvival6" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival6" subtitle_key="quest_BasicSurvival6_subtitle" description_key="quest_BasicSurvival6_description" icon="ui_game_symbol_archery" category_key="quest" difficulty="veryeasy">
+		<objective type="FetchKeep" id="wood" value="10" />
+		<objective type="FetchKeep" id="yuccaFibers" value="3" />
+		<objective type="FetchKeep" id="feather" value="2" />
+		<objective type="FetchKeep" id="rockSmall" value="2" />
+		<objective type="Craft" id="woodenBow" value="1" />
+		<objective type="Craft" id="arrow" value="2" />
+		<reward type="Quest" id="quest_BasicSurvival7" />
+	</quest>
+	<!-- Basic Survival 7 - Start a Base /> -->
+	<quest id="quest_BasicSurvival7" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival7" subtitle_key="quest_BasicSurvival7_subtitle" description_key="quest_BasicSurvival7_description" icon="ui_game_symbol_map_house" category_key="quest" difficulty="veryeasy">
+		<objective type="FetchKeep" id="wood" value="18" />
+		<objective type="Craft" id="woodFrameBlock" value="3" />
+		<objective type="BlockPlace" id="woodFrameBlock" value="3" />
+		<objective type="BlockUpgrade" id="woodFrameBlock" value="3" />
+		<reward type="Quest" id="quest_BasicSurvival8" />
+	</quest>
+	<!-- Basic Survival 8 - Build a Campfire /> -->
+	<quest id="quest_BasicSurvival8" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival8" subtitle_key="quest_BasicSurvival8_subtitle" description_key="quest_BasicSurvival8_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="veryeasy">
+		<objective type="FetchKeep" id="rockSmall" value="8" />
+		<objective type="Craft" id="campfire" value="1" />
+		<objective type="BlockPlace" id="campfire" value="1" />
 		<reward type="SkillPoints" value="5" />
 		<reward type="ShowTip" value="skillPointTip" stage="aftercomplete" />
 		<reward type="Quest" id="quest_whiteRiverCitizen1" stage="aftercomplete" />
@@ -182,7 +179,7 @@
 		<reward type="SkillPoints" value="1" optional="true" />
 	</quest>
 	<quest id="challenge_killthewabbit" name_key="challenge_killthewabbit" subtitle_key="challenge_killthewabbit_subtitle" description_key="challenge_killthewabbit_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_killthewabbit_offer" difficulty="medium">
-		<objective type="AnimalKill" id="animalRabbit" value="3" />
+		<objective type="AnimalKill" id="animalRabbit" value="5" />
 		<requirement type="Group" id="requirementGroupShotgun" value="OR">
 			<requirement type="Holding" id="gunSawedOffPumpShotgun" />
 			<requirement type="Holding" id="gunPumpShotgun" />
@@ -190,20 +187,20 @@
 		<reward type="SkillPoints" value="2" />
 	</quest>
 	<quest id="challenge_nailsomechicks" name_key="challenge_nailsomechicks" subtitle_key="challenge_nailsomechicks_subtitle" description_key="challenge_nailsomechicks_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_nailsomechicks_offer" difficulty="medium">
-		<objective type="AnimalKill" id="animalChicken" value="3" />
+		<objective type="AnimalKill" id="animalChicken" value="5" />
 		<requirement type="Holding" id="nailgun" />
 		<reward type="SkillPoints" value="2" />
 	</quest>
 	<quest id="challenge_thatlldopig" name_key="challenge_thatlldopig" subtitle_key="challenge_thatlldopig_subtitle" description_key="challenge_thatlldopig_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_thatlldopig_offer" difficulty="easy">
-		<objective type="AnimalKill" id="animalBoar" value="3" />
+		<objective type="AnimalKill" id="animalBoar" value="5" />
 		<reward type="SkillPoints" value="2" />
 	</quest>
 	<quest id="challenge_stagparty" name_key="challenge_stagparty" subtitle_key="challenge_stagparty_subtitle" description_key="challenge_stagparty_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_stagparty_offer" difficulty="easy">
-		<objective type="AnimalKill" id="animalStag" value="3" />
+		<objective type="AnimalKill" id="animalStag" value="5" />
 		<reward type="SkillPoints" value="2" />
 	</quest>
 	<quest id="challenge_dontfeedthebears" name_key="challenge_dontfeedthebears" subtitle_key="challenge_dontfeedthebears_subtitle" description_key="challenge_dontfeedthebears_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_dontfeedthebears_offer" difficulty="hard">
-		<objective type="AnimalKill" id="animalBear" value="2" />
+		<objective type="AnimalKill" id="animalBear" value="3" />
 		<reward type="SkillPoints" value="2" />
 	</quest>
 	<quest id="challenge_buythefarm" name_key="challenge_buythefarm" subtitle_key="challenge_buythefarm_subtitle" description_key="challenge_buythefarm_offer" icon="ui_game_symbol_knife" repeatable="true" category_key="challenge" offer_key="challenge_buythefarm_offer" difficulty="medium">
