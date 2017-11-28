@@ -82,6 +82,7 @@
     <Compile Include="Mods\CraftingLag\PatchScripts\CraftingLagFixes.cs" />
     <Compile Include="Mods\WinterMod\PatchScripts\WinterMod.cs" />
     <Compile Include="Mods\WinterMod\Scripts\SnowFillBlock.cs" />
+    <Compile Include="Mods\WinterMod\Scripts\WorldBlockTicker.cs" />
     <Compile Include="Mods\ZombieTransmogrifier\PatchScripts\EntityAlive.cs" />
     <Compile Include="Mods\ZombieTransmogrifier\PatchScripts\PatcherHalDll.cs" />
     <Compile Include="Mods\ZombieTransmogrifier\Scripts\EntityZombieCopSDX.cs" />

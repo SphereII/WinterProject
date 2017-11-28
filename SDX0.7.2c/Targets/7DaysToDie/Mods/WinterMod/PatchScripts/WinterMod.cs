@@ -14,53 +14,41 @@ public class WinterMod : IPatcherMod
     public bool Patch(ModuleDefinition module)
     {
         Log("=== Winter Mod Patcher ===");
-        //AllowSnowFilledAreas(module);
-
+      
         return true;
     }
 
-    private void FixWorldBlockTicker( ModuleDefinition module )
+    private void FixWorldBlockTicker(ModuleDefinition gameModule, ModuleDefinition modModule)
     {
+        // Set the world to be public, so we can access it from our inherited class
+        var gm = gameModule.Types.First(d => d.Name == "WorldBlockTicker");
+        var field = gm.Fields.First(d => d.FieldType.Name == "World");
+        SetFieldToPublic(field);
 
-    }
+        Log(" Finding WorldBlockTicker:NZ");
+        // Find the code for the Chunk method ( NZ in 16.4)
+        var myClass = gameModule.Types.First(d => d.Name == "WorldBlockTicker");
+        var myMethod = myClass.Methods.First(d => d.Name == "NZ");
 
- 
-    // Set the filter on the search to be 2 or 3 characters
-    private void AllowSnowFilledAreas( ModuleDefinition module )
-    {
-        Log("Searching for Prefab Class");
-        var myClass = module.Types.First(d => d.Name == "Prefab");
-        Log("Searching for PrefabChunk Sub Class");
-       // var myNestedClass = myClass.NestedTypes.First(d => d.Name == "Prefab");
-        Log("Searching for GetBlock Method");
-        var myMethod = myClass.Methods.First(d => d.Name == "Get");
+        // Now we need to grab the reference to our mods class
 
-        Log("Searching for Block Class");
-        var myBlock = module.Types.First(d => d.Name == "Block");
+        Log(" Finding NewWroldBlockTicker: BlockTickerPatch");
+        var myModule = modModule.Types.First(d => d.Name == "NewWorldBlockTicker");
+        var myPatch = gameModule.Import(myModule.Methods.First(d => d.Name == "BlockTickerPatch"));
 
-        Log("Searching for GetBlock Method of the Block Class");
-        var myGetBlock = myBlock.Methods.First(d => d.Name == "GetBlockValue");
 
-        var instructions = myMethod.Body.Instructions;
+        Log(" Updating " + myMethod.FullName.ToString());
+        Log("My Method: " + myPatch.FullName.ToString());
         var pro = myMethod.Body.GetILProcessor();
-        foreach (var i in instructions.Reverse())
-        {
-            // We want to replace the Air block and point to our snowFill block, which will have a custom class
-            // and allow us to fill up spaces with a block, instead of air.
-            String strOperand = i.Operand.ToString();
-            if (i.OpCode == OpCodes.Ldsfld )
-            {
-                i.OpCode = OpCodes.Ldstr;
-                i.Operand = "snowFill";
-                pro.InsertAfter(i, Instruction.Create(OpCodes.Call, myGetBlock));
-               
-            }
-
-        }
-
-  
+        //pro.Body.Instructions.Clear();
+        //pro.Body.Instructions.Add(Instruction.Create(OpCodes.Ldarg_0));
+        //pro.Body.Instructions.Add(Instruction.Create(OpCodes.Ldarg_1));
+        //pro.Body.Instructions.Add(Instruction.Create(OpCodes.Call, myPatch));
+        //pro.Body.Instructions.Add(Instruction.Create(OpCodes.Ret));
 
     }
+
+
 
 
     // Called after the patching process and after scripts are compiled.
@@ -68,6 +56,8 @@ public class WinterMod : IPatcherMod
     // Return true if successful
     public bool Link(ModuleDefinition gameModule, ModuleDefinition modModule)
     {
+        Log("Linking...");
+       // FixWorldBlockTicker(gameModule, modModule);
         return true;
     }
 

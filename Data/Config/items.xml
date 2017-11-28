@@ -195,7 +195,7 @@ Mesh files no longer used:
 		<property name="Class" value="ItemClassTorch" />
 		<property name="Meshfile" value="Items/Tools/torchPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/torch_droppedPrefab" />
-		<property name="Material" value="wood" />
+		<property name="Material" value="organic" />
 		<property name="HoldType" value="12" />
 		<property name="Stacknumber" value="50" />
 		<!-- STK torch -->
@@ -214,7 +214,7 @@ Mesh files no longer used:
 			<property name="Sound_start" value="torch_swoosh" />
 			<property name="Stamina_usage" value="8" />
 			<property name="Buff" value="burning" />
-			<property name="Buff_chance" value="0.25" />
+			<property name="Buff_chance" value="0.1" />
 			<property name="DamageBonus.head" value="2" />
 			<property name="DamageBonus.glass" value="1" />
 			<property name="ToolCategory.Butcher" value="0" param1="20" />
@@ -234,9 +234,9 @@ Mesh files no longer used:
 	<item id="17" name="flashlight02">
 		<property name="Class" value="ItemClassToggle" />
 		<property name="Meshfile" value="Items/Tools/flashlight02Prefab" />
-		<property name="Material" value="MelectricParts" />
+		<property name="Material" value="metal" />
 		<property name="Weight" value="5" />
-		<property name="RepairTools" value="electricParts" />
+		<property name="RepairTools" value="repairKit" />
 		<property name="DegradationBreaksAfter" value="false" />
 		<property name="SoundJammed" value="ItemNeedsRepair" />
 		<property name="EconomicValue" value="600" />
@@ -266,7 +266,7 @@ Mesh files no longer used:
 	</item>
 	<item id="18" name="femur">
 		<property name="Meshfile" value="Items/Crafting/femur" />
-		<property name="Material" value="wood" />
+		<property name="Material" value="organic" />
 		<property name="HoldType" value="2" />
 		<property name="Stacknumber" value="250" />
 		<!-- STK resource -->
@@ -289,7 +289,7 @@ Mesh files no longer used:
 	</item>
 	<item id="19" name="boneShiv">
 		<property name="Meshfile" value="Items/Weapons/Melee/Knives/boneShivPrefab" />
-		<property name="Material" value="wood" />
+		<property name="Material" value="metal" />
 		<property name="EconomicValue" value="34" />
 		<property name="SellableToTrader" value="false" />
 		<property name="HoldType" value="36" />
@@ -325,7 +325,7 @@ Mesh files no longer used:
 	<item id="21" name="huntingKnife">
 		<property name="Meshfile" value="Items/Weapons/Melee/Knives/hunting_knifePrefab" />
 		<property name="Material" value="metal" />
-		<property name="RepairTools" value="repairKit" />
+		<property name="RepairTools" value="forgedIron" />
 		<property name="HoldType" value="36" />
 		<property name="DegradationBreaksAfter" value="false" />
 		<property name="FuelValue" value="12" />
@@ -362,7 +362,7 @@ Mesh files no longer used:
 	<item id="22" name="machete">
 		<property name="Meshfile" value="Items/Weapons/Melee/Knives/machetePrefab" />
 		<property name="Material" value="metal" />
-		<property name="RepairTools" value="repairKit" />
+		<property name="RepairTools" value="forgedSteel" />
 		<property name="HoldType" value="47" />
 		<property name="DegradationBreaksAfter" value="false" />
 		<property name="FuelValue" value="12" />
@@ -378,13 +378,12 @@ Mesh files no longer used:
 			<property name="Sphere" value="0.1" />
 			<property name="Sound_start" value="swoosh" />
 			<property name="Stamina_usage" value="6.51" />
-			<property name="DamageBonus.wood" value="5" />
+			<property name="DamageBonus.wood" value="3" />
 			<property name="DamageBonus.head" value="5" />
 			<property name="DamageBonus.glass" value="1" />
 			<property name="DamageBonus.leaves" value="25" />
 			<property name="DamageBonus.organic" value="3" />
 			<property name="ToolCategory.Butcher" value="1" param1="7" />
-			<property name="ToolCategory.harvestingTools" value="0.75" param1="1" />
 			<property name="Sound_harvesting" value="open_animal" param1="organic" />
 		</property>
 		<property class="Attributes">
@@ -1484,7 +1483,7 @@ Mesh files no longer used:
 	<item id="105" name="stoneAxe">
 		<property name="Meshfile" value="Items/Weapons/Melee/Axe/stone_axePrefab" />
 		<property name="Material" value="stone" />
-		<property name="RepairTools" value="yuccaFibers" />
+		<property name="RepairTools" value="rockSmall" />
 		<property name="HoldType" value="32" />
 		<property name="EconomicValue" value="5" />
 		<property name="EconomicBundleSize" value="1" />
@@ -1678,7 +1677,7 @@ Mesh files no longer used:
 	<item id="117" name="stoneShovel">
 		<property name="Meshfile" value="Items/Tools/stone_shovelPrefab" />
 		<property name="Material" value="stone" />
-		<property name="RepairTools" value="yuccaFibers" />
+		<property name="RepairTools" value="rockSmall" />
 		<property name="HoldType" value="18" />
 		<property name="DegradationBreaksAfter" value="false" />
 		<property name="SoundJammed" value="ItemNeedsRepair" />
@@ -2180,7 +2179,7 @@ Mesh files no longer used:
 	<item id="145" name="woodenBow">
 		<property name="Meshfile" value="Items/Weapons/Ranged/Bows/WoodenBow/WoodenBowPrefab" />
 		<property name="Material" value="wood" />
-		<property name="RepairTools" value="yuccaFibers" />
+		<property name="RepairTools" value="wood" />
 		<property name="HoldType" value="27" />
 		<!-- "Sway Off" is hardcoded for hold types 26, 27, 53 -->
 		<property name="FuelValue" value="36" />
@@ -2241,7 +2240,7 @@ Mesh files no longer used:
 	<item id="146" name="crossbow">
 		<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowPrefab" />
 		<property name="Material" value="metal" />
-		<property name="RepairTools" value="leather" />
+		<property name="RepairTools" value="forgedIron" />
 		<property name="HoldType" value="26" />
 		<property name="FuelValue" value="70" />
 		<property name="EconomicValue" value="220" />
@@ -2455,7 +2454,7 @@ Mesh files no longer used:
 	<item id="160" name="blunderbussAmmo">
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-		<property name="Material" value="stone" />
+		<property name="Material" value="paper" />
 		<property name="HoldType" value="45" />
 		<property name="Stacknumber" value="128" />
 		<!-- STK ammo -->
@@ -2483,7 +2482,7 @@ Mesh files no longer used:
 		<property name="DropMeshfile" value="Items/Misc/arrow_dropped" />
 		<property name="HandMeshfile" value="Items/Misc/arrow_hand" />
 		<property name="HoldType" value="32" />
-		<property name="Material" value="stone" />
+		<property name="Material" value="wood" />
 		<property name="Stacknumber" value="250" />
 		<!-- STK ammo -->
 		<property name="FuelValue" value="8" />
@@ -3449,7 +3448,7 @@ Mesh files no longer used:
 		<property name="VehicleSlotType" value="lock" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-		<property name="Material" value="brass" />
+		<property name="Material" value="metal" />
 		<property name="RepairTools" value="repairKit" />
 		<property name="HoldType" value="45" />
 		<property name="Weight" value="5" />
@@ -3484,8 +3483,8 @@ Mesh files no longer used:
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="CustomIcon" value="shoppingBasketEmpty" />
-		<property name="Material" value="Mplastics" />
-		<property name="RepairTools" value="scrapPlastics" />
+		<property name="Material" value="metal" />
+		<property name="RepairTools" value="repairKit" />
 		<property name="HoldType" value="45" />
 		<property name="Weight" value="10" />
 		<property name="EconomicValue" value="250" />
@@ -3597,7 +3596,7 @@ Mesh files no longer used:
 	<!-- * * * * * * * * * * armor tiers * * * * * * * * * * -->
 	<item id="350" name="plantFiberPants">
 		<!-- armorMasterPlantFiberClothes -->
-		<property name="Insulation" value="7" />
+		<property name="Insulation" value="2" />
 		<property name="Encumbrance" value="0.01" />
 		<property name="Material" value="plants" />
 		<property name="RepairTools" value="yuccaFibers" />
@@ -3646,7 +3645,6 @@ Mesh files no longer used:
 	<item id="352" name="plantFiberHood">
 		<!-- plantFiberClothes -->
 		<property name="Extends" value="plantFiberPants" />
-		<property name="Insulation" value="4" />
 		<property name="Waterproof" value="0.05" />
 		<property name="FuelValue" value="3" />
 		<property name="EquipSlot" value="Head" />
@@ -3662,7 +3660,6 @@ Mesh files no longer used:
 	<item id="353" name="plantFiberShoes">
 		<!-- plantFiberClothes -->
 		<property name="Extends" value="plantFiberPants" />
-		<property name="Insulation" value="3" />
 		<property name="FuelValue" value="3" />
 		<property name="EquipSlot" value="Feet" />
 		<property class="UMA">
@@ -3675,7 +3672,6 @@ Mesh files no longer used:
 	<item id="354" name="plantFiberGloves">
 		<!-- plantFiberClothes -->
 		<property name="Extends" value="plantFiberPants" />
-		<property name="Insulation" value="3" />
 		<property name="FuelValue" value="3" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
@@ -3687,7 +3683,7 @@ Mesh files no longer used:
 	</item>
 	<item id="357" name="clothBoots">
 		<!-- armorMasterClothArmor -->
-		<property name="Insulation" value="5" />
+		<property name="Insulation" value="0" />
 		<property name="Encumbrance" value="0.01" />
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -3721,7 +3717,6 @@ Mesh files no longer used:
 	<item id="358" name="clothPants">
 		<!-- clothArmor -->
 		<property name="Extends" value="clothBoots" />
-		<property name="Insulation" value="3" />
 		<property name="FuelValue" value="8" />
 		<property name="EconomicValue" value="48" />
 		<property name="EquipSlot" value="Legs" />
@@ -3735,7 +3730,6 @@ Mesh files no longer used:
 	<item id="359" name="clothJacket">
 		<!-- clothArmor -->
 		<property name="Extends" value="clothBoots" />
-		<property name="Insulation" value="3" />
 		<property name="FuelValue" value="5" />
 		<property name="EconomicValue" value="48" />
 		<property name="EquipSlot" value="Chest" />
@@ -3749,7 +3743,6 @@ Mesh files no longer used:
 	<item id="360" name="clothHat">
 		<!-- clothArmor -->
 		<property name="Extends" value="clothBoots" />
-		<property name="Insulation" value="5" />
 		<property name="FuelValue" value="3" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
@@ -3764,7 +3757,6 @@ Mesh files no longer used:
 	<item id="361" name="clothGloves">
 		<!-- clothArmor -->
 		<property name="Extends" value="clothBoots" />
-		<property name="Insulation" value="3" />
 		<property name="FuelValue" value="1" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
@@ -3776,10 +3768,10 @@ Mesh files no longer used:
 	</item>
 	<item id="364" name="animalHideBoots">
 		<!-- armorMasterHideArmor -->
-		<property name="Insulation" value="6" />
+		<property name="Insulation" value="4" />
 		<property name="Encumbrance" value="0.02" />
 		<property name="Material" value="leather" />
-		<property name="RepairTools" value="animalHide" />
+		<property name="RepairTools" value="leather" />
 		<property name="DegradationBreaksAfter" value="false" />
 		<property name="FuelValue" value="20" />
 		<property name="EconomicValue" value="120" />
@@ -3810,7 +3802,6 @@ Mesh files no longer used:
 	<item id="365" name="animalHideLegArmor">
 		<!-- hideArmor -->
 		<property name="Extends" value="animalHideBoots" />
-		<property name="Insulation" value="4" />
 		<property name="FuelValue" value="40" />
 		<property name="EconomicValue" value="240" />
 		<property name="EquipSlot" value="Legs" />
@@ -3826,7 +3817,6 @@ Mesh files no longer used:
 	<item id="366" name="animalHideChestArmor">
 		<!-- hideArmor -->
 		<property name="Extends" value="animalHideBoots" />
-		<property name="Insulation" value="4" />
 		<property name="FuelValue" value="40" />
 		<property name="EconomicValue" value="240" />
 		<property name="EquipSlot" value="Chest" />
@@ -3840,7 +3830,6 @@ Mesh files no longer used:
 	<item id="367" name="animalHideHood">
 		<!-- hideArmor -->
 		<property name="Extends" value="animalHideBoots" />
-		<property name="Insulation" value="6" />
 		<property name="FuelValue" value="20" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
@@ -3855,7 +3844,6 @@ Mesh files no longer used:
 	<item id="368" name="animalHideGloves">
 		<!-- hideArmor -->
 		<property name="Extends" value="animalHideBoots" />
-		<property name="Insulation" value="4" />
 		<property name="FuelValue" value="20" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
@@ -3867,7 +3855,7 @@ Mesh files no longer used:
 	</item>
 	<item id="370" name="leatherBoots">
 		<!-- armorMasterLeatherArmor -->
-		<property name="Insulation" value="6" />
+		<property name="Insulation" value="1" />
 		<property name="Encumbrance" value="0.02" />
 		<property name="Material" value="leather" />
 		<property name="RepairTools" value="leather" />
@@ -3901,7 +3889,6 @@ Mesh files no longer used:
 	<item id="371" name="leatherGloves">
 		<!-- leatherArmor -->
 		<property name="Extends" value="leatherBoots" />
-		<property name="Insulation" value="4" />
 		<property name="FuelValue" value="20" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
@@ -3914,7 +3901,6 @@ Mesh files no longer used:
 	<item id="372" name="leatherPants">
 		<!-- leatherArmor -->
 		<property name="Extends" value="leatherBoots" />
-		<property name="Insulation" value="4" />
 		<property name="FuelValue" value="40" />
 		<property name="EconomicValue" value="264" />
 		<property name="EquipSlot" value="Legs" />
@@ -3928,7 +3914,6 @@ Mesh files no longer used:
 	<item id="373" name="leatherJacket">
 		<!-- leatherArmor -->
 		<property name="Extends" value="leatherBoots" />
-		<property name="Insulation" value="4" />
 		<property name="FuelValue" value="40" />
 		<property name="EconomicValue" value="264" />
 		<property name="EquipSlot" value="Chest" />
@@ -3942,7 +3927,6 @@ Mesh files no longer used:
 	<item id="374" name="leatherHood">
 		<!-- leatherArmor -->
 		<property name="Extends" value="leatherBoots" />
-		<property name="Insulation" value="6" />
 		<property name="FuelValue" value="20" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
@@ -3956,7 +3940,7 @@ Mesh files no longer used:
 	</item>
 	<item id="377" name="scrapBoots">
 		<!-- armorMasterScrapArmor -->
-		<property name="Insulation" value="2" />
+		<property name="Insulation" value="0" />
 		<property name="Encumbrance" value="0.08" />
 		<property name="Material" value="metal" />
 		<property name="RepairTools" value="scrapIron" />
@@ -3990,7 +3974,6 @@ Mesh files no longer used:
 	<item id="378" name="scrapLegArmor">
 		<!-- scrapArmor -->
 		<property name="Extends" value="scrapBoots" />
-		<property name="Insulation" value="1" />
 		<property name="FuelValue" value="8" />
 		<property name="EconomicValue" value="470" />
 		<property name="EquipSlot" value="Legs" />
@@ -4004,7 +3987,6 @@ Mesh files no longer used:
 	<item id="379" name="scrapChestArmor">
 		<!-- scrapArmor -->
 		<property name="Extends" value="scrapBoots" />
-		<property name="Insulation" value="1" />
 		<property name="FuelValue" value="30" />
 		<property name="EconomicValue" value="470" />
 		<property name="EquipSlot" value="Chest" />
@@ -4018,7 +4000,6 @@ Mesh files no longer used:
 	<item id="380" name="scrapHelmet">
 		<!-- scrapArmor -->
 		<property name="Extends" value="scrapBoots" />
-		<property name="Insulation" value="2" />
 		<property name="FuelValue" value="8" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
@@ -4034,7 +4015,6 @@ Mesh files no longer used:
 	<item id="381" name="scrapGloves">
 		<!-- scrapArmor -->
 		<property name="Extends" value="scrapBoots" />
-		<property name="Insulation" value="1" />
 		<property name="FuelValue" value="8" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
@@ -4046,7 +4026,7 @@ Mesh files no longer used:
 	</item>
 	<item id="383" name="ironBoots">
 		<!-- armorMasterIronArmor -->
-		<property name="Insulation" value="3" />
+		<property name="Insulation" value="0" />
 		<property name="Encumbrance" value="0.1" />
 		<property name="Material" value="metal" />
 		<property name="RepairTools" value="forgedIron" />
@@ -4080,7 +4060,6 @@ Mesh files no longer used:
 	<item id="384" name="ironLegArmor">
 		<!-- ironArmor -->
 		<property name="Extends" value="ironBoots" />
-		<property name="Insulation" value="2" />
 		<property name="FuelValue" value="12" />
 		<property name="EconomicValue" value="770" />
 		<property name="EquipSlot" value="Legs" />
@@ -4094,7 +4073,6 @@ Mesh files no longer used:
 	<item id="385" name="ironChestArmor">
 		<!-- ironArmor -->
 		<property name="Extends" value="ironBoots" />
-		<property name="Insulation" value="2" />
 		<property name="FuelValue" value="12" />
 		<property name="EconomicValue" value="770" />
 		<property name="EquipSlot" value="Chest" />
@@ -4108,7 +4086,6 @@ Mesh files no longer used:
 	<item id="386" name="ironHelmet">
 		<!-- ironArmor -->
 		<property name="Extends" value="ironBoots" />
-		<property name="Insulation" value="3" />
 		<property name="FuelValue" value="12" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
@@ -4131,7 +4108,6 @@ Mesh files no longer used:
 	<item id="387" name="ironGloves">
 		<!-- ironArmor -->
 		<property name="Extends" value="ironBoots" />
-		<property name="Insulation" value="2" />
 		<property name="FuelValue" value="12" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
@@ -4143,7 +4119,7 @@ Mesh files no longer used:
 	</item>
 	<item id="390" name="militaryGloves">
 		<!-- armorMastermilitaryArmor -->
-		<property name="Insulation" value="2" />
+		<property name="Insulation" value="0" />
 		<property name="Encumbrance" value="0.05" />
 		<property name="Material" value="MmilitaryFiber" />
 		<property name="RepairTools" value="militaryFiber" />
@@ -4177,7 +4153,6 @@ Mesh files no longer used:
 	<item id="391" name="militaryHelmet">
 		<!-- militaryArmor -->
 		<property name="Extends" value="militaryGloves" />
-		<property name="Insulation" value="2" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
 			<property name="Mesh" value="gear_kevlar_helmet" />
@@ -4190,7 +4165,6 @@ Mesh files no longer used:
 	<item id="392" name="militaryBoots">
 		<!-- militaryArmor -->
 		<property name="Extends" value="militaryGloves" />
-		<property name="Insulation" value="4" />
 		<property name="EquipSlot" value="Feet" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_kevlar_boots" />
@@ -4202,7 +4176,6 @@ Mesh files no longer used:
 	<item id="393" name="militaryLegArmor">
 		<!-- militaryArmor -->
 		<property name="Extends" value="militaryGloves" />
-		<property name="Insulation" value="2" />
 		<property name="Weight" value="10" />
 		<property name="EconomicValue" value="3200" />
 		<property name="EquipSlot" value="Legs" />
@@ -4216,7 +4189,6 @@ Mesh files no longer used:
 	<item id="394" name="militaryVest">
 		<!-- militaryArmor -->
 		<property name="Extends" value="militaryGloves" />
-		<property name="Insulation" value="2" />
 		<property name="Weight" value="10" />
 		<property name="EconomicValue" value="3200" />
 		<property name="EquipSlot" value="Chest" />
@@ -4235,7 +4207,7 @@ Mesh files no longer used:
 		<property name="RepairTools" value="militaryFiber" />
 		<property name="DegradationBreaksAfter" value="false" />
 		<property name="Weight" value="5" />
-		<property name="EconomicValue" value="400" />
+		<property name="EconomicValue" value="1600" />
 		<property name="EquipSlot" value="Feet" />
 		<property name="HoldType" value="45" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
@@ -4243,7 +4215,7 @@ Mesh files no longer used:
 		<property class="Attributes">
 			<property name="ConcussiveProtection" value="0.08,0.2" />
 			<property name="PunctureProtection" value="0.1,0.25" />
-			<property name="FireProtection" value="0.28,0.7" />
+			<property name="FireProtection" value="0.04,0.1" />
 			<property name="RadiationProtection" value="0.32,0.8" />
 			<property name="ElectricalProtection" value="0.06,0.1" />
 			<property name="DegradationMax" value="160,400" />
@@ -4263,9 +4235,8 @@ Mesh files no longer used:
 	<item id="398" name="hazmatPants">
 		<!-- hazMatArmor -->
 		<property name="Extends" value="hazmatBoots" />
-		<property name="Insulation" value="12" />
 		<property name="Weight" value="10" />
-		<property name="EconomicValue" value="800" />
+		<property name="EconomicValue" value="3200" />
 		<property name="EquipSlot" value="Legs" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_hazmat_legs" />
@@ -4279,10 +4250,10 @@ Mesh files no longer used:
 		<!-- hazMatArmor -->
 		<!-- is now a hazMatJacket -->
 		<property name="Extends" value="hazmatBoots" />
-		<property name="Insulation" value="12" />
+		<property name="Insulation" value="10" />
 		<property name="Waterproof" value="0.45" />
 		<property name="Weight" value="10" />
-		<property name="EconomicValue" value="800" />
+		<property name="EconomicValue" value="3200" />
 		<property name="EquipSlot" value="Chest" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_hazmat_chest" />
@@ -4294,7 +4265,6 @@ Mesh files no longer used:
 	<item id="400" name="hazmatGloves">
 		<!-- hazMatArmor -->
 		<property name="Extends" value="hazmatBoots" />
-		<property name="Insulation" value="4" />
 		<property name="EquipSlot" value="Hands" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_hazmat_hands" />
@@ -4306,7 +4276,6 @@ Mesh files no longer used:
 	<item id="401" name="hazmatMask">
 		<!-- hazMatArmor -->
 		<property name="Extends" value="hazmatBoots" />
-		<property name="Insulation" value="7" />
 		<property name="EquipSlot" value="Head" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_hazmat_head" />
@@ -4328,7 +4297,7 @@ Mesh files no longer used:
 	</item>
 	<item id="402" name="heavyBanditGloves">
 		<!-- armorMasterBanditArmor -->
-		<property name="Insulation" value="2" />
+		<property name="Insulation" value="0" />
 		<property name="Encumbrance" value="0.1" />
 		<property name="Material" value="metal" />
 		<property name="RepairTools" value="forgedIron" />
@@ -4363,7 +4332,6 @@ Mesh files no longer used:
 	<item id="403" name="heavyBanditGasmask">
 		<!-- banditArmor -->
 		<property name="Extends" value="heavyBanditGloves" />
-		<property name="Insulation" value="5" />
 		<property name="EquipSlot" value="Face" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_heavy_bandit_gasmask" />
@@ -4379,7 +4347,6 @@ Mesh files no longer used:
 	<item id="404" name="heavyBanditBoots">
 		<!-- banditArmor -->
 		<property name="Extends" value="heavyBanditGloves" />
-		<property name="Insulation" value="4" />
 		<property name="EquipSlot" value="Feet" />
 		<property class="UMA">
 			<property name="Mesh" value="armor_heavy_bandit_feet" />
@@ -4391,7 +4358,6 @@ Mesh files no longer used:
 	<item id="405" name="heavyBanditLegArmor">
 		<!-- banditArmor -->
 		<property name="Extends" value="heavyBanditGloves" />
-		<property name="Insulation" value="2" />
 		<property name="Weight" value="150" />
 		<property name="EconomicValue" value="770" />
 		<property name="EquipSlot" value="Legs" />
@@ -4405,7 +4371,6 @@ Mesh files no longer used:
 	<item id="406" name="heavyBanditChestArmor">
 		<!-- banditArmor -->
 		<property name="Extends" value="heavyBanditGloves" />
-		<property name="Insulation" value="2" />
 		<property name="Weight" value="150" />
 		<property name="EconomicValue" value="770" />
 		<property name="EquipSlot" value="Chest" />
@@ -4429,7 +4394,7 @@ Mesh files no longer used:
 	</item>
 	<!-- * * * * * * * * * * general clothing * * * * * * * * * * -->
 	<item id="450" name="cowboyHat">
-		<property name="Insulation" value="0" />
+		<property name="Insulation" value="-10" />
 		<property name="Waterproof" value="0.15" />
 		<property name="Encumbrance" value="0.01" />
 		<property name="Material" value="leather" />
@@ -4482,7 +4447,7 @@ Mesh files no longer used:
 		<property name="Extends" value="plantFiberPants" param1="DescriptionKey" />
 		<property name="CustomIcon" value="cowboyHat" />
 		<property name="CustomIconTint" value="227,206,164" />
-		<property name="Insulation" value="0" />
+		<property name="Insulation" value="-10" />
 		<property name="Waterproof" value="0.05" />
 		<property name="FuelValue" value="4" />
 		<property name="EquipSlot" value="Head" />
@@ -4497,7 +4462,7 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="453" name="ballCap">
-		<property name="Insulation" value="0" />
+		<property name="Insulation" value="-5" />
 		<property name="Waterproof" value="0.05" />
 		<property name="Meshfile" value="Items/Clothing/Head/PrefabBallcap" />
 		<property name="Material" value="cloth" />
@@ -4534,7 +4499,7 @@ Mesh files no longer used:
 	</item>
 	<item id="456" name="skullCap">
 		<!-- skullCapMaster -->
-		<property name="Insulation" value="5" />
+		<property name="Insulation" value="10" />
 		<property name="Waterproof" value="0.1" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -4611,13 +4576,12 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="464" name="miningHelmet">
-		<property name="Insulation" value="2" />
 		<property name="Waterproof" value="0.15" />
 		<property name="Class" value="ItemClassToggle" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-		<property name="Material" value="Mplastics" />
-		<property name="RepairTools" value="scrapPlastics" />
+		<property name="Material" value="metal" />
+		<property name="RepairTools" value="forgedIron" />
 		<property name="HoldType" value="45" />
 		<property name="Weight" value="60" />
 		<property name="EconomicValue" value="1200" />
@@ -4650,7 +4614,6 @@ Mesh files no longer used:
 		<property name="LightValue" value="0.7" />
 	</item>
 	<item id="465" name="swatHelmet">
-		<property name="Insulation" value="2" />
 		<property name="Waterproof" value="0.15" />
 		<property name="Meshfile" value="Items/Clothing/Head/swatHelmetPrefab" />
 		<property name="Material" value="metal" />
@@ -4682,11 +4645,10 @@ Mesh files no longer used:
 		<property name="RepairExpMultiplier" value="10.8" />
 	</item>
 	<item id="466" name="footballHelmet">
-		<property name="Insulation" value="2" />
 		<property name="Waterproof" value="0.15" />
 		<property name="Meshfile" value="Items/Clothing/Head/fb_helmet" />
-		<property name="Material" value="Mplastics" />
-		<property name="RepairTools" value="scrapPlastics" />
+		<property name="Material" value="metal" />
+		<property name="RepairTools" value="forgedIron" />
 		<property name="HoldType" value="7" />
 		<property name="EquipSlot" value="Head" />
 		<property name="DegradationBreaksAfter" value="false" />
@@ -4728,7 +4690,6 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="469" name="gasMask">
-		<property name="Insulation" value="4" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="Material" value="organic" />
@@ -4756,8 +4717,8 @@ Mesh files no longer used:
 	<item id="471" name="shades">
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-		<property name="Material" value="Mplastics" />
-		<property name="RepairTools" value="scrapPlastics" />
+		<property name="Material" value="metal" />
+		<property name="RepairTools" value="forgedIron" />
 		<property name="HoldType" value="45" />
 		<property name="EquipSlot" value="Eyes" />
 		<property name="DegradationBreaksAfter" value="false" />
@@ -4792,7 +4753,6 @@ Mesh files no longer used:
 	</item>
 	<item id="473" name="goggles">
 		<property name="Extends" value="shades" />
-		<property name="Insulation" value="2" />
 		<property class="UMA">
 			<property name="Mesh" value="gear_goggles" />
 			<property name="Overlay0" value="gear_goggles" />
@@ -4803,7 +4763,7 @@ Mesh files no longer used:
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="Material" value="metal" />
-		<property name="RepairTools" value="electricParts" />
+		<property name="RepairTools" value="repairKit" />
 		<property name="HoldType" value="45" />
 		<property name="EquipSlot" value="Eyes" />
 		<property name="DegradationBreaksAfter" value="false" />
@@ -4852,16 +4812,14 @@ Mesh files no longer used:
 		<property name="DescriptionKey" value="nerdGlassesDesc" />
 	</item>
 	<item id="477" name="cigar">
-		<property name="Insulation" value="3" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-		<property name="Material" value="plants" />
+		<property name="Material" value="cloth" />
 		<property name="HoldType" value="45" />
 		<property name="Stacknumber" value="1" />
 		<property name="FuelValue" value="3" />
 		<property name="EconomicValue" value="50" />
 		<property name="EquipSlot" value="Face" />
-		<property name="Weight" value="5" />
 		<property class="UMA">
 			<property name="Mesh" value="gear_cigar" />
 			<property name="Overlay0" value="gear_cigar" />
@@ -4886,7 +4844,7 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="481" name="animalHidePoncho">
-		<property name="Insulation" value="16" />
+		<property name="Insulation" value="-20" />
 		<property name="Waterproof" value="0.45" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="HoldType" value="45" />
@@ -4921,7 +4879,6 @@ Mesh files no longer used:
 	</item>
 	<item id="482" name="bandana">
 		<!-- bandanaMaster -->
-		<property name="Insulation" value="3" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="Material" value="cloth" />
@@ -4997,7 +4954,7 @@ Mesh files no longer used:
 	</item>
 	<item id="490" name="denimPants">
 		<!-- clothPantsMaster -->
-		<property name="Insulation" value="9" />
+		<property name="Insulation" value="2" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -5058,7 +5015,7 @@ Mesh files no longer used:
 	</item>
 	<item id="494" name="armyPants">
 		<property name="Extends" value="denimPants" />
-		<property name="Insulation" value="10" />
+		<property name="Insulation" value="3" />
 		<property class="UMA">
 			<property name="Mesh" value="clothes_army_pants" />
 			<property name="Overlay0" value="clothes_army_pants" />
@@ -5069,7 +5026,7 @@ Mesh files no longer used:
 	</item>
 	<item id="497" name="tankTopWhite">
 		<!-- sleevelessClothShirtMaster -->
-		<property name="Insulation" value="4" />
+		<property name="Insulation" value="-10" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -5160,7 +5117,7 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="507" name="wornBoots">
-		<property name="Insulation" value="5" />
+		<property name="Insulation" value="4" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="Material" value="cloth" />
@@ -5193,7 +5150,6 @@ Mesh files no longer used:
 	</item>
 	<item id="508" name="runningShoes">
 		<property name="Extends" value="leatherBoots" />
-		<property name="Insulation" value="3" />
 		<property name="Weight" value="25" />
 		<property name="Encumbrance" value="0.02" />
 		<property class="Attributes">
@@ -5207,7 +5163,7 @@ Mesh files no longer used:
 	</item>
 	<item id="509" name="shirt">
 		<!-- longClothShirtMaster -->
-		<property name="Insulation" value="9" />
+		<property name="Insulation" value="2" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -5283,7 +5239,7 @@ Mesh files no longer used:
 	</item>
 	<item id="515" name="armyShirt">
 		<property name="Extends" value="shirt" />
-		<property name="Insulation" value="10" />
+		<property name="Insulation" value="3" />
 		<property class="UMA">
 			<property name="Mesh" value="clothes_army_shirt" />
 			<property name="Overlay0" value="clothes_army_shirt" />
@@ -5292,7 +5248,7 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="517" name="leatherDuster">
-		<property name="Insulation" value="24" />
+		<property name="Insulation" value="30" />
 		<property name="Waterproof" value="0.55" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -5337,7 +5293,7 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="520" name="pufferCoat">
-		<property name="Insulation" value="20" />
+		<property name="Insulation" value="40" />
 		<property name="Waterproof" value="0.45" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
@@ -5425,7 +5381,7 @@ Mesh files no longer used:
 	</item>
 	<item id="531" name="sweatshirt">
 		<!-- longClothShirtMaster -->
-		<property name="Insulation" value="12" />
+		<property name="Insulation" value="5" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -5502,7 +5458,7 @@ Mesh files no longer used:
 	</item>
 	<item id="537" name="tshirtWhite">
 		<!-- sleevelessClothShirtMaster -->
-		<property name="Insulation" value="6" />
+		<property name="Insulation" value="-5" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -5581,7 +5537,7 @@ Mesh files no longer used:
 	</item>
 	<item id="543" name="skirt">
 		<property name="Extends" value="denimPants" />
-		<property name="Insulation" value="5" />
+		<property name="Insulation" value="-10" />
 		<property class="UMA">
 			<property name="Mesh" value="skirt" />
 			<property name="Overlay0" value="skirt" />
@@ -5592,12 +5548,12 @@ Mesh files no longer used:
 		</property>
 	</item>
 	<item id="544" name="jacketWhite">
-		<property name="Insulation" value="16" />
+		<property name="Insulation" value="30" />
 		<property name="Waterproof" value="0.4" />
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-		<property name="Material" value="leather" />
-		<property name="RepairTools" value="leather" />
+		<property name="Material" value="cloth" />
+		<property name="RepairTools" value="cloth" />
 		<property name="Weight" value="30" />
 		<property name="FuelValue" value="6" />
 		<property name="EconomicValue" value="800" />
@@ -5730,7 +5686,7 @@ Mesh files no longer used:
 	</item>
 	<item id="557" name="denimShortsPants">
 		<property name="Extends" value="denimPants" />
-		<property name="Insulation" value="5" />
+		<property name="Insulation" value="-10" />
 		<property class="UMA">
 			<property name="Mesh" value="base_legs" />
 			<property name="Overlay0" value="legs" />
@@ -5784,7 +5740,7 @@ Mesh files no longer used:
 	</item>
 	<item id="564" name="hoodedSweatshirtWhite">
 		<!-- hoodedClothShirtMaster -->
-		<property name="Insulation" value="14" />
+		<property name="Insulation" value="10" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -5864,7 +5820,6 @@ Mesh files no longer used:
 	<item id="571" name="pressboyCapWhite">
 		<!-- pressboyCapMaster -->
 		<property name="Extends" value="ballCap" />
-		<property name="Insulation" value="5" />
 		<property class="UMA">
 			<property name="Mesh" value="gear_pressboy_cap" />
 			<property name="Overlay0" value="gear_ballcap" />
@@ -5963,7 +5918,8 @@ Mesh files no longer used:
 	<item id="588" name="gothicPants">
 		<!-- leatherArmor -->
 		<property name="Extends" value="leatherPants" />
-		<property name="Insulation" value="9" />
+		<property name="Weight" value="50" />
+		<property name="Insulation" value="2" />
 		<property name="EquipSlot" value="Legs" />
 		<property class="Attributes">
 			<property name="ConcussiveProtection" value="0.16,0.4" />
@@ -5980,7 +5936,7 @@ Mesh files no longer used:
 	<item id="589" name="overalls">
 		<!-- warmClothPants -->
 		<property name="Extends" value="denimPants" />
-		<property name="Insulation" value="12" />
+		<property name="Insulation" value="3" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property class="UMA">
 			<property name="Mesh" value="clothes_overalls" />
@@ -5990,7 +5946,7 @@ Mesh files no longer used:
 	<item id="590" name="flannelShirtWhite">
 		<!-- new icon xxx -->
 		<property name="Extends" value="sweatshirt" />
-		<property name="Insulation" value="10" />
+		<property name="Insulation" value="5" />
 		<property class="UMA">
 			<property name="Mesh" value="plaid_shirt" />
 			<property name="Overlay0" value="plaid_shirt" />
@@ -6052,7 +6008,7 @@ Mesh files no longer used:
 	<item id="598" name="suitPantsBlack">
 		<!-- suitPantsMaster -->
 		<property name="CustomIconTint" value="57,57,57" />
-		<property name="Insulation" value="10" />
+		<property name="Insulation" value="2" />
 		<!-- <property name="Encumbrance" value="0.001"/> -->
 		<property name="Material" value="cloth" />
 		<property name="RepairTools" value="cloth" />
@@ -6089,8 +6045,6 @@ Mesh files no longer used:
 	</item>
 	<item id="599" name="suitJacketBlack">
 		<property name="Extends" value="jacketWhite" />
-		<property name="Material" value="cloth" />
-		<property name="RepairTools" value="cloth" />
 		<property name="CustomIconTint" value="57,57,57" />
 		<property class="UMA">
 			<property name="Mesh" value="clothes_suit_jacket" />
@@ -6104,7 +6058,6 @@ Mesh files no longer used:
 	</item>
 	<item id="600" name="dressShoesBlack">
 		<property name="Extends" value="leatherBoots" />
-		<property name="Insulation" value="4" />
 		<property name="CustomIconTint" value="57,57,57" />
 		<property name="Weight" value="25" />
 		<property name="Encumbrance" value="0.02" />
@@ -7140,10 +7093,10 @@ Mesh files no longer used:
 			<property name="Delay" value="1.0" />
 			<property name="Use_time" value="..." />
 			<property name="Gain_health" value="0" />
-			<property name="Gain_food" value="24" />
+			<property name="Gain_food" value="10" />
 			<property name="Buff" value="eatFood_9_Trigger" />
 			<property name="Gain_water" value="0" />
-			<property name="Gain_wellness" value="1.8" />
+			<property name="Gain_wellness" value="0.8" />
 			<property name="Sound_start" value="player_eating" />
 			<!-- jar from cooking food <property name="Create_item" value="emptyJar"/> -->
 		</property>
@@ -7227,9 +7180,9 @@ Mesh files no longer used:
 			<property name="Delay" value="1.0" />
 			<property name="Use_time" value="..." />
 			<property name="Gain_health" value="0" />
-			<property name="Gain_food" value="40" />
+			<property name="Gain_food" value="21" />
 			<property name="Gain_water" value="0" />
-			<property name="Gain_wellness" value="1.0" />
+			<property name="Gain_wellness" value="0.5" />
 			<property name="Sound_start" value="player_drinking" />
 			<property name="Buff" value="stewWarming,eatFood_12_Trigger" />
 			<!-- jar from cooking food <property name="Create_item" value="emptyJar"/> -->
@@ -7419,7 +7372,7 @@ Mesh files no longer used:
 	</item>
 	<item id="786" name="coffee">
 		<property name="Meshfile" value="Items/Food/coffeePrefab" />
-		<property name="Material" value="glass" />
+		<property name="Material" value="organic" />
 		<property name="HoldType" value="3" />
 		<property name="Weight" value="10" />
 		<property name="Stacknumber" value="15" />
@@ -7525,7 +7478,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="clubSpiked" />
-			<property name="Skills_to_gain" value="Blunt Weapons" />
+			<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
 		</property>
 	</item>
 	<item id="911" name="sledgehammerSchematic">
@@ -7533,14 +7486,14 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="sledgehammer" />
-			<property name="Skills_to_gain" value="Blunt Weapons" />
+			<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
 		</property>
 	</item>
 	<item id="912" name="huntingKnifeBook">
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="huntingKnife" />
-			<property name="Skills_to_gain" value="Blade Weapons" />
+			<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
 		</property>
 	</item>
 	<item id="913" name="beerBook">
@@ -7555,7 +7508,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="compoundBow" />
-			<property name="Skills_to_gain" value="Archery" />
+			<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
 		</property>
 	</item>
 	<item id="920" name="crossbowSchematic">
@@ -7563,14 +7516,14 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="crossbow" />
-			<property name="Skills_to_gain" value="Archery" />
+			<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
 		</property>
 	</item>
 	<item id="921" name="pistolBook">
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gunPistol" />
-			<property name="Skills_to_gain" value="Pistols" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7579,7 +7532,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gun44Magnum" />
-			<property name="Skills_to_gain" value="Pistols" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7587,7 +7540,7 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
 		<property name="Recipes_to_learn" value="gunSawedOffPumpShotgun"/>
-		<property name="Skills_to_gain" value="Shotguns" />
+		<property name="Skills_to_gain" value="craftSkillGuns"/>
 	</property>
 	<property name="PickupJournalEntry" value="gunAssemblyTip"/>
 </item> -->
@@ -7595,7 +7548,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gunPumpShotgun,gunSawedOffPumpShotgun" />
-			<property name="Skills_to_gain" value="Shotguns" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7604,7 +7557,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gunMP5" />
-			<property name="Skills_to_gain" value="Rifles" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7613,7 +7566,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gunAK47" />
-			<property name="Skills_to_gain" value="Rifles" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7621,7 +7574,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gunHuntingRifle" />
-			<property name="Skills_to_gain" value="Rifles" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7630,7 +7583,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="gunSniperRifle" />
-			<property name="Skills_to_gain" value="Rifles" />
+			<!-- <property name="Skills_to_gain" value="craftSkillGuns"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7647,7 +7600,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="nailgun" />
-			<property name="Skills_to_gain" value="Construction Tools" />
+			<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7770,7 +7723,7 @@ Mesh files no longer used:
 		<property name="CustomIcon" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="wrenchSchematic" />
-			<property name="Skills_to_gain" value="Construction Tools" />
+			<!-- <property name="Skills_to_gain" value="craftSkillTools"/> -->
 		</property>
 	</item>
 	<item id="971" name="clawHammerSchematic">
@@ -7779,7 +7732,7 @@ Mesh files no longer used:
 		<property name="CustomIcon" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="clawHammerSchematic" />
-			<property name="Skills_to_gain" value="Construction Tools" />
+			<!-- <property name="Skills_to_gain" value="craftSkillTools"/> -->
 		</property>
 	</item>
 	<item id="980" name="gasCanSchematic">
@@ -7795,7 +7748,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="auger,partsAuger_blade" />
-			<property name="Skills_to_gain" value="Mining Tools" />
+			<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7804,7 +7757,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="chainsaw,partsChainsaw_blade" />
-			<property name="Skills_to_gain" value="Mining Tools" />
+			<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 		</property>
 		<property name="PickupJournalEntry" value="gunAssemblyTip" />
 	</item>
@@ -7812,7 +7765,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="firstAidKit" />
-			<property name="Skills_to_gain" value="Medicine" />
+			<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 		</property>
 	</item>
 	<item id="991" name="herbalAntibioticsRecipe">
@@ -7821,7 +7774,7 @@ Mesh files no longer used:
 		<property name="CustomIcon" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="herbalAntibiotics" />
-			<property name="Skills_to_gain" value="Medicine" />
+			<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 		</property>
 	</item>
 	<item id="992" name="batterybankSchematic">
@@ -7882,7 +7835,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="leatherPants" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1013" name="leatherJacketSchematic">
@@ -7890,7 +7843,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="leatherJacket" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1014" name="leatherHoodSchematic">
@@ -7898,7 +7851,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="leatherHood" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1015" name="leatherGlovesSchematic">
@@ -7906,7 +7859,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="leatherGloves" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1016" name="scrapBootsSchematic">
@@ -7914,7 +7867,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="scrapBoots" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 		<property name="DescriptionKey" value="scrapArmorSchematicDesc" />
 	</item>
@@ -7923,7 +7876,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="scrapLegArmor" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 		<property name="DescriptionKey" value="scrapArmorSchematicDesc" />
 	</item>
@@ -7932,7 +7885,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="scrapChestArmor" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 		<property name="DescriptionKey" value="scrapArmorSchematicDesc" />
 	</item>
@@ -7941,7 +7894,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="scrapHelmet" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 		<property name="DescriptionKey" value="scrapArmorSchematicDesc" />
 	</item>
@@ -7950,7 +7903,7 @@ Mesh files no longer used:
 		<property name="Extends" value="schematicMaster" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="scrapGloves" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 		<property name="DescriptionKey" value="scrapArmorSchematicDesc" />
 	</item>
@@ -7967,7 +7920,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="500" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="ironHelmet" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1022" name="ironChestArmorSchematic">
@@ -7975,7 +7928,7 @@ Mesh files no longer used:
 		<property name="Extends" value="ironHelmetSchematic" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="ironChestArmor" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1023" name="ironLegArmorSchematic">
@@ -7983,7 +7936,7 @@ Mesh files no longer used:
 		<property name="Extends" value="ironHelmetSchematic" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="ironLegArmor" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1024" name="ironBootsSchematic">
@@ -7991,7 +7944,7 @@ Mesh files no longer used:
 		<property name="Extends" value="ironHelmetSchematic" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="ironBoots" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<item id="1025" name="ironGlovesSchematic">
@@ -7999,7 +7952,7 @@ Mesh files no longer used:
 		<property name="Extends" value="ironHelmetSchematic" />
 		<property class="Action1">
 			<property name="Recipes_to_learn" value="ironGloves" />
-			<property name="Skills_to_gain" value="Clothing/Armor" />
+			<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
 		</property>
 	</item>
 	<!-- * * * * * * * * * * quests * * * * * * * * * * -->
@@ -8317,8 +8270,8 @@ Mesh files no longer used:
 		<property name="Group" value="Resources" />
 		<property name="CraftingIngredientExp" value="15" />
 		<property name="CraftingIngredientTime" value="2" />
-		<property name="RepairTime" value="2" />
-		<property name="RepairAmount" value="400" />
+		<!-- <property name="RepairTime" value="2"/>
+	<property name="RepairAmount" value="400"/> -->
 	</item>
 	<item id="1311" name="oilShale">
 		<property name="Meshfile" value="Items/Misc/sackPrefab" />
@@ -8338,7 +8291,6 @@ Mesh files no longer used:
 		<property name="Meshfile" value="Items/Crafting/animal_hidePrefab" />
 		<property name="HoldType" value="21" />
 		<property name="Material" value="leather" />
-		<property name="RepairAmount" value="60" />
 		<property name="Weight" value="5" />
 		<property name="Stacknumber" value="250" />
 		<!-- STK resource -->
@@ -8476,18 +8428,6 @@ Mesh files no longer used:
 			<property name="Max_strain_time" value="1" />
 			<property name="Sound_start" value="swoosh" />
 		</property>
-		<property class="Action1">
-			<property name="Class" value="Eat" />
-			<property name="Delay" value="1.0" />
-			<property name="Use_time" value="..." />
-			<property name="Gain_food" value="0" />
-			<property name="Gain_water" value="20" />
-			<property name="Gain_stamina" value="5" />
-			<property name="Gain_wellness" value="-0.1" />
-			<property name="Sound_start" value="player_eating" />
-			<property name="Buff" value="redTeaCooling,dysentery,extinguishFireBuff" />
-			<property name="Buff_chance" value="1,0.5,1" />
-		</property>
 		<property name="ThrowableDecoy" value="true" />
 		<property name="DropScale" value="3" />
 		<property name="Group" value="Resources" />
@@ -8608,8 +8548,8 @@ Mesh files no longer used:
 		<property name="Group" value="Resources" />
 		<property name="CraftingIngredientExp" value="15" />
 		<property name="CraftingIngredientTime" value="2" />
-		<property name="RepairTime" value="2" />
-		<property name="RepairAmount" value="400" />
+		<!-- <property name="RepairTime" value="2"/>
+	<property name="RepairAmount" value="400"/> -->
 	</item>
 	<item id="1332" name="electronicParts">
 		<!-- scrap material -->
@@ -8770,6 +8710,7 @@ Mesh files no longer used:
 		<property name="EconomicBundleSize" value="10" />
 		<property name="Group" value="Resources" />
 		<property name="CraftingIngredientTime" value="1" />
+		<property name="PickupJournalEntry" value="farmingTip" />
 	</item>
 	<item id="1346" name="potassiumNitratePowder">
 		<property name="Meshfile" value="Items/Food/cornmealPrefab" />
@@ -9036,7 +8977,7 @@ Mesh files no longer used:
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="Material" value="metal" />
 		<property name="HoldType" value="34" />
-		<property name="Stacknumber" value="50" />
+		<property name="Stacknumber" value="1" />
 		<property name="EconomicValue" value="84" />
 		<property class="Action0">
 			<!-- AttackAction -->
@@ -9271,7 +9212,7 @@ Mesh files no longer used:
 	<item id="1432" name="carBattery">
 		<property name="Meshfile" value="Items/Misc/car_battery" />
 		<property name="Material" value="lead" />
-		<property name="RepairTools" value="electricParts" />
+		<property name="RepairTools" value="repairKit" />
 		<property name="HoldType" value="21" />
 		<property name="Stacknumber" value="1" />
 		<property name="Weight" value="160" />
@@ -9399,8 +9340,8 @@ Mesh files no longer used:
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 	<property name="HoldType" value="45"/>
-	<property name="Material" value="brass"/>
-	<property name="Weight" value="15"/>
+	<property name="Material" value="Msteel"/>
+	<property name="Weight" value="5"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="Group" value="Resources"/>
 	<property name="EconomicValue" value="2000"/>
@@ -9602,19 +9543,20 @@ Mesh files no longer used:
 	</property>
 </item>
 -->
-	<!--		<item id="" name="santaToyItem">
-				<property name="DescriptionKey" value="toysDesc" />
-				<property name="Meshfile" value="#santaToy?SantaToyPrefab" />
-				<property name="DropMeshfile" value="#santaToy?SantaToyPrefab" />
-				<property name="Material" value="Mplastics" />
-				<property name="HoldType" value="31" />
-				<property name="Stacknumber" value="1" />		
-				<property class="Action1">
-					<property name="Class" value="PlaceAsBlock" />
-					<property name="Delay" value="0.5" />
-					<property name="Blockname" value="santaToyBlock" />
-				</property>
-				<property name="Group" value="Basics,Decor/Miscellaneous" />
-				<property name="EconomicValue" value="25" />
-			</item> -->
+	<item id="2" name="rabbitItem">
+		<property name="DescriptionKey" value="toysDesc" />
+		<property name="Meshfile" value="#Rabbit?RabbitItemPrefab" />
+		<!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
+		<property name="DropMeshfile" value="#Rabbit?RabbitItemPrefab" />
+		<property name="Material" value="cloth" />
+		<property name="HoldType" value="31" />
+		<property name="Stacknumber" value="1" />
+		<property class="Action1">
+			<property name="Class" value="PlaceAsBlock" />
+			<property name="Delay" value="0.1" />
+			<property name="Blockname" value="rabbitBlock" />
+		</property>
+		<property name="Group" value="Basics,Decor/Miscellaneous" />
+		<property name="EconomicValue" value="25" />
+	</item>
 </items>

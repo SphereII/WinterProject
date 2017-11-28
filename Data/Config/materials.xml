@@ -634,7 +634,6 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 		<property name="surface_category" value="plant" />
 		<property name="particle_category" value="xt_tallgrass" />
 		<property name="particle_destroy_category" value="xt_tallgrass" />
-		<property name="forge_category" value="plants" />
 		<property name="Hardness" type="float" value="1" />
 		<property name="stepsound" value="leaves" />
 		<property name="stability_glue" value="0" />

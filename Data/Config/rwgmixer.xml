@@ -9,7 +9,7 @@
 	<cell_rules>
 		<cell_rule name="default">
 			<cave_count value="4,8" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<hub_rule name="townSmall" prob="0.3" />
 			<hub_rule name="townLarge" prob="0.3" />
@@ -20,7 +20,7 @@
 		</cell_rule>
 		<cell_rule name="customHubTest">
 			<cave_count value="1,3" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<hub_rule name="customHubTest" />
 			<wilderness_rule name="wildernessDefault" />
@@ -31,7 +31,7 @@
 			<hub_type value="rural" />
 			<width value="168, 250" />
 			<height value="168, 250" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<prefab_rule name="default" />
 			<street_gen level="10" length_multiplier="4">
@@ -47,7 +47,7 @@
 			<hub_type value="rural" />
 			<width value="250, 300" />
 			<height value="250, 300" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<prefab_rule name="default" />
 			<street_gen level="15" length_multiplier="4">
@@ -63,7 +63,7 @@
 			<hub_type value="town" />
 			<width value="300, 400" />
 			<height value="300, 400" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<prefab_rule name="default" />
 			<street_gen level="15" length_multiplier="4">
@@ -79,7 +79,7 @@
 			<hub_type value="town" />
 			<width value="400, 600" />
 			<height value="400, 600" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<prefab_rule name="default" />
 			<street_gen level="20" length_multiplier="4">
@@ -95,7 +95,7 @@
 			<hub_type value="city" />
 			<width value="600, 800" />
 			<height value="600, 800" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<prefab_rule name="default" />
 			<street_gen level="20" length_multiplier="4">
@@ -111,7 +111,7 @@
 			<hub_type value="city" />
 			<width value="800, 1200" />
 			<height value="800, 1200" />
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="10" />
 			<downtown_zone_size_perc value="0.45" />
 			<prefab_rule name="default" />
@@ -132,7 +132,7 @@
 	</hub_rules>
 	<wilderness_rules>
 		<wilderness_rule name="wildernessDefault" spawn_min_max="15,20">
-			<path_material value="snow" />
+			<path_material value="snowFill" />
 			<path_radius value="2" />
 			<path_adjust_terrain value="false" />
 			<prefab_rule name="wildernessGroup" prob="1" />
@@ -494,6 +494,7 @@
 -->
 	<terrain_generators>
 		<terrain_generator name="vanilla" use_old_final="false">
+			<!--
 			<module name="landBaseBase" type="FastBillow" seed_additive="5">
 				<property name="frequency" value="0.02" />
 			</module>
@@ -555,6 +556,109 @@
 			<module name="scaleBiasOutput" type="ScaleBiasOutput">
 				<property name="sourceModule" value="finalLand" />
 				<property name="scale" value="182" />
+			</module>
+				
+			<module name="clampOutput" type="ClampOutput">
+				<property name="sourceModule" value="scaleBiasOutput"/>
+				<property name="bounds" value="-28,100"/>
+			</module>
+			
+			<output module="clampOutput"/>
+		</terrain_generator>
+	-->
+			<!-- Module Segment -->
+			<!-- Module Block: Land -->
+			<module name="landBase" type="FastNoise" no_seed="true">
+				<property name="frequency" value="0.0002" />
+				<property name="persistence" value="0.0002" />
+			</module>
+			<module name="landBias" type="BiasOutput">
+				<property name="sourceModule" value="landBase" />
+				<property name="bias" value="1.5" />
+			</module>
+			<module name="landScale" type="ScaleOutput">
+				<property name="sourceModule" value="landBias" />
+				<property name="scale" value="0.0125" />
+			</module>
+			<module name="landAddative" type="FastTurbulence">
+				<property name="sourceModule" value="landScale" />
+				<property name="frequency" value="0.25" />
+				<property name="power" value="30" />
+			</module>
+			<module name="landAddative2" type="FastTurbulence">
+				<property name="sourceModule" value="landAddative" />
+				<property name="frequency" value="0.25" />
+				<property name="power" value="30" />
+			</module>
+			<!-- Module block: Mountains -->
+			<module name="MntBase" type="FastBillow" no_seed="true">
+				<property name="frequency" value="0.007" />
+				<property name="persistence" value="0.55" />
+				<property name="displacement" value="0.6" />
+			</module>
+			<module name="MntBias" type="BiasOutput">
+				<property name="sourceModule" value="MntBase" />
+				<property name="bias" value="-0.75" />
+			</module>
+			<module name="MntScaled" type="ScaleOutput">
+				<property name="sourceModule" value="MntBias" />
+				<property name="scale" value="0.65" />
+			</module>
+			<module name="mntAddative" type="FastTurbulence">
+				<property name="sourceModule" value="MntScaled" />
+				<property name="power" value="28" />
+				<property name="frequency" value="0.45" />
+				<property name="roughness" value="5" />
+			</module>
+			<module name="mntClamp" type="ClampOutput">
+				<property name="sourceModule" value="mntAddative" />
+				<property name="bounds" value="0,182" />
+			</module>
+			<!-- Module Block: Lakes/Ponds -->
+			<module name="waterBase" type="FastBillow" no_seed="true">
+				<property name="frequency" value="0.4" />
+				<property name="persistence" value="0.75" />
+			</module>
+			<module name="waterBiasOutput" type="BiasOutput">
+				<property name="sourceModule" value="waterBase" />
+				<property name="bias" value="0.2" />
+			</module>
+			<module name="waterScaled" type="ScaleOutput">
+				<property name="sourceModule" value="waterBiasOutput" />
+				<property name="scale" value="0.25" />
+			</module>
+			<!-- Control Module for Combiner Type Modules (Add/Blend/Select etc,.) -->
+			<module name="Control" type="FastNoise">
+				<property name="frequency" value="1" />
+			</module>
+			<module name="Mnt" type="Add" no_seed="true">
+				<property name="controlModule" value="Control" />
+				<property name="sourceModule1" value="landAddative" />
+				<property name="sourceModule2" value="mntClamp" />
+			</module>
+			<module name="Land_Mnt" type="Add" no_seed="true">
+				<property name="controlModule" value="Control" />
+				<property name="sourceModule1" value="landAddative" />
+				<property name="sourceModule2" value="Mnt" />
+			</module>
+			<module name="Water_Land_Mnt" type="Select" no_seed="true">
+				<property name="controlModule" value="Control" />
+				<property name="sourceModule1" value="Land_Mnt" />
+				<property name="sourceModule2" value="Land_Mnt" />
+				<property name="bounds" value="0,21000" />
+				<property name="edgeFalloff" value="0.5" />
+			</module>
+			<module name="Final" type="Select" no_seed="true">
+				<property name="controlModule" value="Control" />
+				<property name="sourceModule1" value="landAddative" />
+				<property name="sourceModule2" value="Water_Land_Mnt" />
+				<property name="bounds" value="0,21000" />
+				<property name="edgeFalloff" value="0.5" />
+			</module>
+			<module name="scaleBiasOutput" type="ScaleBiasOutput">
+				<property name="sourceModule" value="Final" />
+				<property name="scale" value="182" />
+				<property name="bias" value="0.25" />
 			</module>
 			<output module="scaleBiasOutput" />
 		</terrain_generator>
@@ -640,7 +744,7 @@
 	-->
 		<biome_spawn_rule name="snow">
 			<biome_generator range="0,1" />
-			<terrain_generator range="176,255" />
+			<terrain_generator range="1,150" />
 		</biome_spawn_rule>
 		<!--
 		<biome_spawn_rule name="wasteland">
