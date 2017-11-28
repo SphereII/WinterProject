@@ -135,16 +135,85 @@
 				<drop event="Harvest" name="wood" count="1" tool_category="harvestingTools" />
 				<property name="ParticleOnDeath" value="treeGib_small_dust" />
 			</block>
-			<block id="" name="stockings">
+			<block id="" name="stockings1">
 				<property name="Material" value="cloth" />
 				<property name="Shape" value="ModelEntity" /> 
-				<property name="Model" value="#Stockings?Stockings" />		
+				<property name="Model" value="#Stockings?Stockings1Prefab" />		
 				<property name="IsDecoration" value="true" />
 				<property name="ImposterExclude" value="true" />
 				<property name="Weight" value="30" />
 				<property name="CanPickup" value="true" />
 				<property name="DescriptionKey" value="" />
 				<drop event="Destroy" name="cloth" count="1,3" prob="1" />
+			</block>
+			<block id="" name="stockings2">
+				<property name="Material" value="cloth" />
+				<property name="Shape" value="ModelEntity" /> 
+				<property name="Model" value="#Stockings?Stockings2Prefab" />		
+				<property name="IsDecoration" value="true" />
+				<property name="ImposterExclude" value="true" />
+				<property name="Weight" value="30" />
+				<property name="CanPickup" value="true" />
+				<property name="DescriptionKey" value="" />
+				<drop event="Destroy" name="cloth" count="1,3" prob="1" />
+			</block>
+			<block id="" name="wrappingStation">
+				<property name="Extends" value="workbench"/>
+				<property name="Material" value="wood" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Stacknumber" value="1" />
+				<property name="Model" value="#WrappingStation?WrappingStationPrefab" />
+				<property name="CustomIcon" value="wrappingStation" />
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="Place" value="TowardsPlacer"/>
+				<property class="RepairItems">
+					<property name="wood" value="15" />
+					<property name="forgedIron" value="2" />
+				</property>
+				<property name="Group" value="Basics,Building" />
+				<property class="Workstation">
+					<property name="CraftingAreaRecipes" value="WrappingStation" />
+					<property name="Modules" value="tools,output" />
+				</property>
+				<property name="CanPickup" value="true" />
+				<property name="EconomicValue" value="100" />
+				<drop event="Destroy" count="0" />
+				<drop event="Harvest" name="wood" count="2,4" tool_category="Disassemble" />
+			</block>
+			<block id="" name="poinsettia">
+				<property name="CustomIcon" value="poinsettia" />
+				<property name="Material" value="treeWoodSmall" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Poinsettia?PoinsettiaPrefab" />
+				<property name="CanPickup" value="true" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="DescriptionKey" value="poinsettia" />
+				<drop event="Destroy" count="0" />
+				<drop event="Harvest" name="wood" count="1" tool_category="harvestingTools" />
+				<property name="CanPlayersSpawnOn" value="false" />
+				<property name="ParticleOnDeath" value="treeGib_small_dust" />
+			</block>
+			<block id="" name="lightString">
+				<property name="Material" value="glass" />
+				<property name="Shape" value="ModelEntity" /> 
+				<property name="Model" value="#LightStrings?LightStringPrefab" />		
+				<property name="IsDecoration" value="true" />
+				<property name="ImposterExclude" value="true" />
+				<property name="Weight" value="30" />
+				<property name="CanPickup" value="true" />
+				<property name="DescriptionKey" value="" />
+				<drop event="Destroy" name="brokenGlass" count="1" prob="1" />
+			</block>
+			<block id="" name="lightStringDiag">
+				<property name="Material" value="glass" />
+				<property name="Shape" value="ModelEntity" /> 
+				<property name="Model" value="#LightStrings?LightStringDiagPrefab" />		
+				<property name="IsDecoration" value="true" />
+				<property name="ImposterExclude" value="true" />
+				<property name="Weight" value="30" />
+				<property name="CanPickup" value="true" />
+				<property name="DescriptionKey" value="" />
+				<drop event="Destroy" name="brokenGlass" count="1" prob="1" />
 			</block>
 		</append>
 	</config>
@@ -165,18 +234,218 @@
 				<property name="Group" value="Basics,Decor/Miscellaneous" />
 				<property name="EconomicValue" value="25" />
 			</item>
+			<item id="" name="snowShovel">
+				<property name="Extends" value="shovelIron"/>
+				<property name="DescriptionKey" value="snowShovelDesc" />
+				<property name="Meshfile" value="#SnowShovel?SnowShovelPrefab" /> 
+				<property name="DropMeshfile" value="#SnowShovel?SnowShovelPrefab" />
+			</item>
+			<item id="" name="candyCane">
+				<property name="Extends" value="clubIron" />
+				<property name="Material" value="wood" />
+				<property name="RepairTools" value="repairKit" />
+				<property name="Meshfile" value="#CandyCane?CandyCanePrefab" />
+				<property name="CustomIcon" value="CandyCane" />
+			</item>
+			<item id="" name="handZombieSnowman">
+				<property name="Extends" value="handZombieCop" />
+				<property name="CreativeMode" value="None" />
+				<property class="Action0">
+					<property name="DamageEntity" value="40" />
+					<property name="DamageBlock" value="400" />
+					<property name="Buff" value="bleeding,stunned" />
+					<property name="Buff_chance" value="0.1,0.1" />
+					<property name="DamageBonus.glass" value="25" />
+					<property name="DamageBonus.cloth" value="10" />
+					<property name="DamageBonus.earth" value="3" />
+					<property name="DamageBonus.stone" value="10" />
+					<property name="DamageBonus.wood" value="10" />
+					<property name="DamageBonus.metal" value="10" />
+				</property>
+				<property class="Action1">
+					<property name="DamageEntity" value="20" />
+					<property name="DamageBlock" value="200" />
+					<property name="Buff" value="bleeding,stunned" />
+					<property name="Buff_chance" value="0.3,0.3" />
+					<property name="DamageBonus.glass" value="25" />
+					<property name="DamageBonus.cloth" value="10" />
+					<property name="DamageBonus.earth" value="3" />
+					<property name="DamageBonus.stone" value="10" />
+					<property name="DamageBonus.wood" value="10" />
+					<property name="DamageBonus.metal" value="10" />
+				</property>
+			</item>
 		</append>	  
 	</config>
 	<config name="recipes">
 		<append xpath="/recipes" >
-			<recipe name="xmasGift" count="1" craft_area="workbench">
+			<recipe name="xmasGift" count="1" craft_area="wrappingStation">
 				<ingredient name="paper" count="2" />
 				<ingredient name="glue" count="1" />
 			</recipe>			
-			<recipe name="xmasGifts" count="1" craft_area="workbench">
+			<recipe name="xmasGifts" count="1" craft_area="wrappingStation">
 				<ingredient name="paper" count="10" />
 				<ingredient name="glue" count="2" />
-			</recipe>			
+			</recipe>		
+			<recipe name="snowShovel" count="1">
+				<ingredient name="forgedIron" count="15" />
+				<ingredient name="wood" count="10" />
+			</recipe>
+			<recipe name="wrappingStation" count="1">
+				<ingredient name="forgedIron" count="2" />
+				<ingredient name="wood" count="15" />
+				<ingredient name="glue" count="1" />
+				<ingredient name="paper" count="30" />
+			</recipe>
+		</append>
+	</config>
+	<config name="loot">
+	   <append xpath="/lootcontainers/lootgroup[@name='weaponsMelee']">
+			<item name="candyCane" prob="0.05" />
+	   </append>
+   </config>
+	<config name="xui">
+		<append xpath="/xui/ruleset" >
+			<window_group name="workstation_wrappingStation" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+			</window_group>
+		</append>
+	</config> 
+	<config name="entityclasses">
+		<append xpath="/entity_classes">
+			<entity_class name="zombieSnowman" extends="SDXTemplate">
+				<property name="Mesh" value="#Snowman?Snowman" />
+				<property name="Class" value="EntityZombieCop"/>
+				<property name="HandItem" value="handZombieSnowman"/>
+				<property name="RightHandJointName" value="snowman_RightHand"/>
+				<property name="WalkType" value="1"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="CanClimbLadders" value="false"/>
+				<property name="PhysicsBody" value="zombieFat"/>
+				<property name="RootMotion" value="false"/>
+				<property name="HasDeathAnim" value="true"/>
+				<property name="MaxHealth" value="300"/>
+				<property name="ExperienceGain" value="2916"/>
+				<property name="Weight" value="70"/>
+				<property name="PushFactor" value="20"/>
+				<property name="LootListOnDeath" value="17"/>
+				<property name="Explosion.ParticleIndex" value="8"/>
+				<property name="Explosion.RadiusBlocks" value="5"/>
+				<property name="Explosion.RadiusEntities" value="6"/>
+				<property name="Explosion.BlockDamage" value="500"/>
+				<property name="Explosion.EntityDamage" value="150"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="HeadDismemberBonusChance" value="0.08"/>
+				<property name="HeadDismemberThreshold" value="0"/>
+				<property name="LowerLegDismemberThreshold" value="0"/>
+				<property name="UpperLegDismemberThreshold" value="0"/>
+				<property name="LowerArmDismemberThreshold" value="0"/>
+				<property name="UpperArmDismemberThreshold" value="0"/>
+				<property name="LegCrawlerThreshold" value="0"/>
+				<property name="LegCrippleThreshold" value="0"/>
+				<property name="KnockdownProneDamageThreshold" value="0"/>
+				<property name="KnockdownKneelDamageThreshold" value="0"/>
+				<property name="LegsExplosionDamageMultiplier" value="2"/> <!-- volatile so vulnerable to land mines/explosives -->
+				<property name="ArmsExplosionDamageMultiplier" value="2"/>
+				<property name="HeadExplosionDamageMultiplier" value="2"/>
+				<property name="ChestExplosionDamageMultiplier" value="2"/>
+				<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>				
+				<property name="MaxTurnSpeed" value="180"/>
+				<property name="MaxViewAngle" value="270"/>
+				<property name="AnimationIdle" value="Idle" />
+				<property name="AnimationSecondIdle" value="Idle" />
+				<property name="AnimationMainAttack" value="Attack" />
+				<property name="AnimationSecondAttack" value="Attack2" />
+				<property name="AnimationJump" value="Jump" />
+				<property name="AnimationPain" value="Pain" />
+				<property name="AnimationDeath" value="Death" />
+				<property name="AnimationRun" value="Run" />
+				<property name="AnimationWalk" value="Walk" />
+				<property name="AnimationSpecialAttack" value="Toss" />
+				<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam" />
+				<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert" />
+				<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack" />
+				<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath" />
+				<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain" />
+				<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense" />
+				<property name="AITarget-1" value="SetNearestEntityAsTarget" param1="EntityEnemyAnimal"/>
+					<property name="AITask-1" value="BreakDoor" param2="5"/>
+					<property name="AITask-2" value="BreakBlock" param2="5"/>
+					<property name="AITask-3" value="BlockingTargetTask"/>
+					<property name="AITask-4" value="RangedAttackTarget" param1="2" param2="0"/>
+					<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityEnemyAnimal"/>
+				<property name="AITarget-2" value="SetNearestEntityAsTarget" param1="EntityAnimalStag"/>
+					<property name="AITask-6" value="BreakDoor" param2="5"/>
+					<property name="AITask-7" value="BreakBlock" param2="5"/>
+					<property name="AITask-8" value="BlockingTargetTask"/>
+					<property name="AITask-9" value="RangedAttackTarget" param1="2" param2="0"/>
+					<property name="AITask-10" value="ApproachAndAttackTarget" param1="EntityAnimalStag"/>
+				<property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityNPC"/>
+					<property name="AITask-11" value="BreakDoor" param2="5"/>
+					<property name="AITask-12" value="BreakBlock" param2="5"/>
+					<property name="AITask-13" value="BlockingTargetTask"/>
+					<property name="AITask-14" value="RangedAttackTarget" param1="2" param2="0"/>
+					<property name="AITask-15" value="ApproachAndAttackTarget" param1="EntityNPC"/>
+				<property name="AITarget-4" value="SetNearestEntityAsTarget" param1="EntityPlayer"/>
+					<property name="AITask-16" value="BreakDoor" param2="5"/>
+					<property name="AITask-17" value="BreakBlock" param2="5"/>
+					<property name="AITask-18" value="BlockingTargetTask"/>
+	<!--				<property name="AITask-19" value="RangedAttackTarget" param1="1" param2="5"/> -->
+					<property name="AITask-19" value="RangedAttackTarget" param1="2" param2="0"/>
+					<property name="AITask-20" value="ApproachAndAttackTarget" param1="EntityPlayer" />
+					<property name="AITask-21" value="SetAsTargetIfHurt" param1="EntityEnemyAnimal"/>
+					<property name="AITask-22" value="SetAsTargetIfHurt" param1="EntityNPC"/>
+					<property name="AITask-23" value="SetAsTargetIfHurt" param1="EntityPlayer" param2="60"/>
+					<property name="AITask-24" value="ApproachSpot"/>
+					<property name="AITask-25" value="Wander"/>
+			</entity_class>
+			<entity_class name="abominable" extends="SDXTemplate" >
+				<property name="Mesh" value="#Abominable?monster2Anims1" />
+				<property name="MaxHealth" value="100" />
+				<property name="AnimationIdle" value="monster2Idle" />
+				<property name="AnimationSecondIdle" value="monster2Roar" />
+				<property name="AnimationMainAttack" value="monster2Attack1" />
+				<property name="AnimationSecondAttack" value="monster2Attack3" />
+				<property name="AnimationJump" value="monster2Jump" />
+				<property name="AnimationPain" value="monster2Hit1" />
+				<property name="AnimationDeath" value="monster2Die" />
+				<property name="AnimationRun" value="monster2Run" />
+				<property name="AnimationWalk" value="monster2WalkForward" />
+				<property name="AnimationSpecialAttack" value="monster2attack2" />
+				<property name="SoundRandom" value="monster2Sounds" />
+				<property name="SoundAlert" value="monster2Sounds" />
+				<property name="SoundAttack" value="monster2Sounds" />
+				<property name="SoundDeath" value="monster2Sounds" />
+				<property name="SoundHurt" value="monster2Sounds" />
+				<property name="SoundSense" value="monster2Sounds" /> 
+			</entity_class>
+		</append>
+	</config>
+	<config name="sounds">
+		<append xpath="/Sounds">
+			<SoundDataNode name="AbominableSounds">
+				<AudioSource name="Sounds/AudioSource_VO" />
+				<Noise ID="3" range="100" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+				<AudioClip ClipName="#monster2Sounds?grrr1" />
+				<AudioClip ClipName="#monster2Sounds?grrr2" />
+				<AudioClip ClipName="#monster2Sounds?grrr3" />
+				<AudioClip ClipName="#monster2Sounds?grrr4" />
+				<AudioClip ClipName="#monster2Sounds?grrr5" />
+				<AudioClip ClipName="#monster2Sounds?grrr6" />
+				<AudioClip ClipName="#monster2Sounds?grrr7" />
+				<AudioClip ClipName="#monster2Sounds?roar1" />
+				<AudioClip ClipName="#monster2Sounds?hit1" />
+				<AudioClip ClipName="#monster2Sounds?die" />
+				<LocalCrouchVolumeScale name="1.0" />
+				<CrouchNoiseScale name="0.5" />
+				<NoiseScale name="1" />
+				<MaxVoices name="10" />
+				<MaxRepeatRate name="1.111" />
+			</SoundDataNode>
 		</append>
 	</config>
 </configs>
