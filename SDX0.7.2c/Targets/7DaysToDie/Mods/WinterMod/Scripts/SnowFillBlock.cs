@@ -19,7 +19,6 @@ public class BlockSnowFill : BlockPlant
     public new int lightLevelStay = 10;
 
     public int Counter = 0;
-
     public override void Init()
     {
         base.Init();
@@ -39,9 +38,10 @@ public class BlockSnowFill : BlockPlant
     // Token: 0x06000044 RID: 68
     public override bool CheckPlantAlive(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue)
     {
-        if (!this.CanPlantStay(_world, _clrIdx, _blockPos, _blockValue))
+        // Check, but only 1 out of 3 times.
+        if (!this.CanPlantStay(_world, _clrIdx, _blockPos, _blockValue)  )
         {
-           _world.SetBlockRPC(_clrIdx, _blockPos, BlockValue.Air);
+            _world.SetBlockRPC(_clrIdx, _blockPos, BlockValue.Air);
            
         }
 

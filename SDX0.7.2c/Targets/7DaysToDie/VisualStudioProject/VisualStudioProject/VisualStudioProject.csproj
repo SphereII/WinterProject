@@ -80,6 +80,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Mods\AnimationSDX\Scripts\AnimationSDX.cs" />
     <Compile Include="Mods\CraftingLag\PatchScripts\CraftingLagFixes.cs" />
+    <Compile Include="Mods\CraftingLag\Scripts\AutoFavourites.cs" />
     <Compile Include="Mods\WinterMod\PatchScripts\WinterMod.cs" />
     <Compile Include="Mods\WinterMod\Scripts\SnowFillBlock.cs" />
     <Compile Include="Mods\WinterMod\Scripts\WorldBlockTicker.cs" />

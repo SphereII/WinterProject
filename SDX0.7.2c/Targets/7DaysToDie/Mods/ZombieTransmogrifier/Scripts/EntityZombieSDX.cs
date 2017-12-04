@@ -42,8 +42,12 @@ public class EntityZombieSDX: EntityZombie
         
 		GetWalkType();
 		GetApproachSpeed();
+
+        
 		
     }
+
+ 
     // Returns a random walk type for the spawned entity
     public static int GetRandomWalkType()
     {

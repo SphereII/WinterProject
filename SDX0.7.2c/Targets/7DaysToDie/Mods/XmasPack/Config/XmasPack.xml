@@ -373,11 +373,14 @@
 			</recipe>
 		</append>
 	</config>
+	
+	
 	<config name="loot">
 		<append xpath="/lootcontainers/lootgroup[@name='weaponsMelee']">
 			<item name="candyCane" prob="0.05" />
 		</append>
 		
+		<!-- Updates all the broken workstations with the Gift Wrapping -->
 		<set xpath="/lootcontainers/lootplaceholders/placeholder/block[@name='cntCollapsedForge']/@name">wrappingStation</set>
 		<set xpath="/lootcontainers/lootplaceholders/placeholder/block[@name='cntCollapsedWorkbench']/@name">wrappingStation</set>
 		<set xpath="/lootcontainers/lootplaceholders/placeholder/block[@name='cntCollapsedCementMixer']/@name">wrappingStation</set>
@@ -528,6 +531,17 @@
 				<MaxVoices name="10" />
 				<MaxRepeatRate name="1.111" />
 			</SoundDataNode>
+		</append>
+	</config>
+	
+	<!-- populates the snow group with more creatures -->
+		<config name="entitygroups" >
+		<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']" >
+			<entity name="animalWolf" prob="0.4" />
+		</append>
+		<append xpath="/entitygroups/entitygroup[@name='SnowZombies']" >
+			<entity name="zombieSnowman" prob="0.5" />
+			<entity name="abominable" prob="0.01" />
 		</append>
 	</config>
 </configs>
