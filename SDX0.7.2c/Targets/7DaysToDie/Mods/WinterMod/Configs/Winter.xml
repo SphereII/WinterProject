@@ -1,8 +1,9 @@
 <configs>
+
 	<config name="blocks">	
 		<append xpath="/blocks">	
 			<!-- the snowFill block is actually a plant, that will die if its light level isn't high enough -->
-			<block id="" name="snowFill">
+			<block id="*" name="snowFill">
 				<property name="Extends" value="snow" />
 				<property name="Class" value="SnowFill, Mods" />
 				<property name="LightLevelStay" value="13" />
@@ -11,9 +12,10 @@
 				<drop event="Destroy" count="0" />
 				<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1" />
 				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
-
 			</block>
+
 		</append>
+		
 	</config> 
 	
 
