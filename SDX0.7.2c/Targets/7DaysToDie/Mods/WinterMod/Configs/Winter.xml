@@ -14,11 +14,139 @@
 				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
 			</block>
 
-		</append>
-		
-	</config> 
-	
+			<block id="" name="GoodSanta">
+				<property name="Group" value="Science" />
+				<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+				<property name="Material" value="Mmetal_medium" />
+				<property name="LightOpacity" value="0" />
+				<property name="StabilitySupport" value="false" />
 
+				<property name="Class" value="SantaVending, Mods" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#GoodSanta?Santa_Character" />
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="ImposterExchange" value="imposterBlock" param1="143" />
+				<property name="OnlySimpleRotations" value="true" />
+				<property name="Place" value="TowardsPlacerInverted" />
+				<property class="RepairItems">
+					<property name="forgedIron" value="5" />
+				</property>
+				<property name="TraderID" value="99" />
+				<property name="Stacknumber" value="10" />
+				<property name="EconomicValue" value="2000" />
+				<property name="Buff" value="shockedBuff" />
+				<drop event="Destroy" count="0" />
+				
+			</block>
+			
+			<block id="" name="RealSanta">
+			<property name="Group" value="Science" />
+				<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+				<property name="Material" value="Mmetal_medium" />
+				<property name="LightOpacity" value="0" />
+				<property name="StabilitySupport" value="false" />
+
+				<property name="Class" value="SantaVending, Mods" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#BadSanta?ZombieClaus" />
+				<property name="MultiBlockDim" value="1,2,1" />
+				<property name="ImposterExchange" value="imposterBlock" param1="143" />
+				<property name="OnlySimpleRotations" value="true" />
+				<property name="Place" value="TowardsPlacerInverted" />
+				<property class="RepairItems">
+					<property name="forgedIron" value="5" />
+				</property>
+				<property name="TraderID" value="98" />
+				<property name="Stacknumber" value="10" />
+				<property name="EconomicValue" value="2000" />
+				<property name="Buff" value="shockedBuff" />
+				<drop event="Destroy" count="0" />
+			</block>
+			
+		</append>
+
+	</config> 
+	<config name="traders">
+		<append xpath="/traders" >
+			<!-- Good Santa! -->
+			<trader_info id="99" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="13" min_items_swapped="6" max_items_swapped="13">
+				<trader_items count="14">
+					<item name="xmasGifts" count="1,10" />
+					<item name="snowShovel" count="1,10" />
+					<item name="xmasTree" count="1,10" />
+					<item name="stockings1" count="1,10" />
+					<item name="wreath" count="1,10" />
+					<item name="candyCane" count="1,10" />
+					<item name="xmasCandle" count="1,10" />
+					<item name="stockings2" count="1,10" />
+					<item name="goldenRodTea" count="1,10" />
+					<item name="xmasGift" count="1,10" />
+					<item name="poinsettia" count="1,10" />
+					<item name="lightStringDiag" count="1,10" />
+					<item name="lightString" count="1,10" />
+					<item name="rabbitBlock" count="1,10" />
+				</trader_items>
+			</trader_info>
+
+			<!-- Bad Santa! -->
+			<trader_info id="98" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="13" min_items_swapped="6" max_items_swapped="13">
+				<trader_items count="10">
+					<item group="weaponsGunsMilitary" count="2,7" prob="0.3"/>
+					<item group="weaponsGunsCommon" count="2,10" prob="0.8"/>
+					<item group="ammoSupplies" count="2,3" prob="0.4"/>
+					<item group="banditArmor" count="4,10" prob="0.4"/>
+				</trader_items>
+			</trader_info>
+		</append>
+	</config>
+
+	<config name="sounds">
+		<append xpath="/Sounds">
+
+			<SoundDataNode name="GoodSantaGreetingSounds">
+				<AudioSource name="Sounds/AudioSource_VO" />
+				<Noise ID="3" range="100" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+				<AudioClip ClipName="#SantaSounds?01_B_Santa_MynameIsSantaMerryChristmas" />
+				<LocalCrouchVolumeScale name="1.0" />
+				<CrouchNoiseScale name="0.5" />
+				<NoiseScale name="1" />
+				<MaxVoices name="10" />
+				<MaxRepeatRate name="1.111" />
+			</SoundDataNode> 
+
+			<SoundDataNode name="GoodSantaSounds">
+				<AudioSource name="Sounds/AudioSource_VO" />
+				<Noise ID="3" range="100" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+				<AudioClip ClipName="#SantaSounds?01_A_Santa_NewYear_talk" />
+				<AudioClip ClipName="#SantaSounds?01_A_Santa_NicePresent_talk" />
+				<AudioClip ClipName="#SantaSounds?01_A_Santa_WhatDoYouWant_talk" />
+				<AudioClip ClipName="#SantaSounds?02_A_HoHo" />
+				<AudioClip ClipName="#SantaSounds?02_B_HaHa" />
+				<AudioClip ClipName="#SantaSounds?03_A_merryxMasToEveryone" />
+				<AudioClip ClipName="#SantaSounds?03_B_merryxMas" />
+				<AudioClip ClipName="#SantaSounds?05_NaughtyOrNice" />
+				<AudioClip ClipName="#SantaSounds?06_HopeWishesComeTrue" />
+				<LocalCrouchVolumeScale name="1.0" />
+				<CrouchNoiseScale name="0.5" />
+				<NoiseScale name="1" />
+				<MaxVoices name="10" />
+				<MaxRepeatRate name="1.111" />
+			</SoundDataNode> 
+
+			<SoundDataNode name="GoodSantaByeSounds">
+				<AudioSource name="Sounds/AudioSource_VO" />
+				<Noise ID="3" range="100" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+				<AudioClip ClipName="#SantaSounds?10_CU_nextYear" />
+				<AudioClip ClipName="#SantaSounds?01_A_Santa_ReturnNorthpole_talk" />
+
+				<LocalCrouchVolumeScale name="1.0" />
+				<CrouchNoiseScale name="0.5" />
+				<NoiseScale name="1" />
+				<MaxVoices name="10" />
+				<MaxRepeatRate name="1.111" />
+			</SoundDataNode> 
+		</append>
+	</config>
 </configs>
 
 
