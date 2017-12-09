@@ -421,7 +421,7 @@
 
 	<config name="entityclasses">
 		<append xpath="/entity_classes">
-			<entity_class name="" extends="SDXTemplate">
+			<entity_class name="Snowman" extends="SDXTemplate">
 				<property name="Mesh" value="#Snowman?Snowman" />
 				<property name="Class" value="EntityZombieCop"/>
 				<property name="HandItem" value="handZombieSnowman"/>
@@ -826,6 +826,7 @@
 		<append xpath="/entitygroups/entitygroup[@name='SnowZombies']" >
 			<entity name="zombieWalker" prob="0.01" />
 			<entity name="snowGoddess" prob="0.01" />
+			<entity name="Snowman" prob="0.01" />
 		</append>
 	</config>
 </configs>

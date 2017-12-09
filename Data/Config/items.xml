@@ -9559,4 +9559,45 @@ Mesh files no longer used:
 		<property name="Group" value="Basics,Decor/Miscellaneous" />
 		<property name="EconomicValue" value="25" />
 	</item>
+	<item id="3" name="snowShovel">
+		<property name="Extends" value="shovelIron" />
+		<property name="DescriptionKey" value="snowShovelDesc" />
+		<property name="Meshfile" value="#SnowShovel?SnowShovelPrefab" />
+		<property name="DropMeshfile" value="#SnowShovel?SnowShovelPrefab" />
+	</item>
+	<item id="4" name="candyCane">
+		<property name="Extends" value="clubIron" />
+		<property name="Material" value="wood" />
+		<property name="RepairTools" value="repairKit" />
+		<property name="Meshfile" value="#CandyCane?CandyCanePrefab" />
+		<property name="CustomIcon" value="CandyCane" />
+	</item>
+	<item id="5" name="handZombieSnowman">
+		<property name="Extends" value="handZombieCop" />
+		<property name="CreativeMode" value="None" />
+		<property class="Action0">
+			<property name="DamageEntity" value="40" />
+			<property name="DamageBlock" value="400" />
+			<property name="Buff" value="bleeding,stunned" />
+			<property name="Buff_chance" value="0.1,0.1" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.cloth" value="10" />
+			<property name="DamageBonus.earth" value="3" />
+			<property name="DamageBonus.stone" value="10" />
+			<property name="DamageBonus.wood" value="10" />
+			<property name="DamageBonus.metal" value="10" />
+		</property>
+		<property class="Action1">
+			<property name="DamageEntity" value="20" />
+			<property name="DamageBlock" value="200" />
+			<property name="Buff" value="bleeding,stunned" />
+			<property name="Buff_chance" value="0.3,0.3" />
+			<property name="DamageBonus.glass" value="25" />
+			<property name="DamageBonus.cloth" value="10" />
+			<property name="DamageBonus.earth" value="3" />
+			<property name="DamageBonus.stone" value="10" />
+			<property name="DamageBonus.wood" value="10" />
+			<property name="DamageBonus.metal" value="10" />
+		</property>
+	</item>
 </items>

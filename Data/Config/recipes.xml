@@ -2223,13 +2223,23 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 		<ingredient name="clayLump" count="2" />
 		<ingredient name="dirtFragment" count="5" />
 	</recipe>
-	<recipe name="xmasGift" count="1" craft_area="workbench">
+	<recipe name="xmasGift" count="1" craft_area="wrappingStation">
 		<ingredient name="paper" count="2" />
 		<ingredient name="glue" count="1" />
 	</recipe>
-	<recipe name="xmasGifts" count="1" craft_area="workbench">
+	<recipe name="xmasGifts" count="1" craft_area="wrappingStation">
 		<ingredient name="paper" count="10" />
 		<ingredient name="glue" count="2" />
+	</recipe>
+	<recipe name="snowShovel" count="1">
+		<ingredient name="forgedIron" count="15" />
+		<ingredient name="wood" count="10" />
+	</recipe>
+	<recipe name="wrappingStation" count="1">
+		<ingredient name="forgedIron" count="2" />
+		<ingredient name="wood" count="15" />
+		<ingredient name="glue" count="1" />
+		<ingredient name="paper" count="30" />
 	</recipe>
 </recipes>
 <!-- To do (maybe / later)

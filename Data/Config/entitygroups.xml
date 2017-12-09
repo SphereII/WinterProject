@@ -171,6 +171,9 @@
 	</entitygroup>
 	<entitygroup name="SnowZombies">
 		<entity name="zombieSnow" prob="1" />
+		<entity name="zombieWalker" prob="0.01" />
+		<entity name="snowGoddess" prob="0.01" />
+		<entity name="Snowman" prob="0.01" />
 	</entitygroup>
 	<entitygroup name="ZombiesBoss">
 		<entity name="zombieFatCop" />
@@ -222,6 +225,7 @@
 		<entity name="animalZombieVulture" prob="0.4" />
 		<entity name="animalDireWolf" prob="0.05" />
 		<entity name="animalBear" prob="0.05" />
+		<entity name="animalWolf" prob="0.4" />
 	</entitygroup>
 	<entitygroup name="FriendlyAnimalsSnow">
 		<entity name="invisibleAnimal" prob="3" />

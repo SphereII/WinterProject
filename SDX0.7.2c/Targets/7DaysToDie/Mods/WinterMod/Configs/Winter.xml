@@ -14,6 +14,7 @@
 				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
 			</block>
 
+			<!--Vending Machine -->
 			<block id="" name="GoodSanta">
 				<property name="Group" value="Science" />
 				<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
@@ -36,11 +37,12 @@
 				<property name="EconomicValue" value="2000" />
 				<property name="Buff" value="shockedBuff" />
 				<drop event="Destroy" count="0" />
-				
+
 			</block>
-			
+
+			<!--Vending Machine -->
 			<block id="" name="RealSanta">
-			<property name="Group" value="Science" />
+				<property name="Group" value="Science" />
 				<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
 				<property name="Material" value="Mmetal_medium" />
 				<property name="LightOpacity" value="0" />
@@ -62,7 +64,7 @@
 				<property name="Buff" value="shockedBuff" />
 				<drop event="Destroy" count="0" />
 			</block>
-			
+
 		</append>
 
 	</config> 
@@ -145,6 +147,212 @@
 				<MaxVoices name="10" />
 				<MaxRepeatRate name="1.111" />
 			</SoundDataNode> 
+		</append>
+	</config>
+	<config name="entityclasses">
+		<append xpath="/entity_classes">
+			<entity_class name="ArcticFox" extends="SDXTemplate">
+				<property name="Mesh" value="#ArcticFox?Arcticfox" />
+				<property name="Class" value="EntityEnemyAnimal"/>
+				<property name="HandItem" value="handAnimalWolf"/>
+				<property name="WalkType" value="1"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="CanClimbLadders" value="false"/>
+				<property name="PhysicsBody" value="wolf"/>
+				<property name="RootMotion" value="false"/>
+				<property name="HasDeathAnim" value="true"/>
+				<property name="MaxHealth" value="150"/>
+				<property name="ExperienceGain" value="2916"/>
+				<property name="Weight" value="70"/>
+				<property name="PushFactor" value="20"/>
+				<property name="LootListOnDeath" value="17"/>
+				<property name="Explosion.ParticleIndex" value="8"/>
+				<property name="Explosion.RadiusBlocks" value="5"/>
+				<property name="Explosion.RadiusEntities" value="6"/>
+				<property name="Explosion.BlockDamage" value="500"/>
+				<property name="Explosion.EntityDamage" value="150"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="HeadDismemberBonusChance" value="0.08"/>
+				<property name="HeadDismemberThreshold" value="0"/>
+				<property name="LowerLegDismemberThreshold" value="0"/>
+				<property name="UpperLegDismemberThreshold" value="0"/>
+				<property name="LowerArmDismemberThreshold" value="0"/>
+				<property name="UpperArmDismemberThreshold" value="0"/>
+				<property name="LegCrawlerThreshold" value="0"/>
+				<property name="LegCrippleThreshold" value="0"/>
+				<property name="KnockdownProneDamageThreshold" value="0"/>
+				<property name="KnockdownKneelDamageThreshold" value="0"/>
+				<property name="LegsExplosionDamageMultiplier" value="2"/>
+				<!-- volatile so vulnerable to land mines/explosives -->
+				<property name="ArmsExplosionDamageMultiplier" value="2"/>
+				<property name="HeadExplosionDamageMultiplier" value="2"/>
+				<property name="ChestExplosionDamageMultiplier" value="2"/>
+				<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>				
+				<property name="MaxTurnSpeed" value="180"/>
+				<property name="MaxViewAngle" value="270"/>
+
+				<!-- Animations -->
+				<property name="AnimationIdle" value="idle" />
+				<property name="AnimationSecondIdle" value="hunt" />
+				<property name="AnimationMainAttack" value="attack" />
+
+				<property name="AnimationJump" value="jump" />
+				<property name="AnimationPain" value="hit" />
+				<property name="AnimationDeath" value="die" />
+				<property name="AnimationRun" value="trot" />
+				<property name="AnimationWalk" value="walk" />
+
+				<!-- Default wolf sounds for now -->
+				<property name="SoundRandom" value="Animals/Wolf/wolfroam"/>
+				<property name="SoundAlert" value="Animals/Wolf/wolfalert"/>
+				<property name="SoundHurt" value="Animals/Wolf/wolfpain"/>
+				<property name="SoundDeath" value="Animals/Wolf/wolfdeath"/>
+				<property name="SoundAttack" value="Animals/Wolf/wolfattack"/>
+				<property name="SoundSense" value="Animals/Wolf/wolfsense"/>
+				<property name="SoundGiveUp" value="Animals/Wolf/wolfgiveup"/>
+				<property name="ExperienceGain" value="1407"/>
+
+				<!-- general AI task from xyth -->
+				<property name="AITarget-1" value="SetNearestEntityAsTarget" param1="EntityEnemyAnimal"/>
+				<property name="AITask-1" value="BreakDoor" param2="5"/>
+				<property name="AITask-2" value="BreakBlock" param2="5"/>
+				<property name="AITask-3" value="BlockingTargetTask"/>
+				<property name="AITask-4" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityEnemyAnimal"/>
+				<property name="AITarget-2" value="SetNearestEntityAsTarget" param1="EntityAnimalStag"/>
+				<property name="AITask-6" value="BreakDoor" param2="5"/>
+				<property name="AITask-7" value="BreakBlock" param2="5"/>
+				<property name="AITask-8" value="BlockingTargetTask"/>
+				<property name="AITask-9" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-10" value="ApproachAndAttackTarget" param1="EntityAnimalStag"/>
+				<property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityNPC"/>
+				<property name="AITask-11" value="BreakDoor" param2="5"/>
+				<property name="AITask-12" value="BreakBlock" param2="5"/>
+				<property name="AITask-13" value="BlockingTargetTask"/>
+				<property name="AITask-14" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-15" value="ApproachAndAttackTarget" param1="EntityNPC"/>
+				<property name="AITarget-4" value="SetNearestEntityAsTarget" param1="EntityPlayer"/>
+				<property name="AITask-16" value="BreakDoor" param2="5"/>
+				<property name="AITask-17" value="BreakBlock" param2="5"/>
+				<property name="AITask-18" value="BlockingTargetTask"/>
+				<!--				<property name="AITask-19" value="RangedAttackTarget" param1="1" param2="5"/> -->
+				<property name="AITask-19" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-20" value="ApproachAndAttackTarget" param1="EntityPlayer" />
+				<property name="AITask-21" value="SetAsTargetIfHurt" param1="EntityEnemyAnimal"/>
+				<property name="AITask-22" value="SetAsTargetIfHurt" param1="EntityNPC"/>
+				<property name="AITask-23" value="SetAsTargetIfHurt" param1="EntityPlayer" param2="60"/>
+				<property name="AITask-24" value="ApproachSpot"/>
+				<property name="AITask-25" value="Wander"/>
+
+				<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="5"/>
+				<!-- animalWolf -->
+				<drop event="Harvest" name="animalHide" tool_category="Butcher" count="10"/>
+				<drop event="Harvest" name="animalFat" tool_category="Butcher" count="5"/>
+				<drop event="Harvest" name="femur" tool_category="Butcher" count="2"/>
+			</entity_class>
+
+			<entity_class name="PolarBear" extends="SDXTemplate">
+				<property name="Mesh" value="#PolarBear?Polarbear" />
+				<property name="Class" value="EntityEnemyAnimal"/>
+				<property name="HandItem" value="handAnimalZombieBear"/>
+				<property name="WalkType" value="1"/>
+				<property name="ModelType" value="Standard"/>
+				<property name="CanClimbLadders" value="false"/>
+				<property name="PhysicsBody" value="bear"/>
+				<property name="RootMotion" value="false"/>
+				<property name="HasDeathAnim" value="true"/>
+				<property name="MaxHealth" value="120"/>
+				<property name="ExperienceGain" value="2916"/>
+				<property name="Weight" value="70"/>
+				<property name="PushFactor" value="20"/>
+				<property name="LootListOnDeath" value="17"/>
+				<property name="Explosion.ParticleIndex" value="8"/>
+				<property name="Explosion.RadiusBlocks" value="5"/>
+				<property name="Explosion.RadiusEntities" value="6"/>
+				<property name="Explosion.BlockDamage" value="500"/>
+				<property name="Explosion.EntityDamage" value="150"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="HeadDismemberBonusChance" value="0.08"/>
+				<property name="HeadDismemberThreshold" value="0"/>
+				<property name="LowerLegDismemberThreshold" value="0"/>
+				<property name="UpperLegDismemberThreshold" value="0"/>
+				<property name="LowerArmDismemberThreshold" value="0"/>
+				<property name="UpperArmDismemberThreshold" value="0"/>
+				<property name="LegCrawlerThreshold" value="0"/>
+				<property name="LegCrippleThreshold" value="0"/>
+				<property name="KnockdownProneDamageThreshold" value="0"/>
+				<property name="KnockdownKneelDamageThreshold" value="0"/>
+				<property name="LegsExplosionDamageMultiplier" value="2"/>
+				<!-- volatile so vulnerable to land mines/explosives -->
+				<property name="ArmsExplosionDamageMultiplier" value="2"/>
+				<property name="HeadExplosionDamageMultiplier" value="2"/>
+				<property name="ChestExplosionDamageMultiplier" value="2"/>
+				<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>				
+				<property name="MaxTurnSpeed" value="180"/>
+				<property name="MaxViewAngle" value="270"/>
+
+				<!-- Animations -->
+				<property name="AnimationIdle" value="polarbear_idle2" />
+				<property name="AnimationSecondIdle" value="sniffs" />
+				<property name="AnimationMainAttack" value="polarbear_bite" />
+				<property name="AnimationSecondAttack" value="polarbear_double_swipe" />
+				<property name="AnimationJump" value="polarbear_roar" />
+				<property name="AnimationPain" value="polarbear_hit" />
+				<property name="AnimationDeath" value="polarbear_die" />
+				<property name="AnimationRun" value="polarbear_running" />
+				<property name="AnimationWalk" value="polarbear_walk" />
+
+				<!-- Default sounds for now -->
+				<property name="SoundHurt" value="Animals/Bear/bearpain"/>
+				<property name="SoundDeath" value="Animals/Bear/beardeath"/>
+				<property name="SoundRandom" value="Animals/Bear/bearroam"/>
+				<property name="SoundSense" value="Animals/Bear/bearsense"/>
+				<property name="SoundAlert" value="Animals/Bear/bearalert"/>
+				<property name="SoundAttack" value="Animals/Bear/bearattack"/>
+				<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+				<property name="SoundGiveUp" value="Animals/Bear/beargiveup"/>
+				<property name="ExperienceGain" value="2509"/>
+				<property name="DeadBodyHitPoints" value="600"/>
+
+
+				<!-- general AI task from xyth -->
+				<property name="AITarget-1" value="SetNearestEntityAsTarget" param1="EntityEnemyAnimal"/>
+				<property name="AITask-1" value="BreakDoor" param2="5"/>
+				<property name="AITask-2" value="BreakBlock" param2="5"/>
+				<property name="AITask-3" value="BlockingTargetTask"/>
+				<property name="AITask-4" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityEnemyAnimal"/>
+				<property name="AITarget-2" value="SetNearestEntityAsTarget" param1="EntityAnimalStag"/>
+				<property name="AITask-6" value="BreakDoor" param2="5"/>
+				<property name="AITask-7" value="BreakBlock" param2="5"/>
+				<property name="AITask-8" value="BlockingTargetTask"/>
+				<property name="AITask-9" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-10" value="ApproachAndAttackTarget" param1="EntityAnimalStag"/>
+				<property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityNPC"/>
+				<property name="AITask-11" value="BreakDoor" param2="5"/>
+				<property name="AITask-12" value="BreakBlock" param2="5"/>
+				<property name="AITask-13" value="BlockingTargetTask"/>
+				<property name="AITask-14" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-15" value="ApproachAndAttackTarget" param1="EntityNPC"/>
+				<property name="AITarget-4" value="SetNearestEntityAsTarget" param1="EntityPlayer"/>
+				<property name="AITask-16" value="BreakDoor" param2="5"/>
+				<property name="AITask-17" value="BreakBlock" param2="5"/>
+				<property name="AITask-18" value="BlockingTargetTask"/>
+				<!--				<property name="AITask-19" value="RangedAttackTarget" param1="1" param2="5"/> -->
+				<property name="AITask-19" value="RangedAttackTarget" param1="2" param2="0"/>
+				<property name="AITask-20" value="ApproachAndAttackTarget" param1="EntityPlayer" />
+				<property name="AITask-21" value="SetAsTargetIfHurt" param1="EntityEnemyAnimal"/>
+				<property name="AITask-22" value="SetAsTargetIfHurt" param1="EntityNPC"/>
+				<property name="AITask-23" value="SetAsTargetIfHurt" param1="EntityPlayer" param2="60"/>
+				<property name="AITask-24" value="ApproachSpot"/>
+				<property name="AITask-25" value="Wander"/>
+
+				<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="10"/>
+				<!-- animalBear -->
+				<drop event="Harvest" name="animalHide" tool_category="Butcher" count="15"/>
+				<drop event="Harvest" name="animalFat" tool_category="Butcher" count="7"/>
+				<drop event="Harvest" name="femur" tool_category="Butcher" count="4"/>
+			</entity_class>
 		</append>
 	</config>
 </configs>
