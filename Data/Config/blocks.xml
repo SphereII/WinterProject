@@ -194,6 +194,7 @@ tbnsew:
 		<property name="DropScale" value="2" />
 		<property name="Map.Color" value="230,230,255" />
 		<property name="CanMobsSpawnOn" value="true" />
+		<property name="FallDamage" value="false" />
 		<property class="RepairItems">
 			<property name="snowBall" value="10" />
 		</property>
@@ -4401,6 +4402,7 @@ group desc for stuff like metal siding
 	</block>
 	<block id="429" name="cntPurse01">
 		<property name="Extends" value="cntBackpack01" />
+		<property name="Material" value="leather" />
 		<property name="Model" value="LootContainers/purse01" param1="main_mesh" />
 		<property name="LootList" value="48" />
 		<drop event="Destroy" count="0" />
@@ -4504,6 +4506,7 @@ group desc for stuff like metal siding
 			<property name="shortMetalPipe" value="2" />
 			<property name="wood" value="4" />
 		</property>
+		<drop event="Harvest" name="mechanicalParts" count="0,1" tool_category="Disassemble" />
 		<drop event="Harvest" name="shortMetalPipe" count="1,2" tool_category="Disassemble" />
 		<drop event="Harvest" name="scrapIron" count="5,10" tool_category="Disassemble" />
 		<drop event="Destroy" name="shortMetalPipe" count="1" prob="1" />
@@ -5069,7 +5072,7 @@ kind of free
 		<property name="ImposterExchange" value="imposterBlock" param1="81" />
 		<property name="IsTerrainDecoration" value="true" />
 		<property name="FuelValue" value="300" />
-		<property name="LootList" value="6" />
+		<property name="LootList" value="23" />
 		<property name="DescriptionKey" value="furnitureGroupDesc" />
 		<property class="RepairItems">
 			<property name="wood" value="15" />
@@ -5089,7 +5092,7 @@ kind of free
 		<property name="MultiBlockDim" value="2,1,1" />
 		<property name="ImposterExchange" value="imposterBlock" param1="147" />
 		<property name="IsTerrainDecoration" value="true" />
-		<property name="LootList" value="6" />
+		<property name="LootList" value="44" />
 		<property name="DescriptionKey" value="furnitureGroupDesc" />
 		<property class="RepairItems">
 			<property name="spring" value="4" />
@@ -5344,7 +5347,7 @@ kind of free
 	</block>
 	<block id="542" name="cntBirdnest">
 		<property name="Class" value="Loot" />
-		<property name="Material" value="wood_weak" />
+		<property name="Material" value="hay" />
 		<property name="StabilitySupport" value="false" />
 		<!-- build restriction -->
 		<property name="Shape" value="Ext3dModel" />
@@ -5354,10 +5357,10 @@ kind of free
 		<property name="IsTerrainDecoration" value="true" />
 		<property name="LootList" value="25" />
 		<property name="Collide" value="melee,bullet,arrow,rocket" />
-		<drop event="Harvest" name="cloth" count="1" prob="0.3" tool_category="Disassemble" />
-		<drop event="Harvest" name="feather" count="3" prob="0.35" tool_category="Disassemble" />
-		<drop event="Harvest" name="feather" count="2" prob="0.6" tool_category="Disassemble" />
-		<drop event="Destroy" name="yuccaFibers" count="2,8" />
+		<drop event="Harvest" name="cloth" count="1" prob="0.3" />
+		<drop event="Harvest" name="feather" count="3" prob="0.35" />
+		<drop event="Harvest" name="feather" count="2" prob="0.6" />
+		<drop event="Destroy" name="wood" count="1,4" />
 	</block>
 	<block id="543" name="concreteCNRRoundTop">
 		<property name="Extends" value="concreteCNRRound" />
@@ -5569,6 +5572,8 @@ kind of free
 		<property name="ParticleOnDeath" value="treeGib_small_dust" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="1" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="560" name="treeMountainPine8m">
 		<property name="Extends" value="treeMaster" />
@@ -5577,7 +5582,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,10,1" />
 		<property name="BigDecorationRadius" value="2" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_burnt" />
 	</block>
 	<block id="561" name="treeMountainPine13m">
@@ -5588,7 +5595,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,19,1" />
 		<property name="BigDecorationRadius" value="2" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_burnt" />
 	</block>
 	<block id="562" name="treeMountainPine16m">
@@ -5599,7 +5608,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,24,1" />
 		<property name="BigDecorationRadius" value="3" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_55m" />
 	</block>
 	<block id="563" name="treeMountainPine19m">
@@ -5610,7 +5621,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,27,1" />
 		<property name="BigDecorationRadius" value="3" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_75m" />
 	</block>
 	<block id="564" name="treeMountainPine20m">
@@ -5621,7 +5634,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,28,1" />
 		<property name="BigDecorationRadius" value="4" />
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="75" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_75m" />
 	</block>
 	<block id="565" name="treeMountainPineDry">
@@ -5632,6 +5647,7 @@ kind of free
 		<property name="BigDecorationRadius" value="3" />
 		<property name="ModelOffset" value="0,-0.3,0" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_55m" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="1" />
 	</block>
@@ -5643,6 +5659,8 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="ParticleOnDeath" value="treeGib_birch_small" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="567" name="treeBirch12m">
 		<property name="Extends" value="treeMaster" />
@@ -5653,6 +5671,7 @@ kind of free
 		<property name="BigDecorationRadius" value="3" />
 		<property name="ParticleOnDeath" value="treeGib_birch_small" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 	</block>
 	<block id="568" name="treeBirch15m">
 		<property name="Extends" value="treeMaster" />
@@ -5663,6 +5682,7 @@ kind of free
 		<property name="BigDecorationRadius" value="4" />
 		<property name="ParticleOnDeath" value="treeGib_birch" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 	</block>
 	<block id="569" name="treeDeadShrub">
 		<property name="Material" value="wood_weak" />
@@ -5684,7 +5704,9 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="ParticleOnDeath" value="treeGib_birch_6m" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 	</block>
 	<block id="571" name="treeMaple13m">
 		<property name="Extends" value="treeMaster" />
@@ -5695,7 +5717,9 @@ kind of free
 		<property name="BigDecorationRadius" value="3" />
 		<property name="ParticleOnDeath" value="treeGib_birch_small" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 	</block>
 	<block id="572" name="rConcreteCNRRoundTop">
 		<property name="Extends" value="rConcreteCNRRound" />
@@ -5714,7 +5738,9 @@ kind of free
 		<property name="BigDecorationRadius" value="4" />
 		<property name="ParticleOnDeath" value="treeGib_birch_15m" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 	</block>
 	<block id="574" name="treeMaple16m">
 		<property name="Extends" value="treeMaster" />
@@ -5725,7 +5751,9 @@ kind of free
 		<property name="BigDecorationRadius" value="5" />
 		<property name="ParticleOnDeath" value="treeGib_birch" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 	</block>
 	<block id="575" name="treeMaple17m">
 		<property name="Extends" value="treeMaster" />
@@ -5736,7 +5764,9 @@ kind of free
 		<property name="BigDecorationRadius" value="6" />
 		<property name="ParticleOnDeath" value="treeGib_birch" />
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="75" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 	</block>
 	<block id="576" name="steelCNRRound">
 		<property name="Extends" value="steelMaster" />
@@ -5758,6 +5788,8 @@ kind of free
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
 		<drop event="Harvest" name="coal" count="3,5" tool_category="harvestingTools" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="578" name="treeBurntPine02">
 		<property name="Extends" value="treeMaster" />
@@ -5769,6 +5801,7 @@ kind of free
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
 		<drop event="Harvest" name="coal" count="8,15" tool_category="harvestingTools" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 	</block>
 	<block id="579" name="treeBurntPine03">
 		<property name="Extends" value="treeMaster" />
@@ -5780,6 +5813,7 @@ kind of free
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
 		<drop event="Harvest" name="coal" count="10,20" tool_category="harvestingTools" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
+		<drop event="Destroy" name="wood" count="75" prob="4" />
 	</block>
 	<block id="580" name="steelCNRRoundTop">
 		<property name="Extends" value="steelCNRRound" />
@@ -5797,6 +5831,8 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="ParticleOnDeath" value="treeGib_dead_01" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
 	</block>
@@ -5808,6 +5844,8 @@ kind of free
 		<property name="ModelOffset" value="0,-0.3,0" />
 		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="ParticleOnDeath" value="treeGib_dead_02" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
 	</block>
@@ -5819,6 +5857,8 @@ kind of free
 		<property name="MultiBlockDim" value="1,6,1" />
 		<property name="BigDecorationRadius" value="1" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="FallOver" value="true" />
 		<property name="ParticleOnDeath" value="treeGib_winter_small" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="1" />
@@ -5831,7 +5871,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,12,1" />
 		<property name="BigDecorationRadius" value="2" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_winter01" />
 	</block>
 	<block id="588" name="cntTreeStump">
@@ -5848,7 +5890,7 @@ kind of free
 		<!-- it shall never be placed on rocks -->
 		<property name="LootList" value="35" />
 		<drop event="Harvest" name="wood" count="20,30" tool_category="harvestingTools" />
-		<drop event="Destroy" count="0" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
 	</block>
 	<block id="589" name="treeWinterPine02">
 		<property name="Extends" value="treeMaster" />
@@ -5858,7 +5900,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,19,1" />
 		<property name="BigDecorationRadius" value="2" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_winter02" />
 	</block>
 	<block id="590" name="treeWinterPine03">
@@ -5869,7 +5913,9 @@ kind of free
 		<property name="MultiBlockDim" value="1,28,1" />
 		<property name="BigDecorationRadius" value="2" />
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="75" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.75" />
 		<property name="ParticleOnDeath" value="treeGib_winter03" />
 	</block>
 	<block id="591" name="treeDesertShrub">
@@ -6176,7 +6222,7 @@ kind of free
 		<!-- disassemble value -->
 	</block>
 	<block id="625" name="schoolDesk">
-		<property name="Material" value="furniture" />
+		<property name="Material" value="Mmetal_weak" />
 		<property name="StabilitySupport" value="false" />
 		<!-- build restriction -->
 		<property name="Shape" value="Ext3dModel" />
@@ -6727,20 +6773,20 @@ kind of free
 		<property name="IsPlant" value="true" />
 		<property name="CanPlayersSpawnOn" value="false" />
 		<drop event="Harvest" name="yuccaFibers" count="10" tool_category="harvestingTools" />
-		<drop event="Destroy" name="foodYuccaFruit" count="3" prob="1" />
+		<drop event="Destroy" name="wood" count="9" prob="1" />
 		<drop event="Destroy" name="yuccaFibers" count="5" />
 	</block>
 	<block id="669" name="treeCactus02">
 		<property name="Extends" value="treeCactus01" />
 		<property name="Model" value="Entities/Trees/Saguaro_Cactus_16Prefab" />
 		<property name="MultiBlockDim" value="1,4,1" />
-		<drop event="Destroy" name="foodYuccaFruit" count="3" prob="1" />
+		<drop event="Destroy" name="wood" count="9" prob="1" />
 	</block>
 	<block id="670" name="treeCactus03">
 		<property name="Extends" value="treeCactus01" />
 		<property name="Model" value="Entities/Trees/Saguaro_Cactus_13Prefab" />
 		<property name="MultiBlockDim" value="1,3,1" />
-		<drop event="Destroy" name="foodYuccaFruit" count="2" prob="1" />
+		<drop event="Destroy" name="wood" count="6" prob="1" />
 	</block>
 	<block id="671" name="treeCactus04">
 		<property name="Extends" value="treeCactus01" />
@@ -6749,21 +6795,21 @@ kind of free
 		<property name="Model" value="Entities/Plants/cactus04Prefab" />
 		<property name="ModelOffset" value="0,0.45,0" />
 		<property name="MultiBlockDim" value="1,1,1" />
-		<drop event="Destroy" name="foodYuccaFruit" count="1" prob="1" />
+		<drop event="Destroy" name="wood" count="3" prob="1" />
 	</block>
 	<block id="672" name="treeCactus05">
 		<property name="Extends" value="treeCactus01" />
 		<property name="Model" value="Entities/Plants/cactus05Prefab" />
 		<property name="ModelOffset" value="0,0.45,0" />
 		<property name="MultiBlockDim" value="1,1,1" />
-		<drop event="Destroy" name="foodYuccaFruit" count="1" prob="1" />
+		<drop event="Destroy" name="wood" count="3" prob="1" />
 	</block>
 	<block id="673" name="treeCactus06">
 		<property name="Extends" value="treeCactus01" />
 		<property name="Model" value="Entities/Plants/cactus06Prefab" />
 		<property name="ModelOffset" value="0,0.45,0" />
 		<property name="MultiBlockDim" value="1,1,1" />
-		<drop event="Destroy" name="foodYuccaFruit" count="2" prob="1" />
+		<drop event="Destroy" name="wood" count="6" prob="1" />
 	</block>
 	<block id="674" name="treePlantedMountainPine1m">
 		<property name="Extends" value="treeMasterGrowing" param1="CustomIcon,DescriptionKey" />
@@ -6793,7 +6839,9 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="PlantGrowing.Next" value="treePlantedMountainPine8m" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="676" name="treePlantedMountainPine8m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -6805,7 +6853,9 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="PlantGrowing.Next" value="treePlantedMountainPine13m" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="677" name="treePlantedMountainPine13m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -6818,7 +6868,9 @@ kind of free
 		<property name="PlantGrowing.Next" value="treePlantedMountainPine16m" />
 		<property name="PlantGrowing.FertileLevel" value="3" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_55m" />
 	</block>
 	<block id="678" name="treePlantedMountainPine16m">
@@ -6834,7 +6886,9 @@ kind of free
 		<property name="PlantGrowing.GrowthRate" value="1" />
 		<property name="PlantGrowing.FertileLevel" value="5" />
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="75" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_55m" />
 	</block>
 	<block id="679" name="treePlantedMountainPine19m">
@@ -6843,7 +6897,9 @@ kind of free
 		<property name="CustomIcon" value="treeMountainPine20m" />
 		<property name="PlantGrowing.FertileLevel" value="15" />
 		<drop event="Harvest" name="wood" count="160" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="80" prob="1" />
 		<drop event="Destroy" name="treePlantedMountainPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="ParticleOnDeath" value="treeGib_burnt_75m" />
 	</block>
 	<block id="680" name="treePlantedMaple1m">
@@ -6864,7 +6920,9 @@ kind of free
 		<property name="PlantGrowing.Next" value="treePlantedMaple13m" />
 		<property name="ParticleOnDeath" value="treeGib_birch_6m" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="682" name="treePlantedMaple13m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -6877,7 +6935,9 @@ kind of free
 		<property name="PlantGrowing.Next" value="treePlantedMaple15m" />
 		<property name="ParticleOnDeath" value="treeGib_maple_13m" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="683" name="treePlantedMaple15m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -6891,7 +6951,9 @@ kind of free
 		<property name="PlantGrowing.FertileLevel" value="3" />
 		<property name="ParticleOnDeath" value="treeGib_maple_15m" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="684" name="treePlantedMaple17m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -6906,7 +6968,9 @@ kind of free
 		<property name="PlantGrowing.GrowthRate" value="1" />
 		<property name="PlantGrowing.FertileLevel" value="5" />
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="75" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<property name="ParticleOnDeath" value="treeGib_maple_17m" />
 	</block>
 	<block id="685" name="pouredConcreteWedgeIncline">
@@ -7463,7 +7527,9 @@ kind of free
 		<property name="CustomIcon" value="treeMaple17m" />
 		<property name="PlantGrowing.FertileLevel" value="15" />
 		<drop event="Harvest" name="wood" count="160" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="80" prob="1" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="733" name="rScrapIronBlock">
 		<property name="Extends" value="rScrapIronMaster" />
@@ -8696,6 +8762,8 @@ kind of free
 		<property name="IsTerrainDecoration" value="true" />
 		<property name="CanPlayersSpawnOn" value="false" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 		<drop event="Destroy" name="treePlantedMaple1m" count="1" />
 	</block>
 	<block id="864" name="treeGreenBrownGrassDiagonal">
@@ -8991,8 +9059,10 @@ kind of free
 		<property name="Mesh" value="models" />
 		<property name="IsTerrainDecoration" value="true" />
 		<property name="Model" value="OutdoorDecor/tire" param1="main_mesh" />
+		<property name="CanPickup" value="true" />
+		<!--<property name="PickupTarget" value="minibikeWheels"/> now a recipe-->
 		<property name="Collide" value="melee,bullet,arrow,rocket" />
-		<drop event="Destroy" name="minibikeWheels" count="1" prob="0.3" />
+		<!--drop event="Destroy" name="minibikeWheels" count="1" prob="0.3"/-->
 	</block>
 	<block id="899" name="scrapIronArrowSlitHalf">
 		<property name="Extends" value="scrapIronMaster" />
@@ -10105,7 +10175,7 @@ kind of free
 		<property name="Class" value="Loot" />
 		<property name="Material" value="metal" />
 		<property name="Texture" value="346,345,341,345,262,345" />
-		<property name="LootList" value="3" />
+		<property name="LootList" value="5" />
 		<drop event="Harvest" name="mechanicalParts" count="0,1" tool_category="Disassemble" />
 		<drop event="Harvest" name="shortMetalPipe" count="1,2" tool_category="Disassemble" />
 		<drop event="Destroy" name="scrapIron" count="5,10" prob="1" />
@@ -10446,8 +10516,9 @@ kind of free
 		<property name="Texture" value="293" />
 		<property name="Mesh" value="models" />
 		<property name="Model" value="Traps/trap_mine_hubcap" param1="main_mesh" />
+		<property name="CanPickup" value="true" />
+		<property name="PickupTarget" value="hubcap" />
 		<property name="IsTerrainDecoration" value="true" />
-		<drop event="Destroy" name="hubcap" count="1" />
 	</block>
 	<block id="1126" name="ironBars">
 		<property name="Extends" value="ironBarsCentered" />
@@ -10626,7 +10697,14 @@ kind of free
 		<property name="PlantGrowing.Next" value="plantedCotton3Harvest" />
 		<drop event="Destroy" name="plantedCotton1" count="1" />
 	</block>
-	<!-- 9 Free -->
+	<!-- 8 Free -->
+	<block id="1155" name="plywoodOsbPlate">
+		<property name="Extends" value="woodPlate" />
+		<property name="Texture" value="65" />
+		<property name="Material" value="wood_weak" />
+		<property name="IsDecoration" value="true" />
+		<!-- <property name="Shape" value="New"/> -->
+	</block>
 	<block id="1156" name="burntWoodWedge7">
 		<property name="Extends" value="burntWoodBlock1" />
 		<property name="CustomIcon" value="burntWoodRamp7" />
@@ -10865,7 +10943,7 @@ kind of free
 		</property>
 		<property name="CustomUpgradeSound" value="place_block_wood" />
 		<drop event="Harvest" name="wood" count="2" prob="1" />
-		<drop event="Destroy" count="0" />
+		<drop event="Destroy" name="doorKnob" count="1" prob="0.5" />
 		<drop event="Fall" name="woodDebris" count="1" prob="0.75" stick_chance="1" />
 	</block>
 	<block id="1177" name="scrapIronWedgeTipStairs">
@@ -11583,7 +11661,7 @@ kind of free
 		<property name="Model" value="cube" />
 		<property name="DescriptionKey" value="largeStorageGroupDesc" />
 		<property name="Class" value="SecureLoot" />
-		<property name="LootList" value="10" />
+		<property name="LootList" value="69" />
 		<property name="Material" value="wood+wood" />
 		<property name="Texture" value="572" />
 		<property name="UseGlobalUV" value="L,L,L,L,L,L" />
@@ -11600,7 +11678,7 @@ kind of free
 		<property name="CreativeMode" value="Player" />
 		<property name="CustomIcon" value="cntStorageHealth" />
 		<property name="Class" value="Loot" />
-		<property name="LootList" value="10" />
+		<property name="LootList" value="69" />
 		<property name="Material" value="wood+wood" />
 		<property name="Texture" value="572" />
 		<property name="UseGlobalUV" value="L,L,G,G,G,G" />
@@ -12341,7 +12419,7 @@ kind of free
 		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1" />
 	</block>
 	<block id="1348" name="shoppingBasketEmpty">
-		<property name="Material" value="metal" />
+		<property name="Material" value="Mplastics" />
 		<property name="StabilitySupport" value="false" />
 		<!-- build restriction -->
 		<property name="Shape" value="Ext3dModel" />
@@ -12354,7 +12432,7 @@ kind of free
 	</block>
 	<block id="1349" name="cntShoppingBasket">
 		<property name="Class" value="Loot" />
-		<property name="Material" value="metal" />
+		<property name="Material" value="Mplastics" />
 		<property name="StabilitySupport" value="false" />
 		<!-- build restriction -->
 		<property name="Shape" value="Ext3dModel" />
@@ -12694,7 +12772,7 @@ kind of free
 		<property name="ImposterDontBlock" value="true" />
 		<property name="Collide" value="melee" />
 		<property name="Model" value="Entities/Decor/hangingMossPrefab" />
-		<drop event="Destroy" count="0" />
+		<drop event="Destroy" name="yuccaFibers" count="2" />
 	</block>
 	<block id="1390" name="stalagmite01">
 		<property name="Extends" value="stalactite01" />
@@ -13461,7 +13539,10 @@ kind of free
 		<drop event="Harvest" name="scrapIron" count="10,20" />
 		<drop event="Harvest" name="headlight" count="1" prob="0.2" tool_category="Disassemble" />
 		<drop event="Destroy" count="0" />
-		<drop event="Harvest" name="mechanicalParts" count="0,2" prob="0.1" tool_category="Disassemble" />
+		<drop event="Harvest" name="hubcap" count="1" prob="0.2" tool_category="Disassemble" />
+		<drop event="Harvest" name="carBattery" count="1" prob="0.2" tool_category="Disassemble" />
+		<drop event="Harvest" name="scrapPlastics" count="0,2" prob=".2" tool_category="Disassemble" />
+		<drop event="Harvest" name="mechanicalParts" count="0,2" prob="0.2" tool_category="Disassemble" />
 		<drop event="Harvest" name="electricParts" count="0,2" prob="0.1" tool_category="Disassemble" />
 		<drop event="Harvest" name="electronicParts" count="0,2" prob="0.1" tool_category="Disassemble" />
 		<!-- <drop event="Fall" name="cntCar03SedanDamage1" count="1" prob="1.0" stick_chance="1"/> -->
@@ -13521,14 +13602,17 @@ kind of free
 		<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tool_category="Disassemble" />
 		<drop event="Harvest" name="carBattery" count="1" prob="0.2" tool_category="Disassemble" />
 		<drop event="Harvest" name="radiator" count="1" prob="0.5" tool_category="Disassemble" />
+		<drop event="Harvest" name="airFilter" count="1" prob="0.2" tool_category="Disassemble" />
 		<drop event="Harvest" name="oil" count="1,3" prob="0.5" tool_category="Disassemble" />
 		<drop event="Harvest" name="cloth" count="3,7" />
 		<drop event="Harvest" name="spring" count="2,4" tool_category="Disassemble" />
 		<drop event="Harvest" name="scrapIron" count="10,35" tool_category="Disassemble" />
 		<drop event="Harvest" name="gasCan" count="20,120" />
 		<drop event="Harvest" name="gasCan" count="20,130" tool_category="Disassemble" />
+		<drop event="Harvest" name="headlight" count="1" prob="0.45" tool_category="Disassemble" />
 		<drop event="Harvest" name="scrapIron" count="12" />
 		<drop event="Destroy" count="0" />
+		<drop event="Harvest" name="scrapPlastics" count="0,2" prob=".2" tool_category="Disassemble" />
 		<drop event="Harvest" name="mechanicalParts" count="2,4" tool_category="Disassemble" />
 		<drop event="Harvest" name="electricParts" count="0,2" tool_category="Disassemble" />
 		<drop event="Harvest" name="electronicParts" count="0,2" prob="0.1" tool_category="Disassemble" />
@@ -13580,7 +13664,6 @@ kind of free
 		<drop event="Harvest" name="gasCan" count="50,150" prob="0.5" />
 		<drop event="Harvest" name="gasCan" count="50,150" prob="0.5" tool_category="Disassemble" />
 		<!-- together 100 avg -->
-		<drop event="Harvest" name="headlight" count="1" prob="0.45" tool_category="Disassemble" />
 		<drop event="Harvest" name="scrapIron" count="20" tool_category="Disassemble" />
 		<drop event="Destroy" count="0" />
 		<drop event="Harvest" name="mechanicalParts" count="1,5" tool_category="Disassemble" />
@@ -13723,7 +13806,7 @@ kind of free
 		<property name="Model" value="Furniture/coffin" param1="main_mesh" />
 		<property name="MultiBlockDim" value="1,1,2" />
 		<property name="ImposterExchange" value="imposterPlate" param1="1" />
-		<property name="LootList" value="1" />
+		<property name="LootList" value="24" />
 		<drop event="Destroy" name="wood" count="1,3" />
 	</block>
 	<block id="1469" name="vaultHatch_v1">
@@ -14299,7 +14382,7 @@ kind of free
 		<property name="HeatMapFrequency" value="25" />
 		<!--<property name="CraftTimeMultiplier" value="0.5,1"/>-->
 		<property class="Workstation">
-			<property name="Modules" value="output" />
+			<property name="Modules" value="tools,output" />
 		</property>
 		<property class="RepairItems">
 			<property name="forgedIron" value="25" />
@@ -14320,7 +14403,7 @@ kind of free
 	<block id="1562" name="bedroll">
 		<property name="DescriptionKey" value="bedGroupDesc" />
 		<property name="Class" value="SleepingBag" />
-		<property name="Material" value="plants" />
+		<property name="Material" value="clothStable" />
 		<property name="StabilitySupport" value="false" />
 		<!-- build restriction -->
 		<property name="MaxDamage" value="100" />
@@ -14340,10 +14423,10 @@ kind of free
 		<property name="IsTerrainDecoration" value="true" />
 		<property name="Group" value="Basics,Building" />
 		<property class="RepairItems">
-			<property name="yuccaFibers" value="10" />
+			<property name="cottonPlant" value="10" />
 		</property>
-		<drop event="Destroy" name="yuccaFibers" count="1,3" />
-		<drop event="Fall" name="yuccaFibers" count="5" prob="1" stick_chance="0" />
+		<drop event="Destroy" name="cloth" count="1,3" />
+		<drop event="Fall" name="cottonPlant" count="5" prob="1" stick_chance="0" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="EconomicValue" value="10" />
 		<property name="EconomicBundleSize" value="10" />
@@ -14367,7 +14450,7 @@ kind of free
 		<!--<property name="CraftTimeMultiplier" value="0.5,1"/>-->
 		<property name="Stacknumber" value="1" />
 		<property class="Workstation">
-			<property name="Modules" value="output" />
+			<property name="Modules" value="tools,output" />
 			<property name="CraftingAreaRecipes" value="player,workbench" />
 		</property>
 		<property class="RepairItems">
@@ -14400,7 +14483,9 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="PlantGrowing.Next" value="treePlantedWinterPine13m" />
 		<drop event="Harvest" name="wood" count="30" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="15" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="1" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<!-- 1 Free -->
 	<block id="1567" name="treePlantedWinterPine13m">
@@ -14413,7 +14498,9 @@ kind of free
 		<property name="BigDecorationRadius" value="2" />
 		<property name="PlantGrowing.Next" value="treePlantedWinterPine16m" />
 		<drop event="Harvest" name="wood" count="70" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="35" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="1568" name="treePlantedWinterPine16m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -14426,7 +14513,9 @@ kind of free
 		<property name="PlantGrowing.Next" value="treePlantedWinterPine19m" />
 		<property name="PlantGrowing.FertileLevel" value="3" />
 		<drop event="Harvest" name="wood" count="110" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="55" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<block id="1569" name="treePlantedWinterPine19m">
 		<property name="Extends" value="treeMasterGrowing" />
@@ -14441,7 +14530,9 @@ kind of free
 		<property name="PlantGrowing.GrowthRate" value="1" />
 		<property name="PlantGrowing.FertileLevel" value="5" />
 		<drop event="Harvest" name="wood" count="150" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="75" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<!-- n Free -->
 	<block id="1575" name="woodPoleSupportCtr">
@@ -14676,7 +14767,9 @@ kind of free
 		<property name="CustomIcon" value="treeWinterPine03" />
 		<property name="PlantGrowing.FertileLevel" value="15" />
 		<drop event="Harvest" name="wood" count="160" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="80" prob="1" />
 		<drop event="Destroy" name="treePlantedWinterPine1m" count="2" />
+		<drop event="Destroy" name="feather" count="8,20" prob="0.5" />
 	</block>
 	<!-- <block id="1653" name="metalSheetNewRandom">
 	<property name="Extends" value="greenRustyMetalWall04Sheet2"/>
@@ -14920,6 +15013,8 @@ kind of free
 		<property name="HeatMapStrength" value="4.05" />
 		<property name="HeatMapTime" value="1200" />
 		<property name="HeatMapFrequency" value="15" />
+		<property name="BuffsWhenWalkedOn" value="blockBurn2Trigger" />
+		<property name="ActiveRadiusEffects" value="+heatSource(3)" />
 		<property name="Group" value="Building" />
 		<property name="DescriptionKey" value="torchPlayerGroupDesc" />
 	</block>

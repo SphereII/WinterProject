@@ -175,7 +175,7 @@
 		<property name="AttackTimeoutDay" value="1.5" />
 		<!-- in s -->
 		<property name="AttackTimeoutNight" value="1.1" />
-		<property name="LootListOnDeath" value="15" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="CorpseBlock" value="GoreBlock1Prefab" />
 		<property name="CorpseBlockChance" value="1" />
 		<property name="ExperienceGain" value="679" />
@@ -212,6 +212,21 @@
 		<property name="ArmsExplosionDamageMultiplier" value="1" />
 		<property name="HeadExplosionDamageMultiplier" value="1" />
 		<property name="ChestExplosionDamageMultiplier" value="1" />
+	</entity_class>
+	<entity_class name="zombieTemplateFemale" extends="zombieTemplateMale">
+		<property name="Mesh" value="Zombies/zombieStandardArleneRagdoll" />
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
+		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
+		<property name="WalkType" value="3" />
+		<property name="MaxHealth" value="120" />
+		<property name="HandItem" value="handZombieFemale" />
+		<property name="LootListOnDeath" value="13" />
+		<property name="TintMaterial1" value="56,50,40" />
+		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieWight -->
 	<!-- Missing: zombieWightRadiated -->
@@ -316,7 +331,7 @@
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="2" />
 		<property name="ExperienceGain" value="1039" />
-		<property name="MaxHealth" value="200" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/Z_eye1" />
@@ -325,11 +340,10 @@
 	<!-- Missing: zombieBoeRadiated -->
 	<entity_class name="zombieBoeFeral" extends="zombieBoe">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="400" />
+		<property name="MaxHealth" value="300" />
 		<property name="ExperienceGain" value="1556" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="38" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -360,7 +374,7 @@
 	<!-- Missing: zombieFootballPlayerRadiated -->
 	<!-- Missing: zombieFootballPlayerFeral -->
 	<!-- Missing: zombieFootballPlayerFeralRadiated -->
-	<entity_class name="zombieFemaleFat" extends="zombieTemplateMale">
+	<entity_class name="zombieFemaleFat" extends="zombieTemplateFemale">
 		<property name="Mesh" value="Zombies/zombieStandardFatLadyZRagdoll" />
 		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam" />
 		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert" />
@@ -382,7 +396,7 @@
 		<property name="SleeperSmellWakeThreshold" value="20,50" />
 		<property name="SmellAlertThreshold" value="20" />
 		<!-- for awake zombies -->
-		<property name="LootListOnDeath" value="85" />
+		<property name="LootListOnDeath" value="39" />
 		<property name="TintMaterial2" value="64,63,62" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -393,7 +407,7 @@
 		<property name="ExperienceGain" value="2091" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="85" />
+		<property name="LootListOnDeath" value="39" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -403,6 +417,7 @@
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="5" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
 		<property name="TintMaterial2" value="79,40,26" />
@@ -453,30 +468,21 @@
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieMoeFeralRadiated -->
-	<entity_class name="zombieArlene" extends="zombieTemplateMale">
+	<entity_class name="zombieArlene" extends="zombieTemplateFemale">
 		<property name="Mesh" value="Zombies/zombieStandardArleneRagdoll" />
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="3" />
-		<property name="HandItem" value="handZombie" />
-		<property name="MaxHealth" value="100" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
 		<property name="TintMaterial1" value="56,50,40" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieArleneRadiated -->
 	<entity_class name="zombieArleneFeral" extends="zombieArlene">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="200" />
+		<property name="MaxHealth" value="240" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
@@ -495,12 +501,12 @@
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="3" />
-		<property name="HandItem" value="handZombie" />
+		<property name="HandItem" value="handZombieFemale" />
 		<property name="MaxHealth" value="100" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="39" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieScreamerRadiated -->
@@ -514,30 +520,21 @@
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieScreamerFeralRadiated -->
-	<entity_class name="zombieDarlene" extends="zombieTemplateMale">
+	<entity_class name="zombieDarlene" extends="zombieTemplateFemale">
 		<property name="Mesh" value="Zombies/zombieStandardDarleneRagdoll" />
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam" />
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert" />
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack" />
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain" />
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death" />
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense" />
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="3" />
-		<property name="HandItem" value="handZombie" />
-		<property name="MaxHealth" value="100" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
 		<property name="TintMaterial2" value="32,24,20" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieDarleneRadiated -->
 	<entity_class name="zombieDarleneFeral" extends="zombieDarlene">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="200" />
+		<property name="MaxHealth" value="240" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
@@ -545,7 +542,7 @@
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieDarleneFeralRadiated -->
-	<entity_class name="zombieMarlene" extends="zombieTemplateMale">
+	<entity_class name="zombieMarlene" extends="zombieTemplateFemale">
 		<property name="Mesh" value="Zombies/zombieStandardMarleneRagdoll" />
 		<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam" />
 		<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert" />
@@ -556,19 +553,16 @@
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="5" />
-		<property name="HandItem" value="handZombie" />
-		<property name="MaxHealth" value="100" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="LootListOnDeath" value="38" />
 		<property name="TintMaterial2" value="41,25,25" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieMarleneRadiated -->
 	<entity_class name="zombieMarleneFeral" extends="zombieMarlene">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="250" />
+		<property name="MaxHealth" value="240" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
@@ -581,6 +575,7 @@
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="5" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
 		<property name="TintMaterial3" value="23,17,13" />
@@ -589,11 +584,11 @@
 	<!-- Missing: zombieYoRadiated -->
 	<entity_class name="zombieYoFeral" extends="zombieYo">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="250" />
+		<property name="MaxHealth" value="300" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -602,6 +597,7 @@
 		<property name="Mesh" value="Zombies/zombieStandardSteveRagdoll" />
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="WalkType" value="6" />
 		<property name="RootMotion" value="true" />
 		<property name="TintMaterial2" value="36,38,45" />
@@ -610,11 +606,11 @@
 	<!-- Missing: zombieSteveRadiated -->
 	<entity_class name="zombieSteveFeral" extends="zombieSteve">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="250" />
+		<property name="MaxHealth" value="300" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -623,9 +619,10 @@
 		<property name="Mesh" value="Zombies/zombieStandardSteveRagdoll" />
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="HandItem" value="handZombie02" />
-		<property name="MaxHealth" value="120" />
+		<property name="MaxHealth" value="100" />
 		<property name="Class" value="EntityZombieCrawl" />
 		<property name="WalkType" value="4" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="CanClimbLadders" value="false" />
 		<property name="RotateToGround" value="true" />
 		<property name="RootMotion" value="true" />
@@ -637,7 +634,7 @@
 		<property name="HandItem" value="handZombie02Feral" />
 		<property name="MaxHealth" value="200" />
 		<property name="ExperienceGain" value="1039" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -655,7 +652,7 @@
 	<!-- Missing: zombieBusinessManRadiated -->
 	<entity_class name="zombieBusinessManFeral" extends="zombieBusinessMan">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="250" />
+		<property name="MaxHealth" value="300" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
@@ -703,13 +700,13 @@
 		<property name="ModelType" value="Standard" />
 		<property name="CanClimbVertical" value="true" />
 		<property name="WalkType" value="8" />
+		<property name="LootListOnDeath" value="12" />
 		<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam" />
 		<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert" />
 		<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack" />
 		<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath" />
 		<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain" />
 		<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense" />
-		<property name="MaxHealth" value="150" />
 		<property name="WanderSpeed" value="0.08" />
 		<property name="ApproachSpeed" value="0.2" />
 		<property name="NightWanderSpeed" value="0.08" />
@@ -751,6 +748,7 @@
 	<entity_class name="zombieBurnt" extends="zombieTemplateMale">
 		<property name="Mesh" value="Zombies/ZombieStandardBurntRagdoll" />
 		<property name="WalkType" value="7" />
+		<property name="LootListOnDeath" value="82" />
 		<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam" />
 		<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert" />
 		<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack" />
@@ -761,25 +759,18 @@
 		<property name="HandItem" value="handZombieBurning" />
 		<property name="HandItemCrawler" value="handZombieBurningCrawler" />
 		<!-- override the default replacement of handZombie02 with a specific hand item -->
-		<property name="MaxHealth" value="80" />
+		<property name="MaxHealth" value="60" />
 		<property name="ExperienceGain" value="798" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieBurntRadiated -->
 	<!-- Missing: zombieBurntFeral -->
 	<!-- Missing: zombieBurntFeralRadiated -->
-	<entity_class name="zombieNurse" extends="zombieTemplateMale">
+	<entity_class name="zombieNurse" extends="zombieTemplateFemale">
 		<property name="Mesh" value="Zombies/zombieStandardNurseRagdoll" />
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="7" />
-		<property name="HandItem" value="handZombie" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
@@ -789,11 +780,11 @@
 	<!-- Missing: zombieNurseRadiated -->
 	<entity_class name="zombieNurseFeral" extends="zombieNurse">
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="250" />
+		<property name="MaxHealth" value="240" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="21" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
@@ -815,7 +806,7 @@
 		<property name="PhysicsBody" value="zombieFat" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="MaxHealth" value="700" />
+		<property name="MaxHealth" value="500" />
 		<property name="ExperienceGain" value="2916" />
 		<property name="LootListOnDeath" value="38" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/Z_eye1" />
@@ -824,7 +815,7 @@
 	<!-- Missing: zombieFatHawaiianRadiated -->
 	<entity_class name="zombieFatHawaiianFeral" extends="zombieFatHawaiian">
 		<property name="HandItem" value="handZombieCopFeral" />
-		<property name="MaxHealth" value="1050" />
+		<property name="MaxHealth" value="750" />
 		<property name="ExperienceGain" value="4334" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
@@ -983,7 +974,6 @@
 	</entity_class>
 	<!-- Missing: zombieSoldierFeralRadiated -->
 	<entity_class name="zombieSkateboarder" extends="zombieBoe">
-		<property name="MaxHealth" value="150" />
 		<property name="ExperienceGain" value="679" />
 		<property name="Mesh" value="Zombies/zombieStandardHoodieRagdoll" />
 		<property name="SoundRandom" value="zombiemaleroam" />
@@ -1006,19 +996,11 @@
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 	</entity_class>
 	<!-- Missing: zombieSkateboarderFeralRadiated -->
-	<entity_class name="zombieCheerleader" extends="zombieTemplateMale">
+	<entity_class name="zombieCheerleader" extends="zombieTemplateFemale">
 		<property name="Mesh" value="Zombies/zombieStandardCheerleaderRagdoll" />
-		<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
-		<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
-		<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
-		<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
-		<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
-		<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 		<property name="AvatarController" value="AvatarZombie01Controller" />
 		<property name="ModelType" value="Standard" />
 		<property name="WalkType" value="3" />
-		<property name="HandItem" value="handZombie" />
-		<property name="MaxHealth" value="120" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="RootMotion" value="true" />
 		<property name="HasDeathAnim" value="true" />
@@ -1031,7 +1013,7 @@
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
 		<property name="HandItem" value="handZombieFeral" />
-		<property name="MaxHealth" value="200" />
+		<property name="MaxHealth" value="240" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
@@ -1050,7 +1032,7 @@
 		<property name="ExperienceGain" value="1556" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
-		<property name="LootListOnDeath" value="38" />
+		<property name="LootListOnDeath" value="81" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<property name="LootListOnDeath" value="81" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
@@ -1071,7 +1053,6 @@
 	<entity_class name="zombieFarmer" extends="zombieTemplateMale">
 		<property name="Mesh" value="Zombies/zombieStandardFarmerRagdoll" />
 		<property name="HandItem" value="handZombieStrong" />
-		<property name="MaxHealth" value="300" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="LootListOnDeath" value="85" />
 		<property name="WalkType" value="6" />
@@ -1082,7 +1063,7 @@
 	<entity_class name="zombieFarmerFeral" extends="zombieFarmer">
 		<property name="Mesh" value="Zombies/zombieStandardFarmerRagdoll" />
 		<property name="HandItem" value="handZombieStrongFeral" />
-		<property name="MaxHealth" value="450" />
+		<property name="MaxHealth" value="300" />
 		<property name="ApproachSpeed" value="1.35" />
 		<property name="NightApproachSpeed" value="1.35" />
 		<property name="ExperienceGain" value="1556" />
@@ -1096,7 +1077,6 @@
 	<entity_class name="zombieStripper" extends="zombieDarlene">
 		<property name="Mesh" value="Zombies/zombieStandardStripperRagdoll" />
 		<property name="HandItem" value="handZombieStripper" />
-		<property name="MaxHealth" value="250" />
 		<property name="ExperienceGain" value="1039" />
 		<property name="LootListOnDeath" value="84" />
 		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
@@ -1105,7 +1085,7 @@
 	<entity_class name="zombieStripperFeral" extends="zombieStripper">
 		<property name="Mesh" value="Zombies/zombieStandardStripperRagdoll" />
 		<property name="HandItem" value="handZombieStripperFeral" />
-		<property name="MaxHealth" value="350" />
+		<property name="MaxHealth" value="300" />
 		<property name="ExperienceGain" value="1556" />
 		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye" />
 		<property name="ApproachSpeed" value="1.35" />
@@ -1399,6 +1379,7 @@
 		<!-- animalZombieDog -->
 		<drop event="Harvest" name="animalHide" tool_category="Butcher" count="4" />
 		<drop event="Harvest" name="animalFat" tool_category="Butcher" count="1" />
+		<drop event="Harvest" name="scrapBrass" tool_category="Butcher" count="2" />
 		<drop event="Harvest" name="femur" tool_category="Butcher" count="2" />
 		<!-- <drop event="Destroy" name="animalFat" tool_category="Butcher" count="2"/> -->
 	</entity_class>
@@ -1726,7 +1707,7 @@
 		<property name="Class" value="EntityMinibike" />
 		<property name="Parent" value="Cars" />
 		<property name="Prefab" value="Minibike" />
-		<property name="MaxHealth" value="1000000" />
+		<property name="MaxHealth" value="100000" />
 		<property name="SurfaceCategory" value="metal" />
 		<property name="IgnoreTrigger" value="true" />
 		<property name="LootListAlive" value="62" />
