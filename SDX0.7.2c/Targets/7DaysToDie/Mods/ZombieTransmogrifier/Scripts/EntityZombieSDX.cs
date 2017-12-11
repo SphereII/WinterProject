@@ -160,7 +160,7 @@ public class EntityZombieSDX: EntityZombie
     public override void OnUpdateLive()
     {
         base.OnUpdateLive();
-
+        
         if (nextCheck < Time.time)
         {
             nextCheck = Time.time + CheckDelay;

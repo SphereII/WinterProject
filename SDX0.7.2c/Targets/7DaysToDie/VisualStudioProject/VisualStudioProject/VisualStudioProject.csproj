@@ -79,9 +79,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Mods\AnimationSDX\Scripts\AnimationSDX.cs" />
+    <Compile Include="Mods\AutoFavourites\PatchScripts\Autofavourites.cs" />
+    <Compile Include="Mods\AutoFavourites\Scripts\AutoFavourites.cs" />
     <Compile Include="Mods\CraftingLag\PatchScripts\CraftingLagFixes.cs" />
-    <Compile Include="Mods\CraftingLag\Scripts\AutoFavourites.cs" />
     <Compile Include="Mods\WinterMod\PatchScripts\WinterMod.cs" />
+    <Compile Include="Mods\WinterMod\Scripts\Santa.cs" />
+    <Compile Include="Mods\WinterMod\Scripts\SantaClausConfig.cs" />
+    <Compile Include="Mods\WinterMod\Scripts\SantaClausEvents.cs" />
     <Compile Include="Mods\WinterMod\Scripts\SnowFillBlock.cs" />
     <Compile Include="Mods\WinterMod\Scripts\WorldBlockTicker.cs" />
     <Compile Include="Mods\ZombieTransmogrifier\PatchScripts\EntityAlive.cs" />
@@ -94,6 +98,8 @@
   <ItemGroup>
     <Content Include="Mods\AnimationSDX\Configs\AnimationSDX.xml" />
     <Content Include="Mods\AnimationSDX\mod.xml" />
+    <Content Include="Mods\AutoFavourites\mod.xml" />
+    <Content Include="Mods\AutoFavourites\ReadMe.txt" />
     <Content Include="Mods\CraftingLag\mod.xml" />
     <Content Include="Mods\CraftingLag\ReadMe.txt" />
     <Content Include="Mods\Nightmares\Configs\Nightmares.xml" />

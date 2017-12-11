@@ -41,6 +41,7 @@
 			<window name="windowCraftingList" />
 			<window name="craftingInfoPanel" />
 			<window name="windowCraftingQueue" />
+			<window name="windowToolsWorkbench" />
 			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 			<window name="windowCombine" />
@@ -208,6 +209,13 @@
 		</window_group>
 		<window_group name="prefabList">
 			<window name="prefabList" />
+		</window_group>
+		<window_group name="workstation_wrappingStation" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
 		</window_group>
 	</ruleset>
 </xui>

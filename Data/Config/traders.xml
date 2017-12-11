@@ -951,4 +951,32 @@ workstations
 	</trader_info>
 	<!-- Rented - Vending Machine -->
 	<trader_info id="5" reset_interval="-1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" rentable="true" rent_cost="2500" rent_time="30" />
+	<!-- Good Santa! -->
+	<trader_info id="99" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="13" min_items_swapped="6" max_items_swapped="13">
+		<trader_items count="14">
+			<item name="xmasGifts" count="1,10" />
+			<item name="snowShovel" count="1,10" />
+			<item name="xmasTree" count="1,10" />
+			<item name="stockings1" count="1,10" />
+			<item name="wreath" count="1,10" />
+			<item name="candyCane" count="1,10" />
+			<item name="xmasCandle" count="1,10" />
+			<item name="stockings2" count="1,10" />
+			<item name="goldenRodTea" count="1,10" />
+			<item name="xmasGift" count="1,10" />
+			<item name="poinsettia" count="1,10" />
+			<item name="lightStringDiag" count="1,10" />
+			<item name="lightString" count="1,10" />
+			<item name="rabbitBlock" count="1,10" />
+		</trader_items>
+	</trader_info>
+	<!-- Bad Santa! -->
+	<trader_info id="98" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="13" min_items_swapped="6" max_items_swapped="13">
+		<trader_items count="10">
+			<item group="weaponsGunsMilitary" count="2,7" prob="0.3" />
+			<item group="weaponsGunsCommon" count="2,10" prob="0.8" />
+			<item group="ammoSupplies" count="2,3" prob="0.4" />
+			<item group="banditArmor" count="4,10" prob="0.4" />
+		</trader_items>
+	</trader_info>
 </traders>
