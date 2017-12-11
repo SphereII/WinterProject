@@ -1,5 +1,12 @@
 <configs>
 
+
+<config name="recipes">
+		<!-- Bedroll and other things need cottonPlants, but there's likely none to be found in the world. Replace with feathrs -->
+		<set xpath="/recipes/recipe/ingredient[@name='cottonPlant']/@name">feather</set>
+		<!-- doesn't make sense to make cloth out of feather, so just change it back to cottonPlant. Players can scrap clothes for cloth -->
+		<set xpath="/recipes/recipe[@name='cloth']/ingredient[@name='feather']/@name">cottonPlant</set>
+</config>
 	<config name="blocks">	
 		<append xpath="/blocks">	
 			<!-- the snowFill block is actually a plant, that will die if its light level isn't high enough -->
@@ -257,6 +264,8 @@
 				<property name="HandItem" value="handAnimalZombieBear"/>
 				<property name="WalkType" value="1"/>
 				<property name="ModelType" value="Standard"/>
+				
+				<property name="ApproachSpeed" value="1.1" />
 				<property name="CanClimbLadders" value="false"/>
 				<property name="PhysicsBody" value="bear"/>
 				<property name="RootMotion" value="false"/>
@@ -287,21 +296,21 @@
 				<property name="ArmsExplosionDamageMultiplier" value="2"/>
 				<property name="HeadExplosionDamageMultiplier" value="2"/>
 				<property name="ChestExplosionDamageMultiplier" value="2"/>
-				<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>				
 				<property name="MaxTurnSpeed" value="180"/>
 				<property name="MaxViewAngle" value="270"/>
 
 				<!-- Animations -->
-				<property name="AnimationIdle" value="polarbear_idle2" />
+				<property name="AnimationIdle" value="idle2" />
 				<property name="AnimationSecondIdle" value="sniffs" />
-				<property name="AnimationMainAttack" value="polarbear_bite" />
-				<property name="AnimationSecondAttack" value="polarbear_double_swipe" />
-				<property name="AnimationJump" value="polarbear_roar" />
-				<property name="AnimationPain" value="polarbear_hit" />
-				<property name="AnimationDeath" value="polarbear_die" />
-				<property name="AnimationRun" value="polarbear_running" />
-				<property name="AnimationWalk" value="polarbear_walk" />
-
+				<property name="AnimationMainAttack" value="bite" />
+				<property name="AnimationSecondAttack" value="double_swipe" />
+				<property name="AnimationJump" value="roar" />
+				<property name="AnimationPain" value="hit" />
+				<property name="AnimationDeath" value="die" />
+				<property name="AnimationRun" value="running" />
+				<property name="AnimationWalk" value="walk" />
+				
+				
 				<!-- Default sounds for now -->
 				<property name="SoundHurt" value="Animals/Bear/bearpain"/>
 				<property name="SoundDeath" value="Animals/Bear/beardeath"/>
@@ -359,7 +368,7 @@
 
 
 <!-- Place the trees down to the old 'ground' 
-		<set xpath="/blocks/block[starts-with(@name, 'treeWinter')]/property[@name='ModelOffset']/@value">0,-12.3,0</set>
+	
 		<set xpath="/blocks/block[starts-with(@name, 'cntTreeStump')]/property[@name='ModelOffset']/@value">0,-12.2,0</set>
 		
 		-->

@@ -35,6 +35,8 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
     private float lastDistance;
     private float DoesntSeemToDoAnything;
 
+    
+
     private bool blDisplayLog = false;
     private void Log( String strLog )
     {
@@ -78,6 +80,7 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
 
         if (entityClass.Properties.Values.ContainsKey("AnimationSpecialAttack"))
             this.AnimationSpecialAttack = entityClass.Properties.Values["AnimationSpecialAttack"];
+
 
         this.IsVisible = true;
     }
@@ -449,8 +452,10 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
         if ( HasValidAnimation( strAnimation ))
         {
             // We only want to play the animation when its not already enabled.
-            if ( !this.ModelTransform.GetComponent<Animation>()[ strAnimation].enabled)
+            if (!this.ModelTransform.GetComponent<Animation>()[strAnimation].enabled)
+            {
                 this.ModelTransform.GetComponent<Animation>().Play(strAnimation);
+            }
         }
     }
     protected void Update()
@@ -489,6 +494,8 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
         float playerDistanceZ = 0.0f;
         float encroached = this.lastDistance;
 
+       
+
         if (this.entityAlive != null)
         {
 
@@ -523,17 +530,20 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
 
         if (this.entityAlive != null && (this.isAlwaysWalk || encroached > 0.150000005960464))
         {
-          
+           
+
             if (encroached > 1.0)
             {
                 // Since the encroached is above 1, we want the zombie to run if need be, to get to the player faster.
                 PlayAnimation(this.AnimationRun);
-                this.ModelTransform.GetComponent<Animation>()[this.AnimationRun].speed = encroached;
+
+                
+                this.ModelTransform.GetComponent<Animation>()[this.AnimationRun].speed = ( encroached  );
             }
             else
             {
                 PlayAnimation(this.AnimationWalk);
-                this.ModelTransform.GetComponent<Animation>()[this.AnimationWalk].speed = encroached * 2f;
+                this.ModelTransform.GetComponent<Animation>()[this.AnimationWalk].speed = ( encroached ) * 2f;
             }
 
             // oh Hal... and Hal Code.....
