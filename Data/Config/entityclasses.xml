@@ -2120,6 +2120,7 @@
 		<property name="HandItem" value="handAnimalZombieBear" />
 		<property name="WalkType" value="1" />
 		<property name="ModelType" value="Standard" />
+		<property name="ApproachSpeed" value="1.1" />
 		<property name="CanClimbLadders" value="false" />
 		<property name="PhysicsBody" value="bear" />
 		<property name="RootMotion" value="false" />
@@ -2150,15 +2151,14 @@
 		<property name="ArmsExplosionDamageMultiplier" value="2" />
 		<property name="HeadExplosionDamageMultiplier" value="2" />
 		<property name="ChestExplosionDamageMultiplier" value="2" />
-		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 		<property name="MaxTurnSpeed" value="180" />
 		<property name="MaxViewAngle" value="270" />
 		<!-- Animations -->
 		<property name="AnimationIdle" value="polarbear_idle2" />
-		<property name="AnimationSecondIdle" value="sniffs" />
+		<property name="AnimationSecondIdle" value="polarbear_sniffing" />
 		<property name="AnimationMainAttack" value="polarbear_bite" />
 		<property name="AnimationSecondAttack" value="polarbear_double_swipe" />
-		<property name="AnimationJump" value="polarbear_roar" />
+		<property name="AnimationJump" value="roar" />
 		<property name="AnimationPain" value="polarbear_hit" />
 		<property name="AnimationDeath" value="polarbear_die" />
 		<property name="AnimationRun" value="polarbear_running" />

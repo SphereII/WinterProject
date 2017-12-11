@@ -218,20 +218,20 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	</recipe>
 	<recipe name="bed01" count="1">
 		<ingredient name="cloth" count="20" />
-		<ingredient name="cottonPlant" count="20" />
+		<ingredient name="feather" count="20" />
 		<ingredient name="spring" count="10" />
 		<ingredient name="shortMetalPipe" count="10" />
 	</recipe>
 	<recipe name="bed02" count="1">
 		<ingredient name="cloth" count="40" />
-		<ingredient name="cottonPlant" count="40" />
+		<ingredient name="feather" count="40" />
 		<ingredient name="spring" count="20" />
 		<ingredient name="wood" count="20" />
 		<ingredient name="shortMetalPipe" count="10" />
 	</recipe>
 	<recipe name="bedroll" count="1">
 		<ingredient name="cloth" count="5" />
-		<ingredient name="cottonPlant" count="10" />
+		<ingredient name="feather" count="10" />
 	</recipe>
 	<recipe name="bellows" count="1">
 		<ingredient name="wood" count="6" />
@@ -752,7 +752,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 		<ingredient name="corn" count="1" />
 	</recipe>
 	<recipe name="plantedCotton1" count="1" craft_time="1">
-		<ingredient name="cottonPlant" count="1" />
+		<ingredient name="feather" count="1" />
 	</recipe>
 	<recipe name="crossbow" count="1">
 		<ingredient name="forgedIron" count="10" />
@@ -1398,7 +1398,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<recipe name="minibikeSeat" count="1" craft_area="workbench">
 		<ingredient name="ductTape" count="4" />
 		<ingredient name="leather" count="7" />
-		<ingredient name="cottonPlant" count="3" />
+		<ingredient name="feather" count="3" />
 		<ingredient name="wood" count="6" />
 		<ingredient name="mechanicalParts" count="2" />
 	</recipe>
@@ -1428,7 +1428,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	</recipe>
 	<recipe name="officeChair01" count="1">
 		<ingredient name="leather" count="5" />
-		<ingredient name="cottonPlant" count="10" />
+		<ingredient name="feather" count="10" />
 		<ingredient name="mechanicalParts" count="2" />
 		<ingredient name="forgedIron" count="3" />
 	</recipe>
@@ -1457,14 +1457,14 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 		<ingredient name="blueberries" count="1" />
 		<ingredient name="chrysanthemumPlant" count="1" />
 		<ingredient name="goldenrodPlant" count="1" />
-		<ingredient name="cottonPlant" count="1" />
+		<ingredient name="feather" count="1" />
 		<ingredient name="bottledRiverWater" count="1" />
 	</recipe>
 	<recipe name="paint" count="50" craft_area="chemistryStation">
 		<ingredient name="blueberries" count="1" />
 		<ingredient name="chrysanthemumPlant" count="1" />
 		<ingredient name="goldenrodPlant" count="1" />
-		<ingredient name="cottonPlant" count="1" />
+		<ingredient name="feather" count="1" />
 		<ingredient name="bottledWater" count="1" />
 	</recipe>
 	<recipe name="pickaxeIron" count="1">
@@ -2282,38 +2282,6 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	</recipe>
 	<recipe name="flagstoneWedgeTipStairs" count="1">
 		<ingredient name="cobblestones" count="4" />
-	</recipe>
-	<recipe name="thatchBlock" count="1">
-		<ingredient name="yuccaFibers" count="10" />
-	</recipe>
-	<recipe name="waddleBlock" count="1">
-		<ingredient name="yuccaFibers" count="2" />
-		<ingredient name="clayLump" count="2" />
-		<ingredient name="dirtFragment" count="5" />
-	</recipe>
-	<recipe name="thatchHalf" count="1">
-		<ingredient name="yuccaFibers" count="10" />
-	</recipe>
-	<recipe name="waddleHalf" count="1">
-		<ingredient name="yuccaFibers" count="2" />
-		<ingredient name="clayLump" count="2" />
-		<ingredient name="dirtFragment" count="5" />
-	</recipe>
-	<recipe name="thatchRamp" count="1">
-		<ingredient name="yuccaFibers" count="10" />
-	</recipe>
-	<recipe name="waddleRamp" count="1">
-		<ingredient name="yuccaFibers" count="2" />
-		<ingredient name="clayLump" count="2" />
-		<ingredient name="dirtFragment" count="5" />
-	</recipe>
-	<recipe name="thatchPlate" count="1">
-		<ingredient name="yuccaFibers" count="10" />
-	</recipe>
-	<recipe name="waddlePlate" count="1">
-		<ingredient name="yuccaFibers" count="2" />
-		<ingredient name="clayLump" count="2" />
-		<ingredient name="dirtFragment" count="5" />
 	</recipe>
 	<recipe name="xmasGift" count="1" craft_area="wrappingStation">
 		<ingredient name="paper" count="2" />

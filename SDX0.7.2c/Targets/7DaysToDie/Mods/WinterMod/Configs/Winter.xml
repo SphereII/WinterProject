@@ -1,12 +1,12 @@
 <configs>
 
 
-<config name="recipes">
+	<config name="recipes">
 		<!-- Bedroll and other things need cottonPlants, but there's likely none to be found in the world. Replace with feathrs -->
 		<set xpath="/recipes/recipe/ingredient[@name='cottonPlant']/@name">feather</set>
 		<!-- doesn't make sense to make cloth out of feather, so just change it back to cottonPlant. Players can scrap clothes for cloth -->
 		<set xpath="/recipes/recipe[@name='cloth']/ingredient[@name='feather']/@name">cottonPlant</set>
-</config>
+	</config>
 	<config name="blocks">	
 		<append xpath="/blocks">	
 			<!-- the snowFill block is actually a plant, that will die if its light level isn't high enough -->
@@ -21,6 +21,11 @@
 				<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
 			</block>
 
+			<block id="" name="air2" >
+				<property name="Material" value="air" />
+				<property name="StabilitySupport" value="true" />
+				<property name="Shape" value="Invisible" />
+			</block>
 			<!--Vending Machine -->
 			<block id="" name="GoodSanta">
 				<property name="Group" value="Science" />
@@ -71,6 +76,33 @@
 				<property name="Buff" value="shockedBuff" />
 				<drop event="Destroy" count="0" />
 			</block>
+
+			<!-- Terrain blocks -->
+			<block id="" name="arcticRock01">
+				<property name="CreativeMode" value="Dev" />
+				<property name="Material" value="Mboulder" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="IsTerrainDecoration" value="true" />
+				<property name="BigDecorationRadius" value="2" />
+				<property name="ImposterDontBlock" value="true" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="PassThroughDamage" value="true" />
+				<drop event="Harvest" name="rockSmall" count="33" tool_category="harvestingTools" />
+				<drop event="Harvest" name="ironFragment" count="11" tool_category="harvestingTools" />
+				<drop event="Harvest" name="coal" count="10" prob="0.33" tool_category="harvestingTools" />
+				<drop event="Harvest" name="potassiumNitratePowder" count="10" prob="0.33" tool_category="harvestingTools" />
+				<drop event="Harvest" name="scrapLead" count="10" prob="0.33" tool_category="harvestingTools" />
+				<drop event="Destroy" count="0" />
+				<property name="Map.Color" value="120,120,120" />
+				<property name="Model" value="#SurfaceResources?Rock02" />
+			</block>
+
+			<block id="" name="arcticRock02" >
+				<property name="Extends" value="arcticRock01" />
+				<property name="Model" value="#SurfaceResources?Rock04" />
+
+			</block>
+
 
 		</append>
 
@@ -264,7 +296,7 @@
 				<property name="HandItem" value="handAnimalZombieBear"/>
 				<property name="WalkType" value="1"/>
 				<property name="ModelType" value="Standard"/>
-				
+
 				<property name="ApproachSpeed" value="1.1" />
 				<property name="CanClimbLadders" value="false"/>
 				<property name="PhysicsBody" value="bear"/>
@@ -300,17 +332,17 @@
 				<property name="MaxViewAngle" value="270"/>
 
 				<!-- Animations -->
-				<property name="AnimationIdle" value="idle2" />
-				<property name="AnimationSecondIdle" value="sniffs" />
-				<property name="AnimationMainAttack" value="bite" />
-				<property name="AnimationSecondAttack" value="double_swipe" />
+				<property name="AnimationIdle" value="polarbear_idle2" />
+				<property name="AnimationSecondIdle" value="polarbear_sniffing" />
+				<property name="AnimationMainAttack" value="polarbear_bite" />
+				<property name="AnimationSecondAttack" value="polarbear_double_swipe" />
 				<property name="AnimationJump" value="roar" />
-				<property name="AnimationPain" value="hit" />
-				<property name="AnimationDeath" value="die" />
-				<property name="AnimationRun" value="running" />
-				<property name="AnimationWalk" value="walk" />
-				
-				
+				<property name="AnimationPain" value="polarbear_hit" />
+				<property name="AnimationDeath" value="polarbear_die" />
+				<property name="AnimationRun" value="polarbear_running" />
+				<property name="AnimationWalk" value="polarbear_walk" />
+
+
 				<!-- Default sounds for now -->
 				<property name="SoundHurt" value="Animals/Bear/bearpain"/>
 				<property name="SoundDeath" value="Animals/Bear/beardeath"/>
@@ -363,6 +395,15 @@
 				<drop event="Harvest" name="femur" tool_category="Butcher" count="4"/>
 			</entity_class>
 		</append>
+	</config>
+	
+	
+	<config name="entitygroups" >
+		<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']" >
+			<entity name="ArcticFox" prob="0.03" />
+			<entity name="PolarBear" prob="0.01" />
+		</append>
+		
 	</config>
 </configs>
 

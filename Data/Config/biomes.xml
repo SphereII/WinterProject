@@ -153,11 +153,10 @@ If you do not declare them, the decorations of the main biome are used.
 				<!-- This affects only the grow event of blocks/plants. Grown blocks of one type are auto-replaced by the second.  -->
 				<replace source="treeTallGrassDiagonal" target="treeSnowyGrassDiagonal" />
 			</replacements>
-
 			<!-- Block layers: Snow, Local ore: potassiumNitrate -->
 			<layers>
+				<layer filluptorg="60" blockname="water" />
 				<layer depth="12" blockname="snowFill" />
-				<!--layer filluptorg="60" blockname="water" /-->
 				<layer depth="3" blockname="dirt">
 					<resource blockname="clay" cluster="1" prob="0.2" rwgGenerationType="all" />
 					<resource blockname="gravelPlusIron" cluster="1" prob="0.811" rwgGenerationType="all" />
@@ -188,23 +187,11 @@ If you do not declare them, the decorations of the main biome are used.
 			<!-- random prob_min,_max per chunk where 0 equals no decoration and 256 means on every block -->
 			<!-- Decorations Main: Snow -->
 			<decorations>
-				<decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7" />
-				<decoration type="prefab" name="rock_form01" prob=".01" rotatemax="7" />
-				<decoration type="prefab" name="resource_coal_pile" prob=".0007" rotatemax="7" />
-				<decoration type="block" blockname="lootForestHelper" prob="0.00025" />
-				<decoration type="block" blockname="rock05" prob=".005" />
-				<decoration type="block" blockname="rock06" prob=".005" />
-				<decoration type="block" blockname="rock07" prob=".005" />
-				<decoration type="block" blockname="rockResource" prob=".0005" rotatemax="3" />
-				<decoration type="block" blockname="rockResource02" prob=".0005" rotatemax="3" />
-				<decoration type="block" blockname="cntBirdnest" prob="0.0007" />
-				<decoration type="block" blockname="treeWinterEverGreen" prob="0.003" rotatemax="7" />
-				<decoration type="block" blockname="treeWinterPine01" prob="0.003" rotatemax="7" />
-				<decoration type="block" blockname="treeWinterPine02" prob="0.003" rotatemax="7" />
-				<decoration type="block" blockname="treeWinterPine03" prob="0.003" rotatemax="7" />
-				<decoration type="block" blockname="cntTreeStump" prob="0.0005" rotatemax="7" />
-				<decoration type="block" blockname="treeSnowyDeadBush" prob="0.005" rotatemax="7" />
-				<decoration type="block" blockname="treeSnowyGrassDiagonal" prob=".1" />
+				<decoration type="block" blockname="arcticRock01" prob=".0001" />
+				<decoration type="block" blockname="arcticRock02" prob=".0001" />
+				<decoration type="block" blockname="cntBirdnest" prob="0.0002" />
+				<decoration type="block" blockname="treeSnowyDeadBush" prob="0.0001" rotatemax="7" />
+				<decoration type="block" blockname="treeSnowyGrassDiagonal" prob=".0001" />
 			</decorations>
 			<terrain class="Mountains" />
 		</biome>
@@ -2097,7 +2084,7 @@ If you do not declare them, the decorations of the main biome are used.
 		<!--poi name="Road Concrete" poimapcolor="#3a3020" prefab="road_concrete" surfaceoffset="0" /><poi name="Road Asphalt" poimapcolor="#272f48" prefab="road_asphalt" surfaceoffset="0" /><poi name="Road Gravel" poimapcolor="#806f52" prefab="road_gravel" surfaceoffset="0" /><poi name="crossing" poimapcolor="#f6ff0f" prefab="street_crossing" /><poi name="Water" poimapcolor="#0063ff" prefab="water_7_wide" surfaceoffset="0" /-->
 		<!--<poi name="Water" poimapcolor="#0063ff" blockname="water" ypos="56" old water set method/-->
 		<!--<poi name="Water" poimapcolor="#0063ff" prefab="water" ypos="56"/>-->
-		<poi name="City Asphalt" poimapcolor="#3d3f47" blockname="snow" >
+		<poi name="City Asphalt" poimapcolor="#3d3f47" blockname="snow">
 			<decal texture="0" face="0" prob="0.001" />
 			<!-- 0 == 500 -->
 			<decal texture="1" face="0" prob="0.001" />
@@ -2126,7 +2113,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<blockontop blockname="rock02" prob="0.0007" />
 			<blockontop blockname="rock04" prob="0.0007" />
 		</poi>
-		<poi name="Country Road Asphalt" poimapcolor="#272f48" blockname="snow" >
+		<poi name="Country Road Asphalt" poimapcolor="#272f48" blockname="snow">
 			<decal texture="0" face="0" prob="0.005" />
 			<decal texture="1" face="0" prob="0.005" />
 			<decal texture="2" face="0" prob="0.005" />
@@ -2154,7 +2141,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<blockontop blockname="rock04" prob="0.0007" />
 			<!--blockontop blockname="potassiumNitrate" prob="0.02" offset="-1"/-->
 		</poi>
-		<poi name="Road Gravel" poimapcolor="#806f52" blockname="snow" >
+		<poi name="Road Gravel" poimapcolor="#806f52" blockname="snow">
 			<decal texture="0" face="0" prob="0.005" />
 			<decal texture="1" face="0" prob="0.005" />
 			<decal texture="2" face="0" prob="0.005" />

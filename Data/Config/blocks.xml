@@ -16338,155 +16338,8 @@ kind of free
 		<property name="DescriptionKey" value="glassGroupDesc" />
 		<drop event="Destroy" name="brokenGlass" count="1,4" />
 	</block>
-	<block id="80" name="thatchBlock">
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#ThatchBlocks?ThatchBlockPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_thatchBlock" />
-		<property name="Group" value="Building" />
-		<property name="DescriptionKey" value="woodFrameGroupDesc" />
-		<property name="Material" value="Thatch" />
-		<property name="stability_glue" value="20" />
-		<!-- <property name="ImposterExchange" value="imposterBlock" param1="67"/> -->
-		<property name="CreativeMode" value="Player" />
-		<property name="FuelValue" value="100" />
-		<property class="RepairItems">
-			<property name="yuccaFibers" value="10" />
-		</property>
-		<property name="CustomUpgradeSound" value="place_block_wood" />
-		<drop event="Destroy" name="yuccaFibers" count="5,10" />
-		<drop event="Fall" name="yuccaFibers" count="5" prob="0.3" stick_chance="1" />
-		<property name="EconomicValue" value="3" />
-		<property name="EconomicBundleSize" value="20" />
-	</block>
-	<block id="81" name="thatchHalf">
-		<property name="Extends" value="thatchBlock" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#ThatchBlocks?ThatchHalfPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_thatchHalf" />
-	</block>
-	<block id="82" name="thatchRamp">
-		<property name="Extends" value="thatchBlock" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#ThatchBlocks?ThatchRampPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_thatchRamp" />
-	</block>
-	<block id="83" name="thatchPlate">
-		<property name="Extends" value="thatchBlock" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#ThatchBlocks?ThatchPlatePrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_thatchPlate" />
-	</block>
-	<block id="84" name="waddleBlock">
-		<property name="Extends" value="woodWeakNoUpgradeMaster" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#WaddleBlocks?WaddleBlockPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_WaddleBlock" />
-	</block>
-	<block id="85" name="waddleHalf">
-		<property name="Extends" value="woodWeakNoUpgradeMaster" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#WaddleBlocks?WaddleHalfPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_WaddleHalf" />
-	</block>
-	<block id="86" name="waddleRamp">
-		<property name="Extends" value="woodWeakNoUpgradeMaster" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#WaddleBlocks?WaddleRampPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_WaddleRamp" />
-	</block>
-	<block id="87" name="waddlePlate">
-		<property name="Extends" value="woodWeakNoUpgradeMaster" />
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#WaddleBlocks?WaddlePlatePrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_WaddlePlate" />
-	</block>
-	<block id="88" name="stoneBlock">
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#StoneBlock?StoneBlockPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_stoneBlock" />
-		<property name="Group" value="Building" />
-		<property name="DescriptionKey" value="flagstoneGroupDesc" />
-		<property name="Material" value="stone" />
-		<property name="CreativeMode" value="Player" />
-		<property name="MaxDamage" value="1500" />
-		<drop event="Harvest" name="rockSmall" count="10" />
-		<drop event="Destroy" count="0" />
-		<drop event="Fall" name="destroyedStone" count="10" prob="0.75" stick_chance="1" />
-		<property name="EconomicValue" value="2" />
-		<property name="EconomicBundleSize" value="20" />
-	</block>
-	<block id="89" name="sandStoneBlock">
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#SandStoneBlocks?SandStoneBlockPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_sandStoneBlock" />
-		<property name="Group" value="Building" />
-		<property name="DescriptionKey" value="flagstoneGroupDesc" />
-		<property name="Material" value="stone" />
-		<property name="CreativeMode" value="Player" />
-		<property name="MaxDamage" value="500" />
-		<drop event="Harvest" name="rockSmall" count="10" />
-		<drop event="Destroy" count="0" />
-		<drop event="Fall" name="destroyedStone" count="10" prob="0.75" stick_chance="1" />
-		<property name="EconomicValue" value="2" />
-		<property name="EconomicBundleSize" value="20" />
-	</block>
-	<block id="90" name="sandstoneDoubleBlock">
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#SandStoneBlocks?SandStoneDoubleBlockPrefab" />
-		<property name="MultiBlockDim" value="2,1,1" />
-		<property name="CustomIcon" value="ui_game_symbol_sandStoneDoubleBlock" />
-		<property name="Group" value="Building" />
-		<property name="DescriptionKey" value="flagstoneGroupDesc" />
-		<property name="Material" value="stone" />
-		<property name="CreativeMode" value="Player" />
-		<property name="MaxDamage" value="1000" />
-		<drop event="Harvest" name="rockSmall" count="10" />
-		<drop event="Destroy" count="0" />
-		<drop event="Fall" name="destroyedStone" count="10" prob="0.75" stick_chance="1" />
-		<property name="EconomicValue" value="2" />
-		<property name="EconomicBundleSize" value="20" />
-	</block>
-	<block id="91" name="redRockBlock">
-		<property name="Shape" value="ModelEntity" />
-		<property name="Model" value="#RedRockBlock?RedRockBlockPrefab" />
-		<property name="CustomIcon" value="ui_game_symbol_redRockBlock" />
-		<property name="Group" value="Building" />
-		<property name="DescriptionKey" value="flagstoneGroupDesc" />
-		<property name="Material" value="stone" />
-		<property name="CreativeMode" value="Player" />
-		<property name="MaxDamage" value="1000" />
-		<drop event="Harvest" name="rockSmall" count="10" />
-		<drop event="Destroy" count="0" />
-		<drop event="Fall" name="destroyedStone" count="10" prob="0.75" stick_chance="1" />
-		<property name="EconomicValue" value="2" />
-		<property name="EconomicBundleSize" value="20" />
-	</block>
-	<block id="92" name="ladderInvisible">
-		<property name="Group" value="Building,Basics" />
-		<property name="Class" value="Ladder" />
-		<property name="Texture" value="241" />
-		<property name="Material" value="air" />
-		<property name="CreativeMode" value="Dev" />
-		<property name="StabilitySupport" value="true" />
-		<property name="Shape" value="Invisible" />
-		<property name="LightOpacity" value="0" />
-		<property name="UseGlobalUV" value="Local" />
-		<property name="Place" value="TowardsPlacerInverted" />
-		<property name="ImposterDontBlock" value="true" />
-		<property name="ImposterExclude" value="true" />
-	</block>
-	<block id="93" name="air2">
-		<property name="Material" value="air" />
-		<property name="StabilitySupport" value="true" />
-		<property name="Shape" value="Invisible" />
-		<!--include these lines below if you want to see your support air blocks for ease of placement, but be sure to comment of the invisible property line above as well.
-				<property name="Shape" value="New"/>
-				<property name="Model" value="cube_glass"/>
-				<property name="Mesh" value="transparent"/>
-				<property name="Texture" value="285"/> -->
-	</block>
 	<!-- the snowFill block is actually a plant, that will die if its light level isn't high enough -->
-	<block id="94" name="snowFill">
+	<block id="80" name="snowFill">
 		<property name="Extends" value="snow" />
 		<property name="Class" value="SnowFill, Mods" />
 		<property name="LightLevelStay" value="13" />
@@ -16496,8 +16349,13 @@ kind of free
 		<drop event="Fall" name="snow" count="1" prob="0.25" stick_chance="1" />
 		<drop event="Fall" name="snowBall" count="20" prob="0.187" stick_chance="0" />
 	</block>
+	<block id="81" name="air2">
+		<property name="Material" value="air" />
+		<property name="StabilitySupport" value="true" />
+		<property name="Shape" value="Invisible" />
+	</block>
 	<!--Vending Machine -->
-	<block id="95" name="GoodSanta">
+	<block id="82" name="GoodSanta">
 		<property name="Group" value="Science" />
 		<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
 		<property name="Material" value="Mmetal_medium" />
@@ -16520,7 +16378,7 @@ kind of free
 		<drop event="Destroy" count="0" />
 	</block>
 	<!--Vending Machine -->
-	<block id="96" name="RealSanta">
+	<block id="83" name="RealSanta">
 		<property name="Group" value="Science" />
 		<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
 		<property name="Material" value="Mmetal_medium" />
@@ -16541,6 +16399,29 @@ kind of free
 		<property name="EconomicValue" value="2000" />
 		<property name="Buff" value="shockedBuff" />
 		<drop event="Destroy" count="0" />
+	</block>
+	<!-- Terrain blocks -->
+	<block id="84" name="arcticRock01">
+		<property name="CreativeMode" value="Dev" />
+		<property name="Material" value="Mboulder" />
+		<property name="Shape" value="ModelEntity" />
+		<property name="IsTerrainDecoration" value="true" />
+		<property name="BigDecorationRadius" value="2" />
+		<property name="ImposterDontBlock" value="true" />
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="PassThroughDamage" value="true" />
+		<drop event="Harvest" name="rockSmall" count="33" tool_category="harvestingTools" />
+		<drop event="Harvest" name="ironFragment" count="11" tool_category="harvestingTools" />
+		<drop event="Harvest" name="coal" count="10" prob="0.33" tool_category="harvestingTools" />
+		<drop event="Harvest" name="potassiumNitratePowder" count="10" prob="0.33" tool_category="harvestingTools" />
+		<drop event="Harvest" name="scrapLead" count="10" prob="0.33" tool_category="harvestingTools" />
+		<drop event="Destroy" count="0" />
+		<property name="Map.Color" value="120,120,120" />
+		<property name="Model" value="#SurfaceResources?Rock02" />
+	</block>
+	<block id="85" name="arcticRock02">
+		<property name="Extends" value="arcticRock01" />
+		<property name="Model" value="#SurfaceResources?Rock04" />
 	</block>
 	<block id="335" name="xmasGift">
 		<property name="Class" value="Loot" />
@@ -16639,7 +16520,7 @@ kind of free
 		<property name="EconomicBundleSize" value="1" />
 		<property name="SellableToTrader" value="false" />
 	</block>
-	<block id="97" name="snowBlock">
+	<block id="86" name="snowBlock">
 		<property name="Material" value="snow" />
 		<property name="Shape" value="ModelEntity" />
 		<property name="Model" value="#WinterBlocks?SnowBlockPrefab" />
@@ -16660,7 +16541,7 @@ kind of free
 		<property name="EconomicBundleSize" value="1" />
 		<property name="SellableToTrader" value="false" />
 	</block>
-	<block id="98" name="rabbitBlock">
+	<block id="87" name="rabbitBlock">
 		<property name="Material" value="cloth" />
 		<property name="Shape" value="ModelEntity" />
 		<!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
@@ -16715,7 +16596,7 @@ kind of free
 		<drop event="Destroy" name="cloth" count="1,3" prob="1" />
 		<property name="EconomicValue" value="100" />
 	</block>
-	<block id="99" name="wrappingStation">
+	<block id="88" name="wrappingStation">
 		<property name="Extends" value="workbench" />
 		<property name="Material" value="wood" />
 		<property name="Shape" value="ModelEntity" />
@@ -16775,7 +16656,7 @@ kind of free
 		<property name="ParticleOnDeath" value="treeGib_small_dust" />
 		<property name="EconomicValue" value="100" />
 	</block>
-	<block id="100" name="lightString">
+	<block id="89" name="lightString">
 		<property name="Material" value="glass" />
 		<property name="Shape" value="ModelEntity" />
 		<property name="Model" value="#LightStrings?LightStringPrefab" />
@@ -16787,7 +16668,7 @@ kind of free
 		<drop event="Destroy" name="brokenGlass" count="1" prob="1" />
 		<property name="EconomicValue" value="100" />
 	</block>
-	<block id="101" name="lightStringDiag">
+	<block id="90" name="lightStringDiag">
 		<property name="Material" value="glass" />
 		<property name="Shape" value="ModelEntity" />
 		<property name="Model" value="#LightStrings?LightStringDiagPrefab" />

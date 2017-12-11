@@ -1023,16 +1023,4 @@ Do not rename "basic" materials like cloth, metal, or stone. These auto-generate
 		<property name="MaxDamage" value="100" />
 		<property name="Experience" value="3.0" />
 	</material>
-	<material id="Thatch">
-		<property name="damage_category" value="earth" />
-		<property name="surface_category" value="plant" />
-		<property name="particle_category" value="xt_tallgrass" />
-		<property name="particle_destroy_category" value="xt_tallgrass" />
-		<property name="Hardness" type="float" value="1" />
-		<property name="stepsound" value="leaves" />
-		<property name="stability_glue" value="20" />
-		<property name="Mass" type="int" value="5" />
-		<property name="MaxDamage" value="50" />
-		<property name="Experience" value="0" />
-	</material>
 </materials>
