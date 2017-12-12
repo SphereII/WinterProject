@@ -13,6 +13,7 @@
 	<!-- This references any config files that SDX needs to merge into your files -->
 	<config_mods>
 		<import file="Configs\Winter.xml" />
+		<import file="Configs\Archtypes.xml" />
     </config_mods>
 	
 </mod>
