@@ -225,7 +225,6 @@
 		<entity name="animalZombieVulture" prob="0.4" />
 		<entity name="animalDireWolf" prob="0.05" />
 		<entity name="animalBear" prob="0.05" />
-		<entity name="ArcticFox" prob="0.03" />
 		<entity name="PolarBear" prob="0.01" />
 		<entity name="animalWolf" prob="0.4" />
 	</entitygroup>

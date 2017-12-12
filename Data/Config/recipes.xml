@@ -2283,6 +2283,14 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<recipe name="flagstoneWedgeTipStairs" count="1">
 		<ingredient name="cobblestones" count="4" />
 	</recipe>
+	<recipe name="GoodSanta" count="1" craft_area="wrappingStation">
+		<ingredient name="Kitten" count="10" />
+		<ingredient name="Cookies" count="100" />
+	</recipe>
+	<recipe name="RealSanta" count="1" craft_area="wrappingStation">
+		<ingredient name="deadKitten" count="10" />
+		<ingredient name="Cookies" count="100" />
+	</recipe>
 	<recipe name="xmasGift" count="1" craft_area="wrappingStation">
 		<ingredient name="paper" count="2" />
 		<ingredient name="glue" count="1" />

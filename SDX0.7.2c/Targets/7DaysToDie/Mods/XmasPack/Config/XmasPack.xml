@@ -234,7 +234,7 @@
 				</property>
 				<property name="Group" value="Basics,Building" />
 				<property class="Workstation">
-					<property name="CraftingAreaRecipes" value="WrappingStation" />
+					<property name="CraftingAreaRecipes" value="wrappingStation" />
 					<property name="Modules" value="tools,output" />
 				</property>
 				<property name="CanPickup" value="true" />

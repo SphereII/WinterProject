@@ -103,10 +103,94 @@
 
 			</block>
 
-
+			<!-- Kitten -->
+			<block id="" name="KittenBlock" >
+				<property name="Material" value="organic" />
+				<property name="MaxDamage" value="10" />
+				<property name="Shape" value="ModelEntity" />
+				<property name="Model" value="#Kitten?KittenReward" />
+				<property name="CanPickup" value="true" />
+				<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+				<property name="DescriptionKey" value="Kitten" />
+				<drop event="Destroy" name="deadKitten" count="1"  />
+				
+				<property name="CanPlayersSpawnOn" value="false" />
+				<property name="ParticleOnDeath" value="blood_death" />
+				<property name="EconomicValue" value="300" />
+			</block>
 		</append>
 
 	</config> 
+
+	<config name="items">
+		<append xpath="/items">
+			<item id="" name="Kitten">
+				<property name="DescriptionKey" value="kitty" />
+				<property name="Meshfile" value="Items/Misc/parcelPrefab" />
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+				<property name="Material" value="organic" />
+				<property name="HoldType" value="31" />
+				<property name="Stacknumber" value="10" />		
+				<property class="Action1">
+					<property name="Class" value="PlaceAsBlock" />
+					<property name="Delay" value="0.1" />
+					<property name="Blockname" value="KittenBlock" />
+				</property>
+				<property name="Group" value="Basics,Decor/Miscellaneous" />
+				<property name="EconomicValue" value="25" />
+			</item>
+
+			<item id="" name="Cookies">
+				<property name="Meshfile" value="Items/Misc/parcelPrefab" />
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+				<property name="HoldType" value="31" />
+				<property name="Material" value="organic" />
+				<property name="Stacknumber" value="50" />
+				<property name="EconomicValue" value="52" />
+				<property class="Action1">
+					<property name="Class" value="Eat" />
+					<property name="Delay" value="2.1" />
+					<property name="Use_time" value="..." />
+					<property name="Gain_health" value="0" />
+					<property name="Gain_food" value="2" />
+					<property name="Buff" value="eatFood_9_Trigger" />
+					<property name="Gain_water" value="0" />
+					<property name="Gain_wellness" value="0.675" />
+					<property name="Sound_start" value="player_eating" />
+				</property>
+				<property name="Smell" value="smallSmell" />
+				<property name="Group" value="Food/Cooking" />
+			</item>
+
+			<item id="" name="deadKitten">
+				<property name="DescriptionKey" value="kitty" />
+				<property name="Meshfile" value="Items/Misc/parcelPrefab" />
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+				<property name="Material" value="organic" />
+				<property name="HoldType" value="31" />
+				<property name="Stacknumber" value="10" />		
+				
+				<property name="Group" value="Basics,Decor/Miscellaneous" />
+				<property name="EconomicValue" value="25" />
+			</item>
+		</append>
+	</config>
+
+	<config name="recipes">
+		<append xpath="/recipes">
+			<recipe name="GoodSanta" count="1" craft_area="wrappingStation">
+				<ingredient name="Kitten" count="10" />
+				<ingredient name="Cookies" count="100" />
+			</recipe>		
+
+			<recipe name="RealSanta" count="1" craft_area="wrappingStation">
+				<ingredient name="deadKitten" count="10" />
+				<ingredient name="Cookies" count="100" />
+			</recipe>	
+
+				
+		</append>
+	</config>
 	<config name="traders">
 		<append xpath="/traders" >
 			<!-- Good Santa! -->
@@ -190,9 +274,12 @@
 	</config>
 	<config name="entityclasses">
 		<append xpath="/entity_classes">
+		<!--
 			<entity_class name="ArcticFox" extends="SDXTemplate">
 				<property name="Mesh" value="#ArcticFox?Arcticfox" />
 				<property name="Class" value="EntityEnemyAnimal"/>
+				<property name="IsEntityAnimal" value="true" />
+
 				<property name="HandItem" value="handAnimalWolf"/>
 				<property name="WalkType" value="1"/>
 				<property name="ModelType" value="Standard"/>
@@ -204,7 +291,6 @@
 				<property name="ExperienceGain" value="2916"/>
 				<property name="Weight" value="70"/>
 				<property name="PushFactor" value="20"/>
-				<property name="LootListOnDeath" value="17"/>
 				<property name="Explosion.ParticleIndex" value="8"/>
 				<property name="Explosion.RadiusBlocks" value="5"/>
 				<property name="Explosion.RadiusEntities" value="6"/>
@@ -222,7 +308,7 @@
 				<property name="KnockdownProneDamageThreshold" value="0"/>
 				<property name="KnockdownKneelDamageThreshold" value="0"/>
 				<property name="LegsExplosionDamageMultiplier" value="2"/>
-				<!-- volatile so vulnerable to land mines/explosives -->
+				
 				<property name="ArmsExplosionDamageMultiplier" value="2"/>
 				<property name="HeadExplosionDamageMultiplier" value="2"/>
 				<property name="ChestExplosionDamageMultiplier" value="2"/>
@@ -230,7 +316,7 @@
 				<property name="MaxTurnSpeed" value="180"/>
 				<property name="MaxViewAngle" value="270"/>
 
-				<!-- Animations -->
+				
 				<property name="AnimationIdle" value="idle" />
 				<property name="AnimationSecondIdle" value="hunt" />
 				<property name="AnimationMainAttack" value="attack" />
@@ -241,7 +327,7 @@
 				<property name="AnimationRun" value="trot" />
 				<property name="AnimationWalk" value="walk" />
 
-				<!-- Default wolf sounds for now -->
+				
 				<property name="SoundRandom" value="Animals/Wolf/wolfroam"/>
 				<property name="SoundAlert" value="Animals/Wolf/wolfalert"/>
 				<property name="SoundHurt" value="Animals/Wolf/wolfpain"/>
@@ -251,7 +337,7 @@
 				<property name="SoundGiveUp" value="Animals/Wolf/wolfgiveup"/>
 				<property name="ExperienceGain" value="1407"/>
 
-				<!-- general AI task from xyth -->
+				
 				<property name="AITarget-1" value="SetNearestEntityAsTarget" param1="EntityEnemyAnimal"/>
 				<property name="AITask-1" value="BreakDoor" param2="5"/>
 				<property name="AITask-2" value="BreakBlock" param2="5"/>
@@ -274,7 +360,7 @@
 				<property name="AITask-16" value="BreakDoor" param2="5"/>
 				<property name="AITask-17" value="BreakBlock" param2="5"/>
 				<property name="AITask-18" value="BlockingTargetTask"/>
-				<!--				<property name="AITask-19" value="RangedAttackTarget" param1="1" param2="5"/> -->
+				
 				<property name="AITask-19" value="RangedAttackTarget" param1="2" param2="0"/>
 				<property name="AITask-20" value="ApproachAndAttackTarget" param1="EntityPlayer" />
 				<property name="AITask-21" value="SetAsTargetIfHurt" param1="EntityEnemyAnimal"/>
@@ -284,15 +370,19 @@
 				<property name="AITask-25" value="Wander"/>
 
 				<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="5"/>
-				<!-- animalWolf -->
+				
 				<drop event="Harvest" name="animalHide" tool_category="Butcher" count="10"/>
 				<drop event="Harvest" name="animalFat" tool_category="Butcher" count="5"/>
 				<drop event="Harvest" name="femur" tool_category="Butcher" count="2"/>
 			</entity_class>
+-->
+			<!-- Polar bear will extend from the Hostile template, over-riding the AvatarController with the AnimationSDX -->
+			<entity_class name="PolarBear" extends="animalTemplateHostile">
+				<property name="AvatarController" value="AnimationSDX, Mods" />
 
-			<entity_class name="PolarBear" extends="SDXTemplate">
 				<property name="Mesh" value="#PolarBear?Polarbear" />
 				<property name="Class" value="EntityEnemyAnimal"/>
+				<property name="IsEntityAnimal" value="true" />
 				<property name="HandItem" value="handAnimalZombieBear"/>
 				<property name="WalkType" value="1"/>
 				<property name="ModelType" value="Standard"/>
@@ -302,45 +392,24 @@
 				<property name="PhysicsBody" value="bear"/>
 				<property name="RootMotion" value="false"/>
 				<property name="HasDeathAnim" value="true"/>
-				<property name="MaxHealth" value="120"/>
+				<property name="MaxHealth" value="1200"/>
 				<property name="ExperienceGain" value="2916"/>
 				<property name="Weight" value="70"/>
 				<property name="PushFactor" value="20"/>
-				<property name="LootListOnDeath" value="17"/>
-				<property name="Explosion.ParticleIndex" value="8"/>
-				<property name="Explosion.RadiusBlocks" value="5"/>
-				<property name="Explosion.RadiusEntities" value="6"/>
-				<property name="Explosion.BlockDamage" value="500"/>
-				<property name="Explosion.EntityDamage" value="150"/>
-				<property name="Explosion.DamageBonus.earth" value="0"/>
-				<property name="HeadDismemberBonusChance" value="0.08"/>
-				<property name="HeadDismemberThreshold" value="0"/>
-				<property name="LowerLegDismemberThreshold" value="0"/>
-				<property name="UpperLegDismemberThreshold" value="0"/>
-				<property name="LowerArmDismemberThreshold" value="0"/>
-				<property name="UpperArmDismemberThreshold" value="0"/>
-				<property name="LegCrawlerThreshold" value="0"/>
-				<property name="LegCrippleThreshold" value="0"/>
-				<property name="KnockdownProneDamageThreshold" value="0"/>
-				<property name="KnockdownKneelDamageThreshold" value="0"/>
-				<property name="LegsExplosionDamageMultiplier" value="2"/>
-				<!-- volatile so vulnerable to land mines/explosives -->
-				<property name="ArmsExplosionDamageMultiplier" value="2"/>
-				<property name="HeadExplosionDamageMultiplier" value="2"/>
-				<property name="ChestExplosionDamageMultiplier" value="2"/>
+
 				<property name="MaxTurnSpeed" value="180"/>
 				<property name="MaxViewAngle" value="270"/>
 
 				<!-- Animations -->
-				<property name="AnimationIdle" value="polarbear_idle2" />
-				<property name="AnimationSecondIdle" value="polarbear_sniffing" />
-				<property name="AnimationMainAttack" value="polarbear_bite" />
-				<property name="AnimationSecondAttack" value="polarbear_double_swipe" />
-				<property name="AnimationJump" value="roar" />
-				<property name="AnimationPain" value="polarbear_hit" />
-				<property name="AnimationDeath" value="polarbear_die" />
-				<property name="AnimationRun" value="polarbear_running" />
-				<property name="AnimationWalk" value="polarbear_walk" />
+				<property name="AnimationIdle" value="Fight Idle" />
+				<property name="AnimationSecondIdle" value="" />
+				<property name="AnimationMainAttack" value="Attack" />
+				<property name="AnimationSecondAttack" value="Attack With Ripping" />
+				<property name="AnimationJump" value="Jumping" />
+				<property name="AnimationPain" value="Hit Front" />
+				<property name="AnimationDeath" value="Death" />
+				<property name="AnimationRun" value="Run" />
+				<property name="AnimationWalk" value="Walk" />
 
 
 				<!-- Default sounds for now -->
@@ -388,22 +457,22 @@
 				<property name="AITask-24" value="ApproachSpot"/>
 				<property name="AITask-25" value="Wander"/>
 
-				<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="10"/>
 				<!-- animalBear -->
+				<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="15"/>
 				<drop event="Harvest" name="animalHide" tool_category="Butcher" count="15"/>
 				<drop event="Harvest" name="animalFat" tool_category="Butcher" count="7"/>
 				<drop event="Harvest" name="femur" tool_category="Butcher" count="4"/>
 			</entity_class>
 		</append>
 	</config>
-	
-	
+
+
 	<config name="entitygroups" >
 		<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']" >
-			<entity name="ArcticFox" prob="0.03" />
+	
 			<entity name="PolarBear" prob="0.01" />
 		</append>
-		
+
 	</config>
 </configs>
 
