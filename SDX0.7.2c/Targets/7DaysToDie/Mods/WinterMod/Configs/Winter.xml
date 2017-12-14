@@ -1024,6 +1024,23 @@
 				<property name="SoundSense" value="AbominableSense" /> 
 				<property name="LootListOnDeath" value="200" />
 			</entity_class>
+			
+			<entity_class name="AnimationTest" extends="SDXTemplate">
+				<property name="Mesh" value="#AnimationTest?Polarbear2" />
+				<property name="AvatarController" value="MechAnimationSDX, Mods" />
+				<property name="RootMotion" value="true"/>
+				<property name="MaxHealth" value="100" />
+				
+			
+				<property name="AnimationIdle" value="Idle" />
+				<property name="AnimationMainAttack" value="Bite" />
+				<property name="AnimationJump" value="Roar" />
+				<property name="AnimationPain" value="Hit" />
+				<property name="AnimationDeath" value="Die" />
+				<property name="AnimationRun" value="Running" />
+				<property name="AnimationWalk" value="Walk" />
+			
+			</entity_class>
 		</append>
 	</config>
 
