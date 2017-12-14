@@ -25,16 +25,21 @@
 
 <quests>
 	<!-- Basic Survival 1 - Craft a Wooden Club /> -->
-	<quest id="quest_BasicSurvival1" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival5" subtitle_key="quest_BasicSurvival5_subtitle" description_key="quest_BasicSurvival5_description" icon="ui_game_symbol_club" category_key="quest" difficulty="veryeasy" offer_key="quest_BasicSurvival_offer">
+	
+	<quest id="quest_BasicSurvival1" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival1" subtitle_key="Lets get started" description_key="Lets get started with your lessons!" icon="ui_game_symbol_book" category_key="quest">
+		<action type="ShowTip" value="tutorialTipQuest01" />
 		<action type="ShowTip" value="tutorialTipQuest02" />
-		<action type="TrackQuest" />
-
-		<objective type="FetchKeep" id="wood" value="6" />
-		<objective type="Craft" id="clubWood" value="1" />
-
+		<objective type="FetchKeep" id="keystoneBlock" value="1" />
+		<reward type="Item" id="pufferCoatGreen" value="200" />
+		<reward type="Item" id="flannelShirtRed" value="100" />
+		<reward type="Item" id="overalls" value="100" />
+		<reward type="Item" id="gunHuntingRifle" value="100" />
+		<reward type="Item" id="762mmBullet" value="25" />
+		<reward type="Item" id="Cookies" value="2" />
+		<reward type="Item" id="snowShovel" value="100" />
 		<reward type="Quest" id="quest_BasicSurvival2" />
-    </quest>
-
+	</quest>
+	
 	<!-- Basic Survival 2 - Craft a Stone Axe /> -->
     <quest id="quest_BasicSurvival2" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival2" subtitle="Craft a Stone Axe" subtitle_key="quest_BasicSurvival2_subtitle" description_key="quest_BasicSurvival2_description"
 	icon="ui_game_symbol_hammer" category_key="quest" offer_key="quest_BasicSurvival_offer" >
@@ -72,7 +77,7 @@
 
 	<!-- Basic Survival 5 - Craft a Bedroll /> -->
 	<quest id="quest_BasicSurvival5" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival1" subtitle_key="quest_BasicSurvival1_subtitle" description_key="quest_BasicSurvival1_description" icon="ui_game_symbol_map_bed" category_key="quest" difficulty="veryeasy">
-		<objective type="FetchKeep" id="cottonPlant" value="10" />
+		<objective type="FetchKeep" id="feather" value="10" />
 		<objective type="FetchKeep" id="cloth" value="5" />
 		<objective type="Craft" id="bedroll" value="1" />
 		<objective type="BlockPlace" id="bedroll" value="1" />

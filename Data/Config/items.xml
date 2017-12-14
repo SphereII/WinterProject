@@ -9628,6 +9628,7 @@ Mesh files no longer used:
 		<property name="EconomicValue" value="25" />
 	</item>
 	<item id="3" name="Cookies">
+		<property name="DescriptionKey" value="Cookies" />
 		<property name="Meshfile" value="Items/Misc/parcelPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="HoldType" value="31" />
@@ -9649,7 +9650,7 @@ Mesh files no longer used:
 		<property name="Group" value="Food/Cooking" />
 	</item>
 	<item id="4" name="deadKitten">
-		<property name="DescriptionKey" value="kitty" />
+		<property name="DescriptionKey" value="SadKitty" />
 		<property name="Meshfile" value="Items/Misc/parcelPrefab" />
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="Material" value="organic" />
@@ -9658,7 +9659,17 @@ Mesh files no longer used:
 		<property name="Group" value="Basics,Decor/Miscellaneous" />
 		<property name="EconomicValue" value="25" />
 	</item>
-	<item id="5" name="rabbitItem">
+	<item id="5" name="Babyseal">
+		<property name="DescriptionKey" value="deadSeal" />
+		<property name="Meshfile" value="Items/Misc/parcelPrefab" />
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+		<property name="Material" value="organic" />
+		<property name="HoldType" value="31" />
+		<property name="Stacknumber" value="10" />
+		<property name="Group" value="Basics,Decor/Miscellaneous" />
+		<property name="EconomicValue" value="25" />
+	</item>
+	<item id="10" name="rabbitItem">
 		<property name="DescriptionKey" value="toysDesc" />
 		<property name="Meshfile" value="#Rabbit?RabbitItemPrefab" />
 		<!-- Rabbit Christmas by Chaitanya Krishnan is licensed under CC Attribution -->
@@ -9674,20 +9685,20 @@ Mesh files no longer used:
 		<property name="Group" value="Basics,Decor/Miscellaneous" />
 		<property name="EconomicValue" value="25" />
 	</item>
-	<item id="10" name="snowShovel">
+	<item id="11" name="snowShovel">
 		<property name="Extends" value="shovelIron" />
 		<property name="DescriptionKey" value="snowShovelDesc" />
 		<property name="Meshfile" value="#SnowShovel?SnowShovelPrefab" />
 		<property name="DropMeshfile" value="#SnowShovel?SnowShovelPrefab" />
 	</item>
-	<item id="11" name="candyCane">
+	<item id="13" name="candyCane">
 		<property name="Extends" value="clubIron" />
 		<property name="Material" value="wood" />
 		<property name="RepairTools" value="repairKit" />
 		<property name="Meshfile" value="#CandyCane?CandyCanePrefab" />
 		<property name="CustomIcon" value="CandyCane" />
 	</item>
-	<item id="13" name="handZombieSnowman">
+	<item id="14" name="handZombieSnowman">
 		<property name="Extends" value="handZombieCop" />
 		<property name="CreativeMode" value="None" />
 		<property class="Action0">

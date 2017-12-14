@@ -171,6 +171,9 @@
 	</entitygroup>
 	<entitygroup name="SnowZombies">
 		<entity name="zombieSnow" prob="1" />
+		<entity name="ZombiePsycho" prob="0.1" />
+		<entity name="ZombieFrozen" prob="0.1" />
+		<entity name="ZombieSeryphSnow" prob="0.1" />
 		<entity name="zombieWalker" prob="0.01" />
 		<entity name="snowGoddess" prob="0.01" />
 		<entity name="Snowman" prob="0.01" />
@@ -225,7 +228,8 @@
 		<entity name="animalZombieVulture" prob="0.4" />
 		<entity name="animalDireWolf" prob="0.05" />
 		<entity name="animalBear" prob="0.05" />
-		<entity name="PolarBear" prob="0.01" />
+		<entity name="PolarBear" prob="0.1" />
+		<entity name="ArcticFox" prob="0.1" />
 		<entity name="animalWolf" prob="0.4" />
 	</entitygroup>
 	<entitygroup name="FriendlyAnimalsSnow">
@@ -233,6 +237,7 @@
 		<entity name="animalRabbit" />
 		<entity name="animalBoar" prob="0.4" />
 		<entity name="animalStag" prob="0.4" />
+		<entity name="animalSeal" prob="0.03" />
 	</entitygroup>
 	<entitygroup name="EnemyAnimalsForest">
 		<entity name="invisibleAnimalEnemy" prob="6" />
@@ -14121,4 +14126,17 @@
 		<entity name="zombieFatCopFeralRadiated" prob="1.431" />
 	</entitygroup>
 	<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXX  end: auto generated feral horde groups  XXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+	<entitygroup name="Nightmares">
+		<entity name="Beast" prob="0.05" />
+		<entity name="Vendigo" prob="0.05" />
+		<entity name="Insectoid" prob="0.05" />
+		<entity name="Nightmare_c1" prob="0.05" />
+		<entity name="Nightmare_c2" prob="0.05" />
+		<entity name="Nightmare_c3" prob="0.05" />
+		<entity name="Nightmare_c4" prob="0.05" />
+		<entity name="Nightmare_c5" prob="0.05" />
+		<entity name="Ripper" prob="0.05" />
+		<entity name="Tornaq" prob="0.05" />
+		<entity name="Snowman" />
+	</entitygroup>
 </entitygroups>

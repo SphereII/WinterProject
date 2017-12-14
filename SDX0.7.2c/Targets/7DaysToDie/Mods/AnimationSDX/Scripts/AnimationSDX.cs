@@ -7,7 +7,7 @@
 
 using System;
 using UnityEngine;
-
+using System.Collections;
 public class AnimationSDX : MonoBehaviour, IAvatarController
 {
     // Default animation strings.
@@ -87,7 +87,7 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
 
     void Awake()
     {
-        // Log("Method: " + System.Reflection.MethodBase.GetCurrentMethod().Name);
+         Log("Method: " + System.Reflection.MethodBase.GetCurrentMethod().Name);
 
         try
         {
@@ -133,12 +133,12 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
 
     private void AddTransformRefs(Transform t)
     {
-      //  Log("Checking " + t.name + " tag " + t.tag);
+        Log("Checking " + t.name + " tag " + t.tag);
         if (t.GetComponent<Collider>() != null && t.GetComponent<RootTransformRefEntity>() == null)
         {
             RootTransformRefEntity root = t.gameObject.AddComponent<RootTransformRefEntity>();
             root.RootTransform = this.transform;
-         //   Log("Added root ref on " + t.name + " tag " + t.tag); 
+            Log("Added root ref on " + t.name + " tag " + t.tag); 
         }
         foreach (Transform tran in t)
         {
@@ -148,7 +148,14 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
 
     void AddTagRecursively(Transform trans, string tag)
     {
-        trans.gameObject.tag = tag;
+        // Check to see if the part contains "head", and let it be a headshot tag
+        // otherwise, fall back to default body
+        if (trans.name.ToLower().Contains("head"))
+            trans.gameObject.tag = "E_BP_Head";
+        else
+            trans.gameObject.tag = tag;
+
+        Log("Transoform Tag: " + trans.name + " : " + trans.tag);
         foreach (Transform t in trans)
             AddTagRecursively(t, tag);
     }
@@ -447,6 +454,14 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
         return false;
     }
 
+    IEnumerator WaitThenCrossFade(float waitFor, AnimationState anim)
+    {
+        Log("Wait Then Cross Fade");
+        yield return new WaitForSeconds(waitFor);
+        
+        this.ModelTransform.GetComponent<Animation>().CrossFade(anim.name);
+    }
+
     public void PlayAnimation( String strAnimation )
     {
         if ( HasValidAnimation( strAnimation ))
@@ -454,6 +469,8 @@ public class AnimationSDX : MonoBehaviour, IAvatarController
             // We only want to play the animation when its not already enabled.
             if (!this.ModelTransform.GetComponent<Animation>()[strAnimation].enabled)
             {
+                //StartCoroutine(WaitThenCrossFade(this.ModelTransform.GetComponent<Animation>()[strAnimation].length - 0.5f, this.ModelTransform.GetComponent<Animation>()[this.AnimationIdle]));
+
                 this.ModelTransform.GetComponent<Animation>().Play(strAnimation);
             }
         }

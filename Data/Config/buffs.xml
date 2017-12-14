@@ -471,4 +471,21 @@ This requires a 50+ food bar:
 		<modify id="0" stat="health" amount="-3" rate="0.5" />
 		<modify id="1" stat="speedmodifier" mulValue="0.1" duration="3.2" />
 	</buff>
+	<!-- Bed Buffs from True Survival -->
+	<buff id="cozybed1" mutex="cozybed1" duration="1" actions="increment(cozybed1, 1, 1, 0, 0)" />
+	<buff id="cozybed1Effect" buffif="cozybed1 greater 1" debuffif="cozybed1 less 1" duration="0" name_key="Bundled Up" description_key="Sleeping in a Sleepingbag warms you up." tooltip_key="You're resting in your warm bed." icon="ui_game_symbol_cozyBed" actions="increment(cozybed1, -1, 1, 0, 0);min(cozybed1, 0)">
+		<modify id="0" stat="coretemp" modifyValue="20" />
+	</buff>
+	<buff id="cozybed2" mutex="cozybed2" duration="1" actions="increment(cozybed2, 1, 1, 0, 0)" />
+	<!-- smallBed -->
+	<buff id="cozybed2Effect" buffif="cozybed2 greater 1" debuffif="cozybed2 less 1" duration="0" actions="increment(cozybed2, -1, 1, 0, 0);min(cozybed2, 0)" name_key="Bundled Up" description_key="Sleeping in a bed moderately regenerates health and warms you up." tooltip_key="You're resting in your warm bed." icon="ui_game_symbol_cozyBed">
+		<modify id="0" stat="health" amount="1" rate="4" />
+		<modify id="1" stat="coretemp" modifyValue="25" />
+	</buff>
+	<buff id="cozybed3" mutex="cozybed3" duration="1" actions="increment(cozybed3, 1, 1, 0, 0)" />
+	<!-- largeBed -->
+	<buff id="cozybed3Effect" buffif="cozybed3 greater 1" debuffif="cozybed3 less 1" duration="0" actions="increment(cozybed3, -1, 1, 0, 0);min(cozybed3, 0)" name_key="Bundled Up" description_key="Sleeping in a bed moderately regenerates health and warms you up." tooltip_key="You're resting in your warm bed." icon="ui_game_symbol_cozyBed">
+		<modify id="0" stat="health" amount="2" rate="4" />
+		<modify id="1" stat="coretemp" modifyValue="30" />
+	</buff>
 </buffs>

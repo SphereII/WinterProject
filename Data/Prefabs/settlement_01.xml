@@ -6,7 +6,7 @@
     <property name="RotationToFaceNorth" value="2" />
     <property name="AllowedTownships" value="city,rural,town" />
     <property name="YOffset" value="-12" />
-    <property name="TraderArea" value="False" />
+
     <property name="ExcludeDistantPOIMesh" value="True" />
     <property name="SleeperVolumeSize" value="38, 18, 38#17, 6, 12#13, 11, 11#10, 12, 10" />
     <property name="SleeperVolumeStart" value="0, 0, 0#21, 0, 5#25, 0, 17#0, 0, 7" />
@@ -14,4 +14,6 @@
     <property name="SleeperVolumeGameStageAdjust" value="hard,hard,hard,hard" />
     <property name="SleeperIsLootVolume" value="False,True,True,True" />
     <property name="DistantPOIYOffset" value="0" />
+	
+
 </prefab>

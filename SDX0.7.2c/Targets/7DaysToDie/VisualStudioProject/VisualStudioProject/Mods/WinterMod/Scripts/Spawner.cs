@@ -2,39 +2,29 @@
 using UnityEngine;
 
 // Custom SnowFill class that makes snow act like plants, for the purpose of snow to disappear in low-light situations.
-public class KittenSpawner : Block
+public class EntitySeal : EntityAnimal
 {
 
-   
-    public override void Init()
+    
+    public override void Init(int _entityClass)
     {
-        base.Init();
- 
+        base.Init(_entityClass);
+    
     }
 
-
-    public override void OnBlockAdded(WorldBase world, Chunk _chunk, Vector3i _blockPos, BlockValue _blockValue)
+    public override void OnEntityDeath()
     {
-        int randomFromGroup =EntityGroups.GetRandomFromGroup("Nightmares");
-        Entity newEntity = EntityFactory.CreateEntity(randomFromGroup, new Vector3(0f, UnityEngine.Random.value * 360f, 0f)); 
-        _chunk.AddEntityToChunk(newEntity);
-            
-            
+        if (this.entityThatKilledMe is global::EntityPlayerLocal)
+        {
+            ((global::EntityPlayer)this.entityThatKilledMe).PlayerJournal.AddJournalEntry("harvestTip", null, true, false);
+        }
+        base.OnEntityDeath();
+        
+        int randomFromGroup = EntityGroups.GetRandomFromGroup("Nightmares");
+        Entity newEntity = EntityFactory.CreateEntity(randomFromGroup, this.position);
+        world.GetAIDirector().World.SpawnEntityInWorld(newEntity);
     }
-
-
-    /*
-     * 
-     * 				if (blockValue.type == 0 && num9 >= num10)
-				{
-					sbyte density2 = MarchingCubes.DensityTerrain;
-					_chunk.SetDensity(x, num10, z, density2);
-					long texture2 = this.GetTexture(i + num2, k, j + num6);
-					_chunk.SetTextureFull(x, num10, z, texture2);
-					_chunk.SetBlock(_world, x, num10, z, Block.GetBlockValue("snowFill"));
-				}
-                */
-
+  
 
 
 }

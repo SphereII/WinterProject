@@ -4690,6 +4690,8 @@ kind of free
 		<drop event="Destroy" name="scrapIron" count="5" />
 		<property name="Group" value="Building,Decor/Miscellaneous" />
 		<property name="EconomicValue" value="1330" />
+		<property name="BuffsWhenWalkedOn" value="cozybed2" />
+		<property name="ActiveRadiusEffects" value="cozybed2Effect" />
 	</block>
 	<block id="464" name="bed01Frame">
 		<property name="Material" value="Mmetal_weak" />
@@ -13796,6 +13798,8 @@ kind of free
 		<drop event="Destroy" name="scrapIron" count="10" />
 		<property name="Group" value="Building,Decor/Miscellaneous" />
 		<property name="EconomicValue" value="2600" />
+		<property name="BuffsWhenWalkedOn" value="cozybed3" />
+		<property name="ActiveRadiusEffects" value="cozybed3Effect" />
 	</block>
 	<block id="1468" name="cntCoffin">
 		<property name="Class" value="Loot" />
@@ -14430,6 +14434,8 @@ kind of free
 		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 		<property name="EconomicValue" value="10" />
 		<property name="EconomicBundleSize" value="10" />
+		<property name="BuffsWhenWalkedOn" value="cozybed1" />
+		<property name="ActiveRadiusEffects" value="cozybed1Effect" />
 	</block>
 	<block id="1563" name="workbench">
 		<property name="Class" value="Workstation" />
@@ -16357,7 +16363,8 @@ kind of free
 	<!--Vending Machine -->
 	<block id="82" name="GoodSanta">
 		<property name="Group" value="Science" />
-		<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+		<property name="CustomIcon" value="GoodSanta" />
+		<property name="DescriptionKey" value="GoodSanta" />
 		<property name="Material" value="Mmetal_medium" />
 		<property name="LightOpacity" value="0" />
 		<property name="StabilitySupport" value="false" />
@@ -16380,7 +16387,8 @@ kind of free
 	<!--Vending Machine -->
 	<block id="83" name="RealSanta">
 		<property name="Group" value="Science" />
-		<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+		<property name="CustomIcon" value="RealSanta" />
+		<property name="DescriptionKey" value="BadSanta" />
 		<property name="Material" value="Mmetal_medium" />
 		<property name="LightOpacity" value="0" />
 		<property name="StabilitySupport" value="false" />

@@ -508,7 +508,8 @@
 				<property name="AITask-24" value="ApproachSpot"/>
 				<property name="AITask-25" value="Wander"/>
 			</entity_class>
-			<!--		<entity_class name="abominable" extends="SDXTemplate" >
+			<!--
+			<entity_class name="abominable" extends="SDXTemplate" >
 				<property name="Mesh" value="#Abominable?monster2Anims1" />
 				<property name="MaxHealth" value="100" />
 				<property name="AnimationIdle" value="monster2Idle" />
@@ -527,7 +528,8 @@
 				<property name="SoundDeath" value="monster2Sounds" />
 				<property name="SoundHurt" value="monster2Sounds" />
 				<property name="SoundSense" value="monster2Sounds" /> 
-			</entity_class> -->
+			</entity_class> 
+			-->
 			<entity_class name="zombieWalker" extends="SDXTemplate">
 				<property name="Mesh" value="#ZombieWalker?ZombieWalker" />
 				<property name="Class" value="EntityZombieCop"/>

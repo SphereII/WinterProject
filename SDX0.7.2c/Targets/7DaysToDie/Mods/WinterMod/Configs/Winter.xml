@@ -29,7 +29,9 @@
 			<!--Vending Machine -->
 			<block id="" name="GoodSanta">
 				<property name="Group" value="Science" />
-				<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+				<property name="CustomIcon" value="GoodSanta"/>
+
+				<property name="DescriptionKey" value="GoodSanta" />
 				<property name="Material" value="Mmetal_medium" />
 				<property name="LightOpacity" value="0" />
 				<property name="StabilitySupport" value="false" />
@@ -55,7 +57,8 @@
 			<!--Vending Machine -->
 			<block id="" name="RealSanta">
 				<property name="Group" value="Science" />
-				<property name="DescriptionKey" value="cntVendingMachineGroupDesc" />
+				<property name="CustomIcon" value="RealSanta"/>
+				<property name="DescriptionKey" value="BadSanta" />
 				<property name="Material" value="Mmetal_medium" />
 				<property name="LightOpacity" value="0" />
 				<property name="StabilitySupport" value="false" />
@@ -120,8 +123,50 @@
 			</block>
 		</append>
 
+		<!-- warming Buffs for all the beds -->
+		<append xpath="/blocks/block[@name='bed01']">
+			<property name="BuffsWhenWalkedOn" value="cozybed2"/>
+			<property name="ActiveRadiusEffects" value="cozybed2Effect"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='bed02']">
+			<property name="BuffsWhenWalkedOn" value="cozybed3"/>
+			<property name="ActiveRadiusEffects" value="cozybed3Effect"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='bedroll']">
+			<property name="BuffsWhenWalkedOn" value="cozybed1"/>
+			<property name="ActiveRadiusEffects" value="cozybed1Effect"/>
+		</append>
+
+			<append xpath="/blocks/block[@name='mattressFlat']">
+			<property name="BuffsWhenWalkedOn" value="cozybed1"/>
+			<property name="ActiveRadiusEffects" value="cozybed1Effect"/>
+		</append>
 	</config> 
 
+	<config name="buffs">
+		<append xpath="/buffs" >
+		<!-- Bed Buffs from True Survival -->
+			<buff id="cozybed1" mutex="cozybed1" duration="1" actions="increment(cozybed1, 1, 1, 0, 0)" />
+			
+			<buff id="cozybed1Effect" buffif="cozybed1 greater 1" debuffif="cozybed1 less 1" duration="0" name_key="Bundled Up" description_key="Sleeping in a Sleepingbag warms you up." tooltip_key="You're resting in your warm bed." icon="ui_game_symbol_cozyBed"    actions="increment(cozybed1, -1, 1, 0, 0);min(cozybed1, 0)" >
+				<modify id="0" stat="coretemp" modifyValue="20" />
+			</buff>
+			<buff id="cozybed2" mutex="cozybed2" duration="1" actions="increment(cozybed2, 1, 1, 0, 0)" />
+			<!-- smallBed -->
+			<buff id="cozybed2Effect" buffif="cozybed2 greater 1" debuffif="cozybed2 less 1" duration="0" actions="increment(cozybed2, -1, 1, 0, 0);min(cozybed2, 0)" name_key="Bundled Up" description_key="Sleeping in a bed moderately regenerates health and warms you up." tooltip_key="You're resting in your warm bed." icon="ui_game_symbol_cozyBed" >
+				<modify id="0" stat="health" amount="1" rate="4" />
+				<modify id="1" stat="coretemp" modifyValue="25" />
+			</buff>
+			<buff id="cozybed3" mutex="cozybed3" duration="1" actions="increment(cozybed3, 1, 1, 0, 0)" />
+			<!-- largeBed -->
+			<buff id="cozybed3Effect" buffif="cozybed3 greater 1" debuffif="cozybed3 less 1" duration="0" actions="increment(cozybed3, -1, 1, 0, 0);min(cozybed3, 0)" name_key="Bundled Up" description_key="Sleeping in a bed moderately regenerates health and warms you up." tooltip_key="You're resting in your warm bed." icon="ui_game_symbol_cozyBed" >
+				<modify id="0" stat="health" amount="2" rate="4" />
+				<modify id="1" stat="coretemp" modifyValue="30" />
+			</buff>    
+		</append>
+	</config>
 	<config name="items">
 		<append xpath="/items">
 			<item id="" name="Kitten">
@@ -141,6 +186,7 @@
 			</item>
 
 			<item id="" name="Cookies">
+				<property name="DescriptionKey" value="Cookies" />
 				<property name="Meshfile" value="Items/Misc/parcelPrefab" />
 				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 				<property name="HoldType" value="31" />
@@ -163,7 +209,19 @@
 			</item>
 
 			<item id="" name="deadKitten">
-				<property name="DescriptionKey" value="kitty" />
+				<property name="DescriptionKey" value="SadKitty" />
+				<property name="Meshfile" value="Items/Misc/parcelPrefab" />
+				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+				<property name="Material" value="organic" />
+				<property name="HoldType" value="31" />
+				<property name="Stacknumber" value="10" />		
+
+				<property name="Group" value="Basics,Decor/Miscellaneous" />
+				<property name="EconomicValue" value="25" />
+			</item>
+
+			<item id="" name="Babyseal">
+				<property name="DescriptionKey" value="deadSeal" />
 				<property name="Meshfile" value="Items/Misc/parcelPrefab" />
 				<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
 				<property name="Material" value="organic" />
@@ -185,7 +243,7 @@
 
 			<recipe name="RealSanta" count="1" craft_area="wrappingStation">
 				<ingredient name="deadKitten" count="10" />
-				<ingredient name="Cookies" count="100" />
+				<ingredient name="Babyseal" count="10" />
 			</recipe>	
 
 
@@ -216,9 +274,9 @@
 			<!-- Bad Santa! -->
 			<trader_info id="98" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="13" min_items_swapped="6" max_items_swapped="13">
 				<trader_items count="10">
-					<item group="weaponsGunsMilitary" count="2,7" prob="0.3"/>
-					<item group="weaponsGunsCommon" count="2,10" prob="0.8"/>
-					<item group="ammoSupplies" count="2,3" prob="0.4"/>
+					<item group="weaponsGunsMilitary" count="10,15" prob="0.3"/>
+					<item group="weaponsGunsCommon" count="10,15" prob="0.8"/>
+					<item group="ammoSupplies" count="10,15" prob="0.4"/>
 					<item group="banditArmor" count="4,10" prob="0.4"/>
 				</trader_items>
 			</trader_info>
@@ -534,7 +592,43 @@
 	</config>
 	<config name="entityclasses">
 		<append xpath="/entity_classes">
-			
+
+			<entity_class name="animalSeal" extends="animalTemplateTimid">
+				<property name="Mesh" value="#SealCub?sealcub" />
+				<property name="AvatarController" value="AnimationSDX, Mods" />
+
+				<property name="Prefab" value="NPC"/>
+				<property name="Class" value="EntitySeal, Mods"/>
+				<property name="Parent" value="Animals"/>
+				<property name="Weight" value="10"/>
+				<property name="MaxHealth" value="1"/>
+				<property name="PhysicsBody" value="rabbit"/>
+				<property name="SoundHurt" value="Animals/rabbitpain"/>
+				<property name="SoundDeath" value="Animals/rabbitdeath"/>
+				<property name="PanicSpeed" value="0"/>
+				<property name="ExperienceGain" value="0"/>
+				<property name="SwimOffset" value="2"/>
+				<property name="Faction" value="animals"/>
+				<property name="HasRagdoll" value="true"/>
+				<property name="DeadBodyHitPoints" value="175"/>
+
+				<property name="WanderSpeed" value="0.2" />
+				<property name="ApproachSpeed" value="0.2" />
+				<property name="NightWanderSpeed" value="0.2" />
+				<property name="NightApproachSpeed" value="0.2" />
+				<property name="HasRagdoll" value="false" />
+
+				<!-- Animations -->
+				<property name="AnimationIdle" value="idle" />
+				<property name="AnimationMainAttack" value="call" />
+				<property name="AnimationPain" value="call" />
+				<property name="AnimationDeath" value="die" />
+				<property name="AnimationRun" value="walk" />
+				<property name="AnimationWalk" value="walk" /> 
+				<drop event="Harvest" name="Babyseal" tool_category="Butcher" count="1"/>
+			</entity_class>
+
+
 			<entity_class name="ArcticFox" extends="SDXTemplate">
 				<property name="Mesh" value="#ArcticFox?arcticfox" />
 				<property name="Class" value="EntityEnemyAnimal"/>
@@ -568,7 +662,7 @@
 				<property name="KnockdownProneDamageThreshold" value="0"/>
 				<property name="KnockdownKneelDamageThreshold" value="0"/>
 				<property name="LegsExplosionDamageMultiplier" value="2"/>
-				
+
 				<property name="ArmsExplosionDamageMultiplier" value="2"/>
 				<property name="HeadExplosionDamageMultiplier" value="2"/>
 				<property name="ChestExplosionDamageMultiplier" value="2"/>
@@ -576,7 +670,7 @@
 				<property name="MaxTurnSpeed" value="180"/>
 				<property name="MaxViewAngle" value="270"/>
 
-				
+
 				<property name="AnimationIdle" value="idle" />
 				<property name="AnimationSecondIdle" value="hunt" />
 				<property name="AnimationMainAttack" value="attack" />
@@ -587,7 +681,7 @@
 				<property name="AnimationRun" value="trot" />
 				<property name="AnimationWalk" value="walk" />
 
-				
+
 				<property name="SoundRandom" value="Animals/Wolf/wolfroam"/>
 				<property name="SoundAlert" value="Animals/Wolf/wolfalert"/>
 				<property name="SoundHurt" value="Animals/Wolf/wolfpain"/>
@@ -597,7 +691,7 @@
 				<property name="SoundGiveUp" value="Animals/Wolf/wolfgiveup"/>
 				<property name="ExperienceGain" value="1407"/>
 
-				
+
 				<property name="AITarget-1" value="SetNearestEntityAsTarget" param1="EntityEnemyAnimal"/>
 				<property name="AITask-1" value="BreakDoor" param2="5"/>
 				<property name="AITask-2" value="BreakBlock" param2="5"/>
@@ -620,7 +714,7 @@
 				<property name="AITask-16" value="BreakDoor" param2="5"/>
 				<property name="AITask-17" value="BreakBlock" param2="5"/>
 				<property name="AITask-18" value="BlockingTargetTask"/>
-				
+
 				<property name="AITask-19" value="RangedAttackTarget" param1="2" param2="0"/>
 				<property name="AITask-20" value="ApproachAndAttackTarget" param1="EntityPlayer" />
 				<property name="AITask-21" value="SetAsTargetIfHurt" param1="EntityEnemyAnimal"/>
@@ -630,7 +724,7 @@
 				<property name="AITask-25" value="Wander"/>
 
 				<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="5"/>
-				
+
 				<drop event="Harvest" name="animalHide" tool_category="Butcher" count="10"/>
 				<drop event="Harvest" name="animalFat" tool_category="Butcher" count="5"/>
 				<drop event="Harvest" name="femur" tool_category="Butcher" count="2"/>
@@ -809,6 +903,9 @@
 				<property name="LootListOnDeath" value="200" />
 			</entity_class>
 			<entity_class name="Nightmare_c3" extends="SDXTemplate">
+				<!-- Make 'em fly! -->
+				<property name="Class" value="EntityVulture"/>
+
 				<property name="Mesh" value="#Nightmares?thc3" />
 				<property name="MaxHealth" value="1000" />
 				<!-- These are the animation map names. The value comes from the animation from Unity -->
@@ -827,6 +924,7 @@
 				<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain" />
 				<property name="SoundSense" value="afroShamanSounds" />
 				<property name="LootListOnDeath" value="200" />
+
 			</entity_class>
 			<entity_class name="Nightmare_c4" extends="SDXTemplate">
 				<property name="Mesh" value="#Nightmares?thc4" />
@@ -908,6 +1006,24 @@
 				<property name="SoundSense" value="afroShamanSounds" />
 				<property name="LootListOnDeath" value="200" />
 			</entity_class>
+
+			<entity_class name="Tornaq" extends="SDXTemplate">
+				<property name="Mesh" value="#Tornaq?Tornaq" />
+				<property name="MaxHealth" value="1000" />
+				<property name="AnimationIdle" value="Idle" />
+				<property name="AnimationMainAttack" value="Roar" />
+				<property name="AnimationPain" value="Roar" />
+				<property name="AnimationDeath" value="Roar" />
+				<property name="AnimationRun" value="Idle" />
+				<property name="AnimationWalk" value="Idle" />
+				<property name="SoundRandom" value="AbominableRandom" />
+				<property name="SoundAlert" value="AbominableAlert" />
+				<property name="SoundAttack" value="AbominableAttack" />
+				<property name="SoundDeath" value="AbominableDie" />
+				<property name="SoundHurt" value="AbominableHurt" />
+				<property name="SoundSense" value="AbominableSense" /> 
+				<property name="LootListOnDeath" value="200" />
+			</entity_class>
 		</append>
 	</config>
 
@@ -915,30 +1031,36 @@
 
 	<config name="entitygroups" >
 		<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']" >
+			<entity name="PolarBear" prob="0.1" />
+			<entity name="ArcticFox" prob="0.1" />
+		</append>
 
-			<entity name="PolarBear" prob="0.01" />
+		<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsSnow']" >
+			<entity name="animalSeal" prob="0.03" />
 		</append>
 
 		<!-- Night time fun! -->
 		<append xpath="/entitygroups">
-			<entitygroup name="NightTerrors">
-				<entity name="Beast" />
-				<entity name="Vendigo" />
-				<entity name="Insectoid" />
-				<entity name="Nightmare_c1" />
-				<entity name="Nightmare_c2" />
-				<entity name="Nightmare_c3" />
-				<entity name="Nightmare_c4" />
-				<entity name="Nightmare_c5" />
-				<entity name="Ripper" />
+			<entitygroup name="Nightmares">
+				<entity name="Beast" prob="0.05" />
+				<entity name="Vendigo"  prob="0.05"/>
+				<entity name="Insectoid" prob="0.05"/>
+				<entity name="Nightmare_c1" prob="0.05"/>
+				<entity name="Nightmare_c2" prob="0.05"/>
+				<entity name="Nightmare_c3" prob="0.05" />
+				<entity name="Nightmare_c4" prob="0.05" />
+				<entity name="Nightmare_c5" prob="0.05"/>
+				<entity name="Ripper" prob="0.05"/>
+				<entity name="Tornaq" prob="0.05"/>
+				<entity name="Snowman"  />
 			</entitygroup>
 		</append>
 	</config>
 
-	<!-- add int he Night Terrors group for nighttime spawning. -->
+	<!-- add in the Night Terrors group for nighttime spawning. -->
 	<config name="spawning" >
-		<append xpath="/spawning/biome">
-			<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="NightTerrors" />
+		<append xpath="/spawning/biome[@name='snow']">
+			<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="Nightmares" />
 		</append>
 	</config>
 
@@ -948,8 +1070,22 @@
 			<lootcontainer id="200" count="1" size="8,4" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
 				<item name="Kitten" count="1" />
 			</lootcontainer>	
+
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='junkPersonal']">
+			<item name="Cookies" count="1,3"/>
+
 		</append>
 
+		<append xpath="/lootcontainers/lootgroup[@name='coldfood']">
+			<item name="Cookies" count="1,3"/>
+
+		</append>
+
+		<append xpath="/lootcontainers/lootgroup[@name='cupboard']">
+			<item name="Cookies" count="1,3"/>
+
+		</append>
 	</config>
 </configs>
 

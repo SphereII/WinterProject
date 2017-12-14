@@ -2289,7 +2289,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	</recipe>
 	<recipe name="RealSanta" count="1" craft_area="wrappingStation">
 		<ingredient name="deadKitten" count="10" />
-		<ingredient name="Cookies" count="100" />
+		<ingredient name="Babyseal" count="10" />
 	</recipe>
 	<recipe name="xmasGift" count="1" craft_area="wrappingStation">
 		<ingredient name="paper" count="2" />

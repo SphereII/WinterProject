@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Weather survival tuning values-->
 <weathersurvival>
-
 	<!-- Degrees per second in which heat the player generates from melee actions dissapates -->
 	<property name="GeneratedHeatDecayRate" value="2"/>
 	<!-- How much the player heats when doing melee actions that consume stamina. -->
@@ -49,25 +48,26 @@
 	<!-- How much the temp changes when you are idle. -->
 	<property name="OutsideTempShiftWhenIdle" value="0"/>
 
-	<TemperatureHeight height="0" addDegrees="0"/>
-	<TemperatureHeight height="10" addDegrees="0"/>
-	<TemperatureHeight height="20" addDegrees="0"/>
-	<TemperatureHeight height="30" addDegrees="0"/>
-	<TemperatureHeight height="40" addDegrees="0"/>
-	<TemperatureHeight height="50" addDegrees="0"/>
-	<TemperatureHeight height="60" addDegrees="0"/>
-	<TemperatureHeight height="70" addDegrees="0"/>
-	<TemperatureHeight height="80" addDegrees="-1"/>
-	<TemperatureHeight height="90" addDegrees="-2"/>
-	<TemperatureHeight height="100" addDegrees="-4"/>
-	<TemperatureHeight height="110" addDegrees="-6"/>
-	<TemperatureHeight height="120" addDegrees="-9"/>
-	<TemperatureHeight height="130" addDegrees="-12"/>
-	<TemperatureHeight height="140" addDegrees="-16"/>
-	<TemperatureHeight height="150" addDegrees="-20"/>
-	<TemperatureHeight height="160" addDegrees="-25"/>
-	<TemperatureHeight height="170" addDegrees="-30"/>
-	<TemperatureHeight height="180" addDegrees="-36"/>
-	<TemperatureHeight height="190" addDegrees="-42"/>
-	<TemperatureHeight height="200" addDegrees="-49"/>
+	<TemperatureHeight height="0" addDegrees="-50"/>
+	<TemperatureHeight height="10" addDegrees="-50"/>
+	<TemperatureHeight height="20" addDegrees="-50"/>
+	<TemperatureHeight height="30" addDegrees="-50"/>
+	<TemperatureHeight height="40" addDegrees="-50"/>
+	<TemperatureHeight height="50" addDegrees="-50"/>
+	<TemperatureHeight height="60" addDegrees="-50"/>
+	<TemperatureHeight height="70" addDegrees="-50"/>
+	<TemperatureHeight height="80" addDegrees="-50"/>
+	<TemperatureHeight height="90" addDegrees="-50"/>
+	<TemperatureHeight height="100" addDegrees="-50"/>
+	<TemperatureHeight height="110" addDegrees="-50"/>
+	<TemperatureHeight height="120" addDegrees="-50"/>
+	<TemperatureHeight height="130" addDegrees="-50"/>
+	<TemperatureHeight height="140" addDegrees="-50"/>
+	<TemperatureHeight height="150" addDegrees="-50"/>
+	<TemperatureHeight height="160" addDegrees="-50"/>
+	<TemperatureHeight height="170" addDegrees="-50"/>
+	<TemperatureHeight height="180" addDegrees="-50"/>
+	<TemperatureHeight height="190" addDegrees="-50"/>
+	<TemperatureHeight height="200" addDegrees="-50"/>
+	
 </weathersurvival>

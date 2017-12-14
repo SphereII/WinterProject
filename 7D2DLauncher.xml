@@ -13,7 +13,8 @@
 			<RSS></RSS>
 			<ReleaseNotes></ReleaseNotes>
 			<Downloads>
-				<Download>https://gitlab.com/sphereii/WinterProject.git</Download>
+				<Download>https://gitlab.com/sphereii/WinterProject.git</Download> 
+				<Download>https://github.com/SphereII/WinterProject/archive/master.zip</Download>
 			</Downloads>
 		</Server>
 		

@@ -5,8 +5,6 @@ using Audio;
 // Extending HAL9000's Zombies Run In Dark mod by adding speed variation
 public class BlockSantaVending : BlockVendingMachine
 {
-    private float nextCheck = 0;
-    public static float CheckDelay = 100f;
 
     public override void Init()
     {
@@ -42,18 +40,4 @@ public class BlockSantaVending : BlockVendingMachine
         return true;
     }
 
-    public override bool UpdateTick(WorldBase _world, int _clrIdx, Vector3i _blockPos, BlockValue _blockValue, bool _bRandomTick, ulong _ticksIfLoaded, System.Random _rnd)
-    {
-        base.UpdateTick( _world,  _clrIdx,  _blockPos,  _blockValue,  _bRandomTick,  _ticksIfLoaded, _rnd);
-
-        if (nextCheck < Time.time)
-        {
-            nextCheck = Time.time + CheckDelay;
-            Vector3i v = new Vector3i(this.position);
-            if (v.x < 0) v.x -= 1;
-            if (v.z < 0) v.z -= 1;
-            lightLevel = GameManager.Instance.World.ChunkClusters[0].GetLight(v, Chunk.LIGHT_TYPE.SUN);
-        }
-        return false;
-    }
 }

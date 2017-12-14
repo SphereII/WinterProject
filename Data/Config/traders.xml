@@ -973,9 +973,9 @@ workstations
 	<!-- Bad Santa! -->
 	<trader_info id="98" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="13" min_items_swapped="6" max_items_swapped="13">
 		<trader_items count="10">
-			<item group="weaponsGunsMilitary" count="2,7" prob="0.3" />
-			<item group="weaponsGunsCommon" count="2,10" prob="0.8" />
-			<item group="ammoSupplies" count="2,3" prob="0.4" />
+			<item group="weaponsGunsMilitary" count="10,15" prob="0.3" />
+			<item group="weaponsGunsCommon" count="10,15" prob="0.8" />
+			<item group="ammoSupplies" count="10,15" prob="0.4" />
 			<item group="banditArmor" count="4,10" prob="0.4" />
 		</trader_items>
 	</trader_info>

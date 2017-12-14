@@ -954,6 +954,7 @@
 		<item name="potato" />
 		<item name="blueberries" />
 		<item name="snowBall" />
+		<item name="Cookies" count="1,3" />
 	</lootgroup>
 	<lootgroup name="farmCrops">
 		<item name="corn" />
@@ -982,6 +983,7 @@
 		<item name="potassiumNitratePowder" count="5,10" prob="0.15" />
 		<item name="paint" count="5,20" prob="0.15" />
 		<item name="silverNugget" count="1,4" prob="0.05" />
+		<item name="Cookies" count="1,3" />
 	</lootgroup>
 	<lootgroup name="rareAutomotive">
 		<item name="smallEngine" />
@@ -1196,6 +1198,7 @@
 		<item group="books" />
 		<item group="quest+treasure" count="1" prob="0.6" />
 		<!-- 0.6 = 2.7 % -->
+		<item name="Cookies" count="1,3" />
 	</lootgroup>
 	<lootgroup name="junk">
 		<item name="ironArrowHead" count="4,12" prob="0.5" />
@@ -2335,4 +2338,7 @@
 	</lootcontainer>
 	<!-- "bag" container that gets dropped when a zombie gore block is destroyed but still contained loot -->
 	<lootcontainer id="99" count="0" size="5,10" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="baseTemplate"></lootcontainer>
+	<lootcontainer id="200" count="1" size="8,4" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+		<item name="Kitten" count="1" />
+	</lootcontainer>
 </lootcontainers>

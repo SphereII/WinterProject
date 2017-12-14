@@ -11,10 +11,10 @@
 			<path_material value="snowFill" />
 			<path_radius value="0" />
 			<hub_rule name="townSmall" prob="0.3" />
-			<hub_rule name="townLarge" prob="0.3" />
+			<hub_rule name="townLarge" prob="0.01" />
 			<hub_rule name="citySmall" prob="0.1" />
-			<hub_rule name="cityLarge" prob="0.1" />
-			<hub_rule name="rural" prob="0.3" />
+			<hub_rule name="cityLarge" prob="0.01" />
+			<hub_rule name="rural" prob="0.5" />
 			<wilderness_rule name="wildernessDefault" />
 		</cell_rule>
 		<cell_rule name="customHubTest">
