@@ -4744,6 +4744,8 @@ kind of free
 		<drop event="Destroy" count="0" />
 		<property name="EconomicValue" value="60" />
 		<!-- disassemble value -->
+		<property name="BuffsWhenWalkedOn" value="cozybed1" />
+		<property name="ActiveRadiusEffects" value="cozybed1Effect" />
 	</block>
 	<block id="467" name="shapedChargeBlockTest">
 		<property name="CreativeMode" value="Dev" />

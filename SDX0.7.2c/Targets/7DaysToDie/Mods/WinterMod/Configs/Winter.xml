@@ -591,6 +591,14 @@
 		</append>
 	</config>
 	<config name="entityclasses">
+	
+	<!-- Sacred Creature -->
+		<append xpath="/entity_classes/entity_class[@name='animalStag']">
+			<property name="Class" value="EntityAnimalProtector, Mods"/>
+		</append>
+		
+
+		
 		<append xpath="/entity_classes">
 
 			<entity_class name="animalSeal" extends="animalTemplateTimid">
@@ -1025,6 +1033,33 @@
 				<property name="LootListOnDeath" value="200" />
 			</entity_class>
 			
+			 <entity_class name="Maw" extends="SDXTemplate" >
+                <property name="Mesh" value="#Maw?Maw" /> <!-- Tornaq Idle by tsiliopoulos is licensed under CC Attribution -->
+                <property name="MaxHealth" value="1000" />
+                <property name="MaxTurnSpeed" value="230"/>
+                <property name="MaxViewAngle" value="270"/>
+                <property name="WanderSpeed" value="0.3" />
+                <property name="ApproachSpeed" value="0.6" />
+                <property name="NightWanderSpeed" value="0.3" />
+                <property name="NightApproachSpeed" value="1.1" />
+                <property name="PanicSpeed" value="0.8"/>
+                <property name="AnimationIdle" value="Idle" />
+                <property name="AnimationMainAttack" value="Attack" />
+                <property name="AnimationSecondAttack" value="Attack2" />
+                <property name="AnimationPain" value="Hit" />
+                <property name="AnimationDeath" value="Die" />
+                <property name="AnimationRun" value="Run" />
+                <property name="AnimationWalk" value="Walk" />
+                <property name="AnimationJump" value="Jump" />
+                <property name="SoundRandom" value="AbominableRandom" />
+                <property name="SoundAlert" value="AbominableAlert" />
+                <property name="SoundAttack" value="AbominableAttack" />
+                <property name="SoundDeath" value="AbominableDie" />
+                <property name="SoundHurt" value="AbominableHurt" />
+                <property name="SoundSense" value="AbominableSense" /> 
+            </entity_class>
+			
+			
 			<entity_class name="AnimationTest" extends="SDXTemplate">
 				<property name="Mesh" value="#AnimationTest?Polarbear2" />
 				<property name="AvatarController" value="MechAnimationSDX, Mods" />
@@ -1069,8 +1104,14 @@
 				<entity name="Nightmare_c5" prob="0.05"/>
 				<entity name="Ripper" prob="0.05"/>
 				<entity name="Tornaq" prob="0.05"/>
-				<entity name="Snowman"  />
+				<entity name="Maw"  prob="0.05" />
 			</entitygroup>
+			
+		
+			<entitygroup name="Protector">
+				<entity name="Maw" prob="0.05" />
+			</entitygroup>
+				
 		</append>
 	</config>
 
