@@ -14137,6 +14137,6 @@
 		<entity name="Nightmare_c5" prob="0.05" />
 		<entity name="Ripper" prob="0.05" />
 		<entity name="Tornaq" prob="0.05" />
-		<entity name="Snowman" />
+		
 	</entitygroup>
 </entitygroups>
