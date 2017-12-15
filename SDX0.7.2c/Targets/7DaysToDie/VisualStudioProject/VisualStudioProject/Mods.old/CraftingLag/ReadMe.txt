@@ -1,1 +1,0 @@
-Various Crafting Lag fixes by Jeoshua, ported by sphereii to SDX.

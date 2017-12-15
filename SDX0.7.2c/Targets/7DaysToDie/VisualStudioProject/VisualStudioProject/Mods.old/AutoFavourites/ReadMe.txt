@@ -1,1 +1,0 @@
-Another tweak to enable all your crafted items to appear automatically in your Favourites window. This will help with inventory lag.
