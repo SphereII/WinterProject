@@ -10,12 +10,14 @@
 				<Exclude>SDX0.7.2c</Exclude>
 			</Excludes>
 			<Version>alpha16.4</Version>
-			<RSS></RSS>
-			<ReleaseNotes></ReleaseNotes>
+			<RSS/>
+			<ReleaseNotes/>
 			<Downloads>
 				<Download>https://github.com/SphereII/WinterProject/archive/master.zip</Download>
+				<Download>https://github.com/SphereII/7D2DPatches/raw/master/Alpha16.4/ZombieTextures/ZombieTextureOverhaul.zip</Download>
+
 			</Downloads>
 		</Server>
-		
+
 	</ServerGroup>
 </Servers>
