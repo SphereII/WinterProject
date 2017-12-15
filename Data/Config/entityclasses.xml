@@ -81,7 +81,7 @@
 		<property name="Parent" value="Enemies" />
 		<property name="PhysicsBody" value="zombieStandard" />
 		<property name="Faction" value="undead" />
-		<property name="MaxTurnSpeed" value="360" />
+		<property name="MaxTurnSpeed" value="230" />
 		<!-- param1: 0 == attack action, 1 == use action, param2: attack length in s -->
 		<!-- <property name="AITask-6" value="ApproachAndAttackTarget" param1="EntityPlayer" param2="30"/> with give up time -->
 		<property name="AITask-1" value="BreakDoor" />
@@ -120,29 +120,29 @@
 		<!--property name="AITarget-4" value="SetNearestEntityAsTarget" param1="EntityAnimalBear" /-->
 		<!--property name="AITarget-5" value="SetNearestEntityAsTarget" param1="EntityAnimalStag" /-->
 		<property name="MaxHealth" value="150" />
-		<property name="MaxViewAngle" value="180" />
+		<property name="MaxViewAngle" value="270" />
 		<property name="HandItem" value="handZombie" />
 		<property name="Weight" value="70" />
 		<property name="Immunity" value="sickness;disease;bleeding;wellness" />
 		<property name="WanderSpeed" value="0.08" />
-		<property name="ApproachSpeed" value="0.2" />
+		<property name="ApproachSpeed" value="0.25" />
 		<property name="NightWanderSpeed" value="0.08" />
 		<property name="NightApproachSpeed" value="1.1" />
 		<property name="PanicSpeed" value="0.55" />
 		<property name="CanClimbLadders" value="true" />
 		<property name="IsEnemyEntity" value="true" />
 		<!-- Stealth settings -->
-		<property name="SightRange" value="30" />
+		<property name="SightRange" value="50" />
 		<!-- distance in m -->
-		<property name="SightScale" value="-2,150" />
+		<property name="SightScale" value="-25,125" />
 		<!-- how well lit you have to be for the zombie to see you at min,max range -->
-		<property name="SleeperWakeupSightDetectionMin" value="-40,5" />
+		<property name="SleeperWakeupSightDetectionMin" value="-25,0" />
 		<!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
-		<property name="SleeperWakeupSightDetectionMax" value="340,480" />
+		<property name="SleeperWakeupSightDetectionMax" value="100,125" />
 		<!-- Indiv.Random. "I see you" light value at "SightRange" -->
-		<property name="SleeperSenseSightDetectionMin" value="-10,0" />
+		<property name="SleeperSenseSightDetectionMin" value="-15,10" />
 		<!-- same for groaning, not waking -->
-		<property name="SleeperSenseSightDetectionMax" value="200,300" />
+		<property name="SleeperSenseSightDetectionMax" value="99,150" />
 		<property name="SleeperNoiseSenseThreshold" value="2,13" />
 		<!-- Indiv.Random. hearing capability - "I hear something" noise value -->
 		<property name="SleeperNoiseWakeThreshold" value="20,20" />
@@ -1158,7 +1158,7 @@
 		<property name="AITask-5" value="Wander" />
 		<property name="CanClimbLadders" value="false" />
 		<property name="MaxHealth" value="50" />
-		<property name="MaxViewAngle" value="180" />
+		<property name="MaxViewAngle" value="270" />
 		<property name="WanderSpeed" value="0.7" />
 		<property name="PanicSpeed" value="2.0" />
 		<!-- Stealth settings -->
@@ -1223,7 +1223,7 @@
 		<property name="PhysicsBody" value="rabbit" />
 		<property name="SoundHurt" value="Animals/rabbitpain" />
 		<property name="SoundDeath" value="Animals/rabbitdeath" />
-		<property name="PanicSpeed" value="1.5" />
+		<property name="PanicSpeed" value="1.2" />
 		<property name="ExperienceGain" value="173" />
 		<property name="SwimOffset" value="2" />
 		<property name="Faction" value="animals" />
@@ -1298,7 +1298,7 @@
 		<property name="CanClimbLadders" value="false" />
 		<property name="HandItem" value="handAnimalBear" />
 		<property name="MaxHealth" value="1200" />
-		<property name="MaxViewAngle" value="180" />
+		<property name="MaxViewAngle" value="270" />
 		<property name="WanderSpeed" value="0.25" />
 		<property name="PanicSpeed" value="2.0" />
 		<property name="ApproachSpeed" value="1.3" />
@@ -2674,11 +2674,12 @@
 		<property name="Mesh" value="#Tornaq?Tornaq" />
 		<property name="MaxHealth" value="2500" />
 		<property name="AnimationIdle" value="Idle" />
-		<property name="AnimationMainAttack" value="Roar" />
+		<property name="AnimationMainAttack" value="Bash" />
+		<property name="AnimationSecondAttack" value="Stomp" />
 		<property name="AnimationPain" value="Roar" />
-		<property name="AnimationDeath" value="Roar" />
-		<property name="AnimationRun" value="Idle" />
-		<property name="AnimationWalk" value="Idle" />
+		<property name="AnimationDeath" value="Die" />
+		<property name="AnimationRun" value="Run" />
+		<property name="AnimationWalk" value="Walk" />
 		<property name="SoundRandom" value="AbominableRandom" />
 		<property name="SoundAlert" value="AbominableAlert" />
 		<property name="SoundAttack" value="AbominableAttack" />
@@ -2690,7 +2691,7 @@
 	<entity_class name="Maw" extends="SDXTemplate">
 		<property name="Mesh" value="#Maw?Maw" />
 		<!-- Tornaq Idle by tsiliopoulos is licensed under CC Attribution -->
-		<property name="MaxHealth" value="1000" />
+		<property name="MaxHealth" value="1500" />
 		<property name="MaxTurnSpeed" value="230" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="WanderSpeed" value="0.3" />
@@ -2785,7 +2786,7 @@
 		<property name="PhysicsBody" value="zombieFat" />
 		<property name="RootMotion" value="false" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="MaxHealth" value="300" />
+		<property name="MaxHealth" value="700" />
 		<property name="ExperienceGain" value="2916" />
 		<property name="Weight" value="70" />
 		<property name="PushFactor" value="20" />
@@ -2894,7 +2895,7 @@
 		<property name="PhysicsBody" value="zombieFat" />
 		<property name="RootMotion" value="false" />
 		<property name="HasDeathAnim" value="true" />
-		<property name="MaxHealth" value="300" />
+		<property name="MaxHealth" value="500" />
 		<property name="ExperienceGain" value="2916" />
 		<property name="Weight" value="70" />
 		<property name="PushFactor" value="20" />
