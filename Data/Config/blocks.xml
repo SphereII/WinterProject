@@ -16529,7 +16529,7 @@ kind of free
 		<property name="Model" value="#WinterBlocks?IceBlockPrefab" />
 		<!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
 		<property name="CanPickup" value="false" />
-		<property name="CustomIcon" value="iceblock" />
+		<property name="CustomIcon" value="iceBlock" />
 		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 		<property name="ImposterExchange" value="imposterBlock" param1="62" />
 		<property name="DropScale" value="2" />
@@ -16550,7 +16550,7 @@ kind of free
 		<property name="Model" value="#WinterBlocks?SnowBlockPrefab" />
 		<!-- Ice Blocks by vanquish99 is licensed under CC Attribution -->
 		<property name="CanPickup" value="false" />
-		<property name="CustomIcon" value="snowblock" />
+		<property name="CustomIcon" value="snowBlock" />
 		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 		<property name="ImposterExchange" value="imposterBlock" param1="62" />
 		<property name="DropScale" value="2" />
