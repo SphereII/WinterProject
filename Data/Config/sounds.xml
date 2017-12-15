@@ -7708,7 +7708,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="GoodSantaGreetingSounds">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#SantaSounds?01_B_Santa_MynameIsSantaMerryChristmas" />
 		<LocalCrouchVolumeScale name="1.0" />
 		<CrouchNoiseScale name="0.5" />
@@ -7718,7 +7718,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="GoodSantaSounds">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#SantaSounds?01_A_Santa_NewYear_talk" />
 		<AudioClip ClipName="#SantaSounds?01_A_Santa_NicePresent_talk" />
 		<AudioClip ClipName="#SantaSounds?01_A_Santa_WhatDoYouWant_talk" />
@@ -7736,7 +7736,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="GoodSantaByeSounds">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#SantaSounds?10_CU_nextYear" />
 		<AudioClip ClipName="#SantaSounds?01_A_Santa_ReturnNorthpole_talk" />
 		<LocalCrouchVolumeScale name="1.0" />
@@ -7747,7 +7747,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="afroShamanSounds">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AfroShamanSounds?all_alone" />
 		<AudioClip ClipName="#AfroShamanSounds?all_is_lost2" />
 		<AudioClip ClipName="#AfroShamanSounds?all_is_lost" />
@@ -8025,7 +8025,7 @@
 			</SoundDataNode> -->
 	<SoundDataNode name="AbominableAlert">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AbominableSounds?roar1" />
 		<LocalCrouchVolumeScale name="1.0" />
 		<CrouchNoiseScale name="0.5" />
@@ -8035,7 +8035,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="AbominableAttack">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AbominableSounds?grrr7" />
 		<LocalCrouchVolumeScale name="1.0" />
 		<CrouchNoiseScale name="0.5" />
@@ -8045,7 +8045,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="AbominableRandom">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AbominableSounds?grrr1" />
 		<AudioClip ClipName="#AbominableSounds?grrr2" />
 		<AudioClip ClipName="#AbominableSounds?grrr3" />
@@ -8059,7 +8059,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="AbominableHurt">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AbominableSounds?hit1" />
 		<LocalCrouchVolumeScale name="1.0" />
 		<CrouchNoiseScale name="0.5" />
@@ -8069,7 +8069,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="AbominableSense">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AbominableSounds?grrr6" />
 		<LocalCrouchVolumeScale name="1.0" />
 		<CrouchNoiseScale name="0.5" />
@@ -8079,7 +8079,7 @@
 	</SoundDataNode>
 	<SoundDataNode name="AbominableDie">
 		<AudioSource name="Sounds/AudioSource_VO" />
-		<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+		<Noise ID="3" range="100" volume="12" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
 		<AudioClip ClipName="#AbominableSounds?die" />
 		<LocalCrouchVolumeScale name="1.0" />
 		<CrouchNoiseScale name="0.5" />
