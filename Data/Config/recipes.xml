@@ -2309,6 +2309,21 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 		<ingredient name="glue" count="1" />
 		<ingredient name="paper" count="30" />
 	</recipe>
+	
+	 <recipe name="snowBlock" count="1" >
+                <ingredient name="snowBall" count="10"/>
+	        <ingredient name="bottledRiverWater" count="1"/>
+         </recipe> 
+	 <recipe name="snowBlock" count="1" >
+                <ingredient name="snowBall" count="10"/>
+                 <ingredient name="bottledWater" count="1"/>
+         </recipe> 
+	 <recipe name="iceBlock" count="1" >
+                <ingredient name="bottledRiverWater" count="10"/>
+         </recipe> 
+	 <recipe name="iceBlock" count="1" >
+                <ingredient name="bottledWater" count="10"/>
+          </recipe> 
 </recipes>
 <!-- To do (maybe / later)
 <recipe name="steelArrowHead" count="1" craft_area="forge" craft_tool="calipers" material_based="true">
