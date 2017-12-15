@@ -2312,12 +2312,9 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	
 	 <recipe name="snowBlock" count="1" >
                 <ingredient name="snowBall" count="10"/>
-	        <ingredient name="bottledRiverWater" count="1"/>
+	     
          </recipe> 
-	 <recipe name="snowBlock" count="1" >
-                <ingredient name="snowBall" count="10"/>
-                 <ingredient name="bottledWater" count="1"/>
-         </recipe> 
+	
 	 <recipe name="iceBlock" count="1" >
                 <ingredient name="bottledRiverWater" count="10"/>
          </recipe> 
