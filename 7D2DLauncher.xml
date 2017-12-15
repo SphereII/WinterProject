@@ -3,10 +3,7 @@
 	<ServerGroup Name="Sphereii-mental" Logo="" Description="Highly Experimental SDX Builds">
 		<Server Name="WinterProject" Logo="">
 			<Description>Winter Project by sphereii and xyth
-***
-*** Warning! Due to the snow effect, approaching towns or large POIs will lag you out a bit. Slow down and it'll catch up!
-***
-				
+			
  Based on the ComSens Mod from CraterCreator, with RainUI from Dust2Death, the Winter Project shoves you into a world covered in snow for a unique play style never experienced yet. 
  
 See the world from a completely different point of view, and face new and old challenges as you explore and experience a world frozen during the last Christmas Holiday...
@@ -14,6 +11,11 @@ See the world from a completely different point of view, and face new and old ch
 Merry "ComSens", welcome to the Winter Project!
 
 -sphereii and xyth
+				
+***
+*** Warning! Due to the snow effect, approaching towns or large POIs will lag you out a bit. Slow down and it'll catch up!
+***
+	
 				
 
 			</Description>
