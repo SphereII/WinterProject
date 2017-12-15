@@ -2672,7 +2672,7 @@
 	</entity_class>
 	<entity_class name="Tornaq" extends="SDXTemplate">
 		<property name="Mesh" value="#Tornaq?Tornaq" />
-		<property name="MaxHealth" value="1000" />
+		<property name="MaxHealth" value="2500" />
 		<property name="AnimationIdle" value="Idle" />
 		<property name="AnimationMainAttack" value="Roar" />
 		<property name="AnimationPain" value="Roar" />
@@ -3057,7 +3057,7 @@
 	</entity_class>
 	<entity_class name="snowGoddess" extends="SDXTemplate">
 		<property name="Mesh" value="#SnowGoddess?SnowGoddess" />
-		<property name="MaxHealth" value="100" />
+		<property name="MaxHealth" value="500" />
 		<property name="MaxTurnSpeed" value="230" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="WanderSpeed" value="0.3" />
