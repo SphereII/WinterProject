@@ -2713,6 +2713,8 @@
 		<property name="SoundDeath" value="AbominableDie" />
 		<property name="SoundHurt" value="AbominableHurt" />
 		<property name="SoundSense" value="AbominableSense" />
+				<property name="LootListOnDeath" value="200" />
+
 	</entity_class>
 	<entity_class name="AnimationTest" extends="SDXTemplate">
 		<property name="Mesh" value="#AnimationTest?Polarbear2" />
