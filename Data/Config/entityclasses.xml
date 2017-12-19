@@ -2291,7 +2291,7 @@
 		<property name="Mesh" value="#SealCub?sealcub" />
 		<property name="AvatarController" value="AnimationSDX, Mods" />
 		<property name="Prefab" value="NPC" />
-		<property name="Class" value="EntitySeal, Mods" />
+		<!--property name="Class" value="EntitySeal, Mods" /-->
 		<property name="Parent" value="Animals" />
 		<property name="Weight" value="10" />
 		<property name="MaxHealth" value="1" />
