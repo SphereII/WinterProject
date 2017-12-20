@@ -16441,9 +16441,11 @@ kind of free
 		<property name="Model" value="#Kitten?KittenReward" />
 		<property name="CanPickup" value="true" />
 		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="PickupTarget" value="Kitten" />
 		<property name="DescriptionKey" value="Kitten" />
 		<drop event="Destroy" name="deadKitten" count="1" />
 		<property name="CanPlayersSpawnOn" value="false" />
+		
 		<property name="ParticleOnDeath" value="blood_death" />
 		<property name="EconomicValue" value="300" />
 	</block>
