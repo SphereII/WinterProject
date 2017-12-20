@@ -16448,6 +16448,7 @@ kind of free
 		
 		<property name="ParticleOnDeath" value="blood_death" />
 		<property name="EconomicValue" value="300" />
+				<property name="ModelOffset" value="0,0,0" />
 	</block>
 	<block id="335" name="xmasGift">
 		<property name="Class" value="Loot" />
