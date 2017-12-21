@@ -174,9 +174,10 @@
 		<entity name="ZombiePsycho" prob="0.1" />
 		<entity name="ZombieFrozen" prob="0.1" />
 		<entity name="ZombieSeryphSnow" prob="0.1" />
-		<entity name="zombieWalker" prob="0.01" />
+		<entity name="zombieWalker" prob="0.1" />
 		<entity name="snowGoddess" prob="0.01" />
 		<entity name="Snowman" prob="0.01" />
+		<entity name="blackSanta" prob="0.1" />
 	</entitygroup>
 	<entitygroup name="ZombiesBoss">
 		<entity name="zombieFatCop" />
