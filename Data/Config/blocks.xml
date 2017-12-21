@@ -16452,7 +16452,7 @@ kind of free
 	</block>
 	<block id="335" name="xmasGift">
 		<property name="Class" value="Loot" />
-		<property name="LootList" value="8" />
+		<property name="LootList" value="201" />
 		<property name="CustomIcon" value="xmasGift" />
 		<property name="Material" value="paper" />
 		<property name="Shape" value="ModelEntity" />
@@ -16469,7 +16469,7 @@ kind of free
 	<!-- This will replace the oldChair -->
 	<block id="312" name="xmasGifts">
 		<property name="Class" value="Loot" />
-		<property name="LootList" value="8" />
+		<property name="LootList" value="201" />
 		<property name="CustomIcon" value="xmasGifts" />
 		<property name="Material" value="paper" />
 		<property name="Shape" value="ModelEntity" />
