@@ -16491,10 +16491,10 @@ kind of free
 		<property name="Shape" value="ModelEntity" />
 		<property name="Model" value="#XmasTree?XmasTreePrefab" />
 		<property name="CanPickup" value="true" />
-		<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
+		<property name="Collide" value="melee,bullet,arrow,rocket" />
 		<property name="DescriptionKey" value="xmasTree" />
-		<drop event="Destroy" count="0" />
-		<drop event="Harvest" name="wood" count="10" tool_category="harvestingTools" />
+		<drop event="Destroy" name="wood" count="10" prob="1" />
+
 		<property name="MultiBlockDim" value="1,3,1" />
 		<property name="CanPlayersSpawnOn" value="false" />
 		<property name="ParticleOnDeath" value="treeGib_small_dust" />
