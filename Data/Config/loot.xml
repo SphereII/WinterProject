@@ -2338,7 +2338,7 @@
 	</lootcontainer>
 	<!-- "bag" container that gets dropped when a zombie gore block is destroyed but still contained loot -->
 	<lootcontainer id="99" count="0" size="5,10" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" loot_quality_template="baseTemplate"></lootcontainer>
-	<lootcontainer id="200" count="1" size="8,4" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+	<lootcontainer id="200" count="1,4" size="8,4" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
 		<item name="Kitten" count="1" />
 		<item name="coal" count="20,150" />
 		<item name="oilShale" count="20,40"  />
