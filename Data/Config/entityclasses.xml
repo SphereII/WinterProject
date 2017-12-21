@@ -2343,20 +2343,7 @@
 		<property name="Explosion.BlockDamage" value="500" />
 		<property name="Explosion.EntityDamage" value="150" />
 		<property name="Explosion.DamageBonus.earth" value="0" />
-		<property name="HeadDismemberBonusChance" value="0.08" />
-		<property name="HeadDismemberThreshold" value="0" />
-		<property name="LowerLegDismemberThreshold" value="0" />
-		<property name="UpperLegDismemberThreshold" value="0" />
-		<property name="LowerArmDismemberThreshold" value="0" />
-		<property name="UpperArmDismemberThreshold" value="0" />
-		<property name="LegCrawlerThreshold" value="0" />
-		<property name="LegCrippleThreshold" value="0" />
-		<property name="KnockdownProneDamageThreshold" value="0" />
-		<property name="KnockdownKneelDamageThreshold" value="0" />
-		<property name="LegsExplosionDamageMultiplier" value="2" />
-		<property name="ArmsExplosionDamageMultiplier" value="2" />
-		<property name="HeadExplosionDamageMultiplier" value="2" />
-		<property name="ChestExplosionDamageMultiplier" value="2" />
+
 		<property name="MaxTurnSpeed" value="180" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="AnimationIdle" value="idle" />
@@ -2802,22 +2789,7 @@
 		<property name="Explosion.BlockDamage" value="500" />
 		<property name="Explosion.EntityDamage" value="150" />
 		<property name="Explosion.DamageBonus.earth" value="0" />
-		<property name="HeadDismemberBonusChance" value="0.08" />
-		<property name="HeadDismemberThreshold" value="0" />
-		<property name="LowerLegDismemberThreshold" value="0" />
-		<property name="UpperLegDismemberThreshold" value="0" />
-		<property name="LowerArmDismemberThreshold" value="0" />
-		<property name="UpperArmDismemberThreshold" value="0" />
-		<property name="LegCrawlerThreshold" value="0" />
-		<property name="LegCrippleThreshold" value="0" />
-		<property name="KnockdownProneDamageThreshold" value="0" />
-		<property name="KnockdownKneelDamageThreshold" value="0" />
-		<property name="LegsExplosionDamageMultiplier" value="2" />
-		<!-- volatile so vulnerable to land mines/explosives -->
-		<property name="ArmsExplosionDamageMultiplier" value="2" />
-		<property name="HeadExplosionDamageMultiplier" value="2" />
-		<property name="ChestExplosionDamageMultiplier" value="2" />
-		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
+
 		<property name="MaxTurnSpeed" value="180" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="AnimationIdle" value="Idle" />
@@ -2911,22 +2883,8 @@
 		<property name="Explosion.BlockDamage" value="500" />
 		<property name="Explosion.EntityDamage" value="150" />
 		<property name="Explosion.DamageBonus.earth" value="0" />
-		<property name="HeadDismemberBonusChance" value="0.08" />
-		<property name="HeadDismemberThreshold" value="0" />
-		<property name="LowerLegDismemberThreshold" value="0" />
-		<property name="UpperLegDismemberThreshold" value="0" />
-		<property name="LowerArmDismemberThreshold" value="0" />
-		<property name="UpperArmDismemberThreshold" value="0" />
-		<property name="LegCrawlerThreshold" value="0" />
-		<property name="LegCrippleThreshold" value="0" />
-		<property name="KnockdownProneDamageThreshold" value="0" />
-		<property name="KnockdownKneelDamageThreshold" value="0" />
-		<property name="LegsExplosionDamageMultiplier" value="2" />
-		<!-- volatile so vulnerable to land mines/explosives -->
-		<property name="ArmsExplosionDamageMultiplier" value="2" />
-		<property name="HeadExplosionDamageMultiplier" value="2" />
-		<property name="ChestExplosionDamageMultiplier" value="2" />
-		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
+	
+
 		<property name="MaxTurnSpeed" value="230" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="WanderSpeed" value="0.2" />
@@ -2993,20 +2951,7 @@
 		<property name="LootListOnDeath" value="17" />
 		<property name="HeadDismemberBonusChance" value="0.08" />
 		<property name="HeadDismemberThreshold" value="0" />
-		<property name="LowerLegDismemberThreshold" value="0" />
-		<property name="UpperLegDismemberThreshold" value="0" />
-		<property name="LowerArmDismemberThreshold" value="0" />
-		<property name="UpperArmDismemberThreshold" value="0" />
-		<property name="LegCrawlerThreshold" value="0" />
-		<property name="LegCrippleThreshold" value="0" />
-		<property name="KnockdownProneDamageThreshold" value="0" />
-		<property name="KnockdownKneelDamageThreshold" value="0" />
-		<property name="LegsExplosionDamageMultiplier" value="2" />
-		<!-- volatile so vulnerable to land mines/explosives -->
-		<property name="ArmsExplosionDamageMultiplier" value="2" />
-		<property name="HeadExplosionDamageMultiplier" value="2" />
-		<property name="ChestExplosionDamageMultiplier" value="2" />
-		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
+	
 		<property name="MaxTurnSpeed" value="230" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="WanderSpeed" value="0.2" />
