@@ -2782,7 +2782,7 @@
 	</entity_class>
 	<entity_class name="Snowman" extends="SDXTemplate">
 		<property name="Mesh" value="#Snowman?Snowman" />
-		<property name="Class" value="EntityZombieCop" />
+		<!--property name="Class" value="EntityZombieCop" /-->
 		<property name="HandItem" value="handZombieSnowman" />
 		<property name="RightHandJointName" value="snowman_RightHand" />
 		<property name="WalkType" value="1" />
@@ -2891,7 +2891,7 @@
 			-->
 	<entity_class name="zombieWalker" extends="SDXTemplate">
 		<property name="Mesh" value="#ZombieWalker?ZombieWalker" />
-		<property name="Class" value="EntityZombieCop" />
+		<!--property name="Class" value="EntityZombieCop" / -->
 		<property name="HandItem" value="handZombieSnowman" />
 		<property name="RightHandJointName" value="snowman_RightHand" />
 		<property name="WalkType" value="1" />
