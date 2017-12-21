@@ -136,6 +136,32 @@ If you do not declare them, the decorations of the main biome are used.
 	-->
 		<!-- Snow Main Biome -->
 		<biome name="snow" biomemapcolor="#FFFFFF">
+					<weather prob="0.25">
+				<Temperature min="-94" max="-94" prob="0.25"/>
+				<CloudThickness min="70" max="100" prob="0.25"/>
+				<Fog min="0" max="30" prob="0.25"/>
+				<Precipitation min="30" max="100" prob="0.25"/>
+				<Wind min="30" max="100" prob="0.25"/>
+			</weather>
+			<weather prob="0.25">
+				<Temperature min="-91" max="-91" prob="0.25"/>
+				<CloudThickness min="30" max="70" prob="0.25"/>
+				<Fog min="0" max="15" prob="0.25"/>
+				<Precipitation min="0" max="30" prob="0.25"/>
+				<Wind min="15" max="30" prob="0.25"/>
+			</weather>	
+			<weather prob="0.75">	
+				<Temperature min="-88" max="-88" prob="0.5"/>
+				<CloudThickness min="0" max="30" prob="0.75"/>
+				<Fog min="0" max="0" prob="0.75"/>
+				<Precipitation min="0" max="0" prob="0.75"/>
+				<Wind min="0" max="5" prob="0.75"/>
+			</weather>
+			<weather prob="1">	
+				<ParticleEffect prefab="ParticleEffects/p_smokestorm" ChunkMargin="30" prob="1"/>
+				<ParticleEffect prefab="ParticleEffects/p_snowstorm1" ChunkMargin="25" prob="1"/>
+			</weather>	
+			<!--
 			<weather>
 				<Temperature min="-90" max="-90" prob="1" />
 				<Fog min="0" max="0" prob=".9" />
@@ -143,12 +169,12 @@ If you do not declare them, the decorations of the main biome are used.
 				<CloudThickness min="0" max="100" prob=".5" />
 				<CloudThickness min="95" max="100" prob=".5" />
 				<Precipitation min="0" max="0" prob=".0" />
-				<!-- it has to be at least 70% cloudy before it can rain -->
 				<Precipitation min="50" max="100" prob=".75" />
 				<Wind min="20" max="40" prob="0.9" />
 				<Wind min="40" max="100" prob="0.1" />
 				<ParticleEffect prefab="ParticleEffects/p_snowstorm1" ChunkMargin="7" />
 			</weather>
+		-->
 			<replacements>
 				<!-- This affects only the grow event of blocks/plants. Grown blocks of one type are auto-replaced by the second.  -->
 				<replace source="treeTallGrassDiagonal" target="treeSnowyGrassDiagonal" />
