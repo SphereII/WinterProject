@@ -2318,7 +2318,9 @@
 		<property name="AnimationWalk" value="walk" />
 		<drop event="Harvest" name="Babyseal" tool_category="Butcher" count="1" />
 	</entity_class>
-	<entity_class name="ArcticFox" extends="SDXTemplate">
+	<entity_class name="ArcticFox" extends="animalTemplateTimid">
+			<property name="AvatarController" value="AnimationSDX, Mods" />
+
 		<property name="Mesh" value="#ArcticFox?arcticfox" />
 			<property name="Prefab" value="NPC" />
 		<!--property name="Class" value="EntitySeal, Mods" /-->
