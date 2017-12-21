@@ -2320,7 +2320,9 @@
 	</entity_class>
 	<entity_class name="ArcticFox" extends="SDXTemplate">
 		<property name="Mesh" value="#ArcticFox?arcticfox" />
-		<property name="Class" value="EntityEnemyAnimal" />
+			<property name="Prefab" value="NPC" />
+		<!--property name="Class" value="EntitySeal, Mods" /-->
+		<property name="Parent" value="Animals" />
 		<property name="IsEntityAnimal" value="true" />
 		<property name="HandItem" value="handAnimalWolf" />
 		<property name="WalkType" value="1" />
@@ -2353,7 +2355,6 @@
 		<property name="ArmsExplosionDamageMultiplier" value="2" />
 		<property name="HeadExplosionDamageMultiplier" value="2" />
 		<property name="ChestExplosionDamageMultiplier" value="2" />
-		<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0" />
 		<property name="MaxTurnSpeed" value="180" />
 		<property name="MaxViewAngle" value="270" />
 		<property name="AnimationIdle" value="idle" />
