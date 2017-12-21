@@ -167,6 +167,8 @@ If you do not declare them, the decorations of the main biome are used.
 					<resource blockname="silverOre" cluster="1" prob="0.00030" rwgGenerationType="all" />
 					<resource blockname="goldOre" cluster="1" prob="0.00020" rwgGenerationType="all" />
 					<resource blockname="diamondOre" cluster="1" prob="0.00010" rwgGenerationType="all" />
+											<resource blockname="coalOre" cluster="1" prob="0.1030" rwgGenerationType="all" />
+
 				</layer>
 				<layer depth="1" blockname="stone">
 					<resource blockname="gravelPlusIron" cluster="1" prob="0.8130" rwgGenerationType="all" />
@@ -177,6 +179,8 @@ If you do not declare them, the decorations of the main biome are used.
 					<resource blockname="silverOre" cluster="1" prob="0.00030" rwgGenerationType="all" />
 					<resource blockname="goldOre" cluster="1" prob="0.00020" rwgGenerationType="all" />
 					<resource blockname="diamondOre" cluster="1" prob="0.00010" rwgGenerationType="all" />
+											<resource blockname="coalOre" cluster="1" prob="0.1030" rwgGenerationType="all" />
+
 				</layer>
 				<layer depth="1" blockname="stone">
 					<resource blockname="gravel" cluster="1" prob="0.8130" rwgGenerationType="all" />
