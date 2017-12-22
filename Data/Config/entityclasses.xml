@@ -2740,7 +2740,7 @@
 		<property name="AITask-25" value="Wander" />
 	</entity_class>
 	<entity_class name="blackSanta" extends="SDXTemplate">
-		<property name="Mesh" value="#BlackSanta?BlackSanta_X" />
+		<property name="Mesh" value="#BlackSanta?BlackSanta" />
 		<property name="WalkType" value="1" />
 		<property name="CanClimbLadders" value="false" />
 		<property name="HasDeathAnim" value="true" />
@@ -2760,11 +2760,12 @@
 		<property name="NightApproachSpeed" value="1.1" />
 		<property name="PanicSpeed" value="0.6" />
 		<property name="AnimationIdle" value="Idle" />
-		<property name="AnimationMainAttack" value="Attack1" />
+		<property name="AnimationSecondIdle" value="Idle" />
+		<property name="AnimationMainAttack" value="Attack" />
 		<property name="AnimationSecondAttack" value="Attack2" />
-		<property name="AnimationJump" value="Jump" />
-		<property name="AnimationPain" value="Hit" />
-		<property name="AnimationDeath" value="Die" />
+		<property name="AnimationJump" value="Idle" />
+		<property name="AnimationPain" value="Hurt" />
+		<property name="AnimationDeath" value="Death" />
 		<property name="AnimationRun" value="Run" />
 		<property name="AnimationWalk" value="Walk" />
 		<!--				<property name="AnimationSpecialAttack" value="Walk" /> -->
