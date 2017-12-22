@@ -23,6 +23,7 @@ Merry "ComSens", welcome to the Winter Project!
 			<Excludes>
 				<Exclude>7DaysToDieServer_Data</Exclude>
 				<Exclude>SDX0.7.2c</Exclude>
+				<Exclude>NoNightmares</Exclude>
 			</Excludes>
 			<Version>alpha16.4</Version>
 			<RSS/>
@@ -34,5 +35,37 @@ Merry "ComSens", welcome to the Winter Project!
 			</Downloads>
 		</Server>
 
+				<Server Name="WinterProject-NoNightmares" Logo="">
+			<Description>Winter Project ( No Nightmares ) by sphereii and xyth
+			
+ Based on the ComSens Mod from CraterCreator, with RainUI from Dust2Death, the Winter Project shoves you into a world covered in snow for a unique play style never experienced yet. 
+ 
+See the world from a completely different point of view, and face new and old challenges as you explore and experience a world frozen during the last Christmas Holiday...
+
+Merry "ComSens", welcome to the Winter Project!
+
+-sphereii and xyth
+		
+***  
+*** Warning! Due to the snow effect, approaching towns or large POIs will lag you out a bit. Slow down and it'll catch up!
+***
+	
+				
+
+			</Description>
+			<DownloadMode>Clone</DownloadMode>
+			<Excludes>
+				<Exclude>7DaysToDieServer_Data</Exclude>
+				<Exclude>SDX0.7.2c</Exclude>
+			</Excludes>
+			<Version>alpha16.4</Version>
+			<RSS/>
+			<ReleaseNotes/>
+			<Downloads>
+				<Download>https://github.com/SphereII/WinterProject/archive/master.zip</Download>
+				<Download>https://github.com/SphereII/7D2DPatches/raw/master/Alpha16.4/ZombieTextures/ZombieTextureOverhaul.zip</Download>
+
+			</Downloads>
+		</Server>
 	</ServerGroup>
 </Servers>
