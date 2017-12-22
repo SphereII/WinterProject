@@ -64,7 +64,8 @@ Merry "ComSens", welcome to the Winter Project!
 			<Downloads>
 				<Download>https://github.com/SphereII/WinterProject/archive/master.zip</Download>
 				<Download>https://github.com/SphereII/7D2DPatches/raw/master/Alpha16.4/ZombieTextures/ZombieTextureOverhaul.zip</Download>
-
+				<Download>https://raw.githubusercontent.com/SphereII/WinterProject/master/NoNightmares/spawning.xml</Download>
+				<Download>https://raw.githubusercontent.com/SphereII/WinterProject/master/NoNightmares/loot.xml</Download>
 			</Downloads>
 		</Server>
 	</ServerGroup>
