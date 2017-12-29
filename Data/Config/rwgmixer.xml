@@ -316,7 +316,6 @@
 			<prefab name="bar_sm_01" />
 			<prefab name="fire_station_01" max_count="1" />
 			<prefab name="fire_station_02" max_count="1" />
-			<prefab rule="skyscrapers" min_count="2" />
 			<prefab name="store_pawn_01" max_count="1" />
 		</prefab_rule>
 		<prefab_rule name="skyscrapers">
