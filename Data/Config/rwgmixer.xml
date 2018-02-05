@@ -10,8 +10,8 @@
 			<cave_count value="4,8" />
 			<path_material value="snowFill" />
 			<path_radius value="0" />
-			<hub_rule name="townSmall" prob="0.3" />
-			<hub_rule name="townLarge" prob="0.01" />
+			<hub_rule name="townSmall" prob="0.5" />
+			<hub_rule name="townLarge" prob="0.001" />
 			<hub_rule name="citySmall" prob="0.001" />
 			<hub_rule name="cityLarge" prob="0.001" />
 			<hub_rule name="ruralSmall" prob="0.5" />
@@ -229,9 +229,6 @@
 			<prefab name="trailer_park_01" />
 		</prefab_rule>
 		<prefab_rule name="residentialNewGroup">
-			<prefab name="house_new_mansion_01" />
-			<prefab name="house_new_mansion_02" />
-			<prefab name="house_new_mansion_03" />
 			<prefab name="house_new_01" />
 			<prefab name="house_new_02" />
 			<prefab name="house_new_03" />
@@ -243,13 +240,7 @@
 			<prefab name="houseranchtan2" />
 			<prefab name="houseranchblue1" />
 			<prefab name="church_sm_01" />
-			<prefab name="hospital_01_rg" max_count="1" />
-			<prefab name="school_01" min_count="1" max_count="1" />
-			<prefab name="school_k6_01" min_count="1" max_count="1" />
 			<prefab name="school_daycare_01" min_count="1" max_count="1" />
-			<prefab name="football_stadium" max_count="1" />
-			<prefab name="apartment_adobe_red_5_flr" max_count="1" />
-			<prefab name="apartment_brick_6_flr" max_count="1" />
 			<prefab name="funeral_home_01" max_count="1" />
 		</prefab_rule>
 		<prefab_rule name="commercialGroup">
@@ -301,10 +292,6 @@
 			<prefab name="post_office_med_01" max_count="1" />
 			<prefab name="mp_waste_bldg_governer_08" max_count="1" />
 			<prefab name="police_station1" max_count="1" />
-			<prefab name="hotel_roadside_01" max_count="1" />
-			<prefab name="hotel_roadside_02" max_count="1" />
-			<prefab name="hotel_ostrich" max_count="1" />
-			<prefab name="hotel_new_01" max_count="1" />
 			<prefab name="prison_01" max_count="1" />
 			<prefab name="parking_lot_01" />
 			<prefab name="parking_lot_02" />
@@ -329,8 +316,6 @@
 			<prefab name="utility_electric_co_01" />
 			<prefab name="utility_refinery_01" max_count="1" />
 			<prefab name="settlement_01" />
-			<prefab name="factory_lg_01" max_count="1" />
-			<prefab name="factory_lg_02" max_count="1" />
 			<prefab name="installation_red_mesa" max_count="1" />
 			<prefab name="sawmill_01_snow" max_count="1" />
 			<prefab name="utility_celltower_02" max_count="1" />
